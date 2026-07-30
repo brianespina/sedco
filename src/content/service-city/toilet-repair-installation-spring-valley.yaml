@@ -1,0 +1,93 @@
+service: toilet-repair-installation
+city: spring-valley
+
+title: Toilet Repair in Spring Valley, CA | Sedco Plumbing
+description: >-
+  Toilet repair and installation for Spring Valley homes — running toilets, worn fill valves, leaks, and full
+  replacements done right. Call [PHONE].
+primaryKeyword: toilet repair Spring Valley
+supportingKeywords:
+  - toilet installation Spring Valley
+  - running toilet repair Spring Valley
+  - toilet replacement 91977
+  - fill valve replacement
+  - clogged toilet repair
+
+heroStat: 200 gal/day
+heroStatLabel: Wasted by a moderate leak
+heroPoints:
+  - Static pressure checked when we replace components
+  - Corroded angle stops and broken flanges corrected same visit
+  - High-efficiency fixtures without losing flush performance
+  - Most calls handled same-day in one visit
+
+h1: Toilet Repair & Installation in Spring Valley, CA
+intro:
+  - >-
+    That refill sound at two in the morning — the phantom flush — is your toilet leaking water from tank to bowl, and it
+    rarely stops on its own. Sedco Plumbing repairs and installs toilets throughout Spring Valley, and we also address
+    the local factor that wears toilet parts out early: water pressure.
+
+sections:
+  - heading: Why Toilet Parts Fail Faster on the Hill
+    paragraphs:
+      - >-
+        Fill valves are rated for normal household pressure, and on hillside streets around Dictionary Hill and Casa de
+        Oro, incoming pressure above 80 psi is common where regulators are missing or worn out. That pressure hammers the
+        fill valve every time the tank refills, causing early failure, noisy operation, and sometimes a hissing valve that
+        never fully seats. When we replace toilet components, we check your static pressure too — because a new valve under
+        old pressure fails on the same schedule as the last one.
+
+  - heading: Repairs, Replacements, and Mid-Century Bathrooms
+    paragraphs:
+      - >-
+        Beyond valves and flappers, we reset leaking toilets, replace corroded angle stops, repair rusted or broken
+        flanges, and clear stubborn clogs. In Spring Valley’s older homes, the original bathroom hardware is often part of
+        the problem — a shutoff that will not close, a flange sitting below layers of remodeled flooring. We handle those
+        complications in the same visit, and every replacement toilet meets California’s high-efficiency requirements
+        without sacrificing flush performance.
+
+  - heading: When Replacement Beats Another Repair
+    paragraphs:
+      - >-
+        A toilet from the 1980s or earlier can use three to seven gallons per flush; a modern high-efficiency model uses
+        1.28. If your water is billed by Helix or Otay, that difference shows up every month. For fixtures that crack,
+        wobble on a bad flange, or clog chronically, we give you honest numbers on repair versus replacement and let you
+        decide.
+
+faqs:
+  - question: Why does my toilet run in the middle of the night?
+    answer:
+      - >-
+        Intermittent refilling means water is escaping the tank — usually past a worn flapper — and the fill valve tops it
+        off. High water pressure can make it worse by preventing the valve from seating cleanly. Both are quick,
+        inexpensive fixes.
+  - question: How much water does a running toilet waste?
+    answer:
+      - >-
+        A moderate leak wastes roughly 200 gallons a day, and a stuck-open fill valve can waste far more. Over a billing
+        cycle, that is often the single biggest line item on a surprised customer’s water bill.
+  - question: How soon can you get to Spring Valley?
+    answer:
+      - >-
+        Quickly — our El Cajon shop is minutes away via SR-94 or Sweetwater Springs Boulevard, and most toilet calls in
+        Spring Valley are handled same-day in a single visit.
+
+ctaHeading: Put an End to the Midnight Refill
+ctaBody: >-
+  One visit from a licensed, insured plumber (CA C-36 [LICENSE #]) can quiet your toilet and lower your bill. Call
+  Sedco Plumbing at [PHONE] to schedule toilet repair or installation in Spring Valley.
+
+internalLinks:
+  - href: /services/toilet-repair-installation/
+    anchor: toilet services
+    group: service
+  - href: /service-areas/spring-valley/
+    anchor: Spring Valley plumber
+    group: city
+  - href: /services/drain-cleaning/spring-valley/
+    anchor: Spring Valley drain cleaning
+    group: combo
+  - href: /services/water-pressure-regulators/
+    anchor: water pressure regulators
+    group: service

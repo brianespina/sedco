@@ -1,0 +1,110 @@
+service: water-filtration
+
+title: Water Filtration & Softeners El Cajon | Sedco Plumbing
+description: >-
+  Hard water is tough on East County homes. Whole-house filtration and water softeners installed in El
+  Cajon by a licensed local plumber. Call [PHONE].
+primaryKeyword: water filtration El Cajon
+supportingKeywords:
+  - water softener installation El Cajon
+  - whole-house water filter
+  - hard water treatment East County
+  - reverse osmosis system
+  - water conditioner El Cajon
+
+heroBadge: Softeners, conditioners, filtration & RO
+heroStat: 14–18
+heroStatLabel: Grains per gallon locally
+heroPoints:
+  - Your actual hardness tested, not assumed
+  - System sized to your household’s usage
+  - Proper bypass valve and code-compliant drain
+  - Local follow-up service and filter changes
+
+h1: Water Filtration and Softener Systems in El Cajon
+intro:
+  - >-
+    If you have ever scraped white crust off a showerhead or watched spots bloom on freshly washed
+    glasses, you have met East County’s water. Most of what flows from El Cajon taps is imported Colorado
+    River water, and by the time it arrives it carries some of the highest mineral loads in the region —
+    commonly 14 to 18 grains per gallon, firmly in the “very hard” category. Sedco Plumbing installs and
+    services water softeners, conditioners, whole-house filtration, and reverse osmosis systems that turn
+    that water into something your home, appliances, and family will genuinely appreciate.
+
+sections:
+  - heading: What Hard Water Is Quietly Costing You
+    paragraphs:
+      - >-
+        Hardness is not a health problem, but it is an expensive houseguest. Mineral scale coats water
+        heater elements and tank walls, cutting efficiency and shortening the heater’s life by years. It
+        clogs faucet aerators and showerheads, stiffens valves in toilets and washing machines, and etches
+        a film onto glass shower doors that no amount of scrubbing fully removes. It also fights your
+        soap: hard water forces you to use more detergent and shampoo while leaving skin drier and laundry
+        duller. Softening the supply pays for itself in appliance lifespan alone for many El Cajon
+        households.
+
+  - heading: 'Softeners, Conditioners, and Filters: Which One Do You Need?'
+    paragraphs:
+      - >-
+        The right system depends on what you want to change about your water. A traditional salt-based
+        softener removes hardness minerals through ion exchange and remains the most effective fix for
+        heavy scale. Salt-free conditioners do not remove minerals but alter them so they resist sticking
+        to pipes and heaters — a lower-maintenance option some households prefer. Whole-house carbon
+        filtration targets chlorine taste and odor from municipal treatment, and an under-sink reverse
+        osmosis system gives you exceptionally clean drinking water at the kitchen tap. Many of our East
+        County customers combine a softener or conditioner with an RO faucet and cover all the bases.
+
+  - heading: Sized, Installed, and Serviced by a Local Licensed Plumber
+    paragraphs:
+      - >-
+        Big-box systems fail most often at the installation, not the equipment. We test your actual water
+        hardness, size the system to your household’s usage, install it with a proper bypass valve and
+        code-compliant drain connection, and dial in the settings before we leave. Because we are based in
+        El Cajon, ongoing service is easy — filter changes, resin bed checks, and adjustments are a quick
+        local visit rather than a distant service window.
+
+faqs:
+  - question: How hard is the water in El Cajon?
+    answer:
+      - >-
+        Water delivered around El Cajon typically measures 14 to 18 grains per gallon, which water-quality
+        standards classify as very hard. Anything above roughly 7 grains is considered hard, so local water
+        is more than double that threshold.
+  - question: What is the difference between a water softener and a water filter?
+    answer:
+      - >-
+        A softener removes hardness minerals like calcium and magnesium to stop scale. A filter removes
+        contaminants such as chlorine, sediment, and off-tastes. They solve different problems, and many
+        homes benefit from both.
+  - question: Does softened water taste salty?
+    answer:
+      - >-
+        No. The ion-exchange process adds only a trace of sodium — far less than a slice of bread
+        contains. Households watching sodium closely can pair a softener with a reverse osmosis tap for
+        drinking and cooking water.
+  - question: Will a softener help my water heater last longer?
+    answer:
+      - >-
+        Significantly. Scale buildup is the leading cause of early water heater failure in East County,
+        and softened water dramatically slows that buildup — protecting tankless heat exchangers in
+        particular.
+
+ctaHeading: Find Out What Is in Your Water
+ctaBody: >-
+  The first step is a simple hardness test, and we are happy to run one at your kitchen sink. Call Sedco
+  Plumbing at [PHONE] to schedule a water assessment in El Cajon or anywhere in East County, or reach out
+  through our contact page today.
+
+internalLinks:
+  - href: /services/water-heater/
+    anchor: hard water and your water heater
+    group: service
+  - href: /services/water-pressure-regulators/
+    anchor: pressure regulator replacement
+    group: service
+  - href: /service-areas/rancho-san-diego/
+    anchor: filtration service in Rancho San Diego
+    group: city
+  - href: /contact/
+    anchor: schedule a water assessment
+    group: page

@@ -1,0 +1,548 @@
+---
+/**
+ * HOMEPAGE — guide Part 3 "Homepage", design Homepage.dc.html.
+ *
+ * Copy is verbatim from the guide; the layout follows the design. Carries the
+ * site-wide Plumber (LocalBusiness) entity plus FAQPage schema, and links to
+ * all 16 service pages and all 10 city pages (guide Part 7.2).
+ */
+import { Image } from 'astro:assets';
+import { site, paths } from '@config/site';
+import { featuredReviews, reviewsArePlaceholder } from '@config/reviews';
+import { images } from '@lib/images';
+import { th } from '@lib/tokens';
+import type { Faq } from '@lib/types';
+
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Hero from '@components/Hero.astro';
+import HeroCtas from '@components/HeroCtas.astro';
+import ContactForm from '@components/ContactForm.astro';
+import ServiceCardGrid from '@components/ServiceCardGrid.astro';
+import FaqBlock from '@components/FaqBlock.astro';
+import CtaSection from '@components/CtaSection.astro';
+import Droplet from '@components/Droplet.astro';
+import ServiceAreaMap from '@components/ServiceAreaMap.astro';
+import LocalBusinessSchema from '@components/schema/LocalBusinessSchema.astro';
+import FaqSchema from '@components/schema/FaqSchema.astro';
+
+const title = 'Plumber in El Cajon, CA | Sedco Plumbing — San Diego County';
+const description =
+  'Licensed El Cajon plumbers serving all of San Diego County. Drains, water heaters, slab leaks, sewer lines and more. Upfront pricing. Call [PHONE].';
+
+const trust = [
+  'Licensed & Insured',
+  'Upfront Pricing',
+  'Same-Day Availability',
+  'Locally Owned in El Cajon',
+];
+
+const whyStats = [
+  {
+    value: 'C-36',
+    label: 'Licensed & bonded',
+    sub: 'California plumbing contractor, fully insured',
+  },
+  { value: 'Flat', label: 'Upfront pricing', sub: 'Approve the price before we start' },
+  { value: 'Same-day', label: 'Fast local response', sub: 'Minutes from most of East County' },
+  { value: '1950s+', label: 'Older-home experts', sub: 'Slab homes, hard water, clay laterals' },
+];
+
+// Guide Part 3 Homepage FAQ — the same array feeds the visible accordion and
+// the FAQPage schema.
+const faqs: Faq[] = [
+  {
+    question: 'Do you charge for estimates?',
+    answer: [
+      '[ESTIMATE POLICY] Call [PHONE] and we will tell you exactly what to expect before we dispatch a technician.',
+    ],
+  },
+  {
+    question: 'Are you licensed and insured?',
+    answer: [
+      'Yes. Sedco Plumbing holds California C-36 plumbing contractor license [LICENSE #] and is fully bonded and insured. We pull permits whenever the work requires them, including water heater replacements and gas line work.',
+    ],
+  },
+  {
+    question: 'How fast can you get to my home?',
+    answer: [
+      'We are based in El Cajon, so most East County addresses are a short drive away. Same-day appointments are usually available, and we offer emergency service [HOURS].',
+    ],
+  },
+];
+
+const eastCountyCities = site.cities.filter((city) => city.slug !== 'san-diego');
+---
+
+<BaseLayout title={title} description={description} path="/">
+  <Fragment slot="head">
+    <LocalBusinessSchema />
+    <FaqSchema faqs={faqs} />
+  </Fragment>
+
+  <Hero
+    variant="home"
+    image={images.heroHome}
+    badge="Licensed CA C-36 plumbing contractor"
+    heading="El Cajon Plumbers Serving All of San Diego County"
+    intro="When a drain backs up, a water heater quits, or a slab leak starts running up your water bill, you want a plumber who is already nearby. Sedco Plumbing is based in El Cajon and serves homes and businesses across East County and greater San Diego County — from La Mesa and Santee to Lakeside, Spring Valley, and beyond. We are licensed (CA C-36 [LICENSE #]), bonded, and insured, and we give you a clear, upfront price before any work begins."
+  >
+    <HeroCtas slot="cta" requestHref="#request" />
+
+    <ul class="trust-row" slot="below">
+      {
+        trust.map((item) => (
+          <li>
+            <span class="check" aria-hidden="true">
+              ✓
+            </span>
+            {item}
+          </li>
+        ))
+      }
+    </ul>
+
+    <ContactForm slot="aside" variant="compact" as="h2" />
+  </Hero>
+
+  <!-- ================= SERVICES ================= -->
+  <section class="section">
+    <div class="container">
+      <div class="split">
+        <div class="section-head">
+          <span class="eyebrow">
+            <Droplet size={12} />
+            What we do
+          </span>
+          <h2>Plumbing Services We Provide</h2>
+          <p>
+            From quick faucet repairs to full sewer line replacements, our team handles the entire
+            plumbing system of your home or business.
+          </p>
+        </div>
+
+        <div class="framed">
+          <Image
+            src={images.servicesIntro.src}
+            alt={images.servicesIntro.alt}
+            widths={[420, 720]}
+            sizes="(max-width: 900px) 100vw, 460px"
+            height={280}
+            loading="lazy"
+          />
+          <div class="framed__badge">
+            <span class="card__glyph" aria-hidden="true">🔧</span>
+            <span>
+              <strong>{site.services.length} services</strong>
+              <span>residential &amp; commercial</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="services-grid">
+        <ServiceCardGrid services={site.services} variant="numbered" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TRUST BAND ================= -->
+  <section class="trust-band on-dark">
+    <Image
+      class="trust-band__bg"
+      src={images.trustBand.src}
+      alt=""
+      widths={[900, 1400, 1920]}
+      sizes="100vw"
+      loading="lazy"
+      aria-hidden="true"
+    />
+    <div class="trust-band__overlay"></div>
+    <div class="container trust-band__inner">
+      <div>
+        <p class="trust-band__head">Real plumbers. Real fixes. Honest prices.</p>
+        <p class="trust-band__sub">
+          Every job backed by a written, flat-rate quote before we start.
+        </p>
+      </div>
+      <a class="btn btn--accent" href={paths.contact}>Get my upfront price →</a>
+    </div>
+  </section>
+
+  <!-- ================= WHY SEDCO ================= -->
+  <section class="section section--tint">
+    <div class="container">
+      <div class="split split--reverse">
+        <div class="framed framed--right">
+          <Image
+            src={images.whyUs.src}
+            alt={images.whyUs.alt}
+            widths={[440, 880]}
+            sizes="(max-width: 900px) 100vw, 480px"
+            height={440}
+            loading="lazy"
+          />
+          <div class="framed__flag">
+            <strong>Flat-rate</strong>
+            <span>no surprises</span>
+          </div>
+        </div>
+
+        <div>
+          <span class="eyebrow">
+            <Droplet size={12} />
+            Local experience
+          </span>
+          <h2>Why East County Homeowners Choose Sedco Plumbing</h2>
+          <p class="why-copy">
+            A lot of the homes we work in were built in the 1950s through the 1980s, and East
+            County’s hard water and hot summers are tough on pipes, fixtures, and water heaters.
+            That local experience matters. We know why Fletcher Hills slabs spring copper leaks, why
+            mature trees in La Mesa find their way into old clay sewer laterals, and why hillside
+            homes in Spring Valley need pressure regulators. You get a technician who has seen your
+            problem before — and a flat-rate price before we start, so there are no surprises on the
+            invoice.
+          </p>
+
+          <div class="stat-grid">
+            {
+              whyStats.map((stat) => (
+                <div class="stat">
+                  <div class="stat__value">{stat.value}</div>
+                  <div class="stat__name">{stat.label}</div>
+                  <div class="stat__label">{stat.sub}</div>
+                </div>
+              ))
+            }
+          </div>
+
+          <p class="warranty-note">
+            Our work is backed by a workmanship warranty <span set:html={th('[WARRANTY TERMS]')} />.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICE AREAS ================= -->
+  <section class="section">
+    <div class="container">
+      <div class="split split--even">
+        <div>
+          <span class="eyebrow">
+            <Droplet size={12} />
+            Where we work
+          </span>
+          <h2>Serving El Cajon and All of San Diego County</h2>
+          <p class="area-copy">
+            Sedco Plumbing is headquartered in El Cajon, which puts us minutes from most of East
+            County. We provide fast service throughout our priority service area — {
+              eastCountyCities.map((city, index) => (
+                <>
+                  <a href={paths.city(city.slug)}>{city.name}</a>
+                  {index < eastCountyCities.length - 2
+                    ? ', '
+                    : index === eastCountyCities.length - 2
+                      ? ', and '
+                      : ''}
+                </>
+              ))
+            } — and we take jobs across <a href={paths.city('san-diego')}>the city of San Diego</a> and
+            the rest of the county.
+          </p>
+
+          <ul class="pill-list area-pills">
+            {
+              site.cities.map((city) => (
+                <li>
+                  <a class="pill" href={paths.city(city.slug)}>
+                    <span aria-hidden="true">📍</span>
+                    {city.name}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+
+        <ServiceAreaMap />
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= REVIEWS ================= -->
+  <section class="reviews-band on-dark">
+    <Droplet class="reviews-band__drop reviews-band__drop--a" size={120} />
+    <Droplet class="reviews-band__drop reviews-band__drop--b" size={90} />
+
+    <div class="container reviews-band__inner">
+      <div class="reviews-band__head">
+        <div>
+          <span class="eyebrow eyebrow--light">Reviews</span>
+          <h2>What Our Customers Say</h2>
+        </div>
+        <a class="btn btn--glass" href={paths.reviews}>Read all reviews →</a>
+      </div>
+
+      <ul class="grid grid--3 review-cards" role="list">
+        {
+          featuredReviews.map((review) => (
+            <li class="review-card">
+              <div class="stars" aria-label="5 out of 5 stars">
+                ★★★★★
+              </div>
+              <p>“{review.quote}”</p>
+              <div class="review-card__name">— {review.name}</div>
+              <div class="review-card__detail">{review.detail}</div>
+            </li>
+          ))
+        }
+      </ul>
+
+      {
+        reviewsArePlaceholder && (
+          <p class="reviews-band__note">
+            Sample reviews — replace with genuine first-party or live Google reviews before launch.
+          </p>
+        )
+      }
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section class="section">
+    <div class="container">
+      <div class="faq-wrap">
+        <div class="section-head section-head--center">
+          <span class="eyebrow">
+            <Droplet size={12} />
+            Good to know
+          </span>
+        </div>
+        <FaqBlock faqs={faqs} center />
+      </div>
+    </div>
+  </section>
+
+  <CtaSection
+    heading="Need a Plumber Today?"
+    body="Tell us what’s going on and we will give you an honest assessment and an upfront price. Call Sedco Plumbing at [PHONE] or request service online — we are ready to help anywhere in San Diego County."
+  />
+</BaseLayout>
+
+<style>
+  .split {
+    display: grid;
+    grid-template-columns: 1fr 0.82fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  .split--reverse {
+    grid-template-columns: 0.92fr 1fr;
+  }
+  .split--even {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .services-grid {
+    margin-top: 4.5rem;
+  }
+
+  .framed img {
+    height: 280px;
+  }
+  .framed--right::before {
+    transform: rotate(3deg);
+    background: linear-gradient(135deg, var(--brand-primary), var(--brand-deep));
+  }
+  .framed--right img {
+    height: 440px;
+    object-position: center 30%;
+  }
+  .framed__flag {
+    position: absolute;
+    top: -18px;
+    right: -14px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 14px;
+    padding: 0.875rem 1.125rem;
+    box-shadow: 0 12px 26px rgba(240, 133, 31, 0.4);
+    text-align: center;
+  }
+  .framed__flag strong {
+    display: block;
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 1.625rem;
+    line-height: 1;
+  }
+  .framed__flag span {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+  }
+
+  .why-copy,
+  .area-copy {
+    font-size: var(--fs-prose);
+    color: var(--text-soft);
+    margin-top: 1.125rem;
+    line-height: 1.65;
+  }
+  .stat__name {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--brand-deep);
+    margin-top: 0.5rem;
+  }
+  .warranty-note {
+    font-size: var(--fs-sm);
+    color: var(--text-muted);
+    margin-top: 1.25rem;
+  }
+  .area-pills {
+    margin-top: 1.625rem;
+  }
+
+  /* ---- Trust band ---- */
+  .trust-band {
+    position: relative;
+    overflow: hidden;
+    background: var(--brand-deep);
+    color: #fff;
+    isolation: isolate;
+  }
+  .trust-band__bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 55%;
+    opacity: 0.28;
+    z-index: -2;
+  }
+  .trust-band__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, var(--brand-trust-band) 20%, rgba(12, 47, 82, 0.6) 100%);
+    z-index: -1;
+  }
+  .trust-band__inner {
+    padding-block: 3.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+  .trust-band__head {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.625rem;
+  }
+  .trust-band__sub {
+    color: #bcd4ea;
+    margin-top: 0.375rem;
+  }
+
+  /* ---- Reviews band ---- */
+  .reviews-band {
+    position: relative;
+    background: var(--brand-deep);
+    color: #fff;
+    overflow: hidden;
+  }
+  .reviews-band__inner {
+    padding-block: var(--section-y);
+    position: relative;
+  }
+  .reviews-band__drop {
+    position: absolute;
+  }
+  .reviews-band__drop--a {
+    left: -20px;
+    top: -30px;
+    color: rgba(56, 182, 232, 0.12);
+  }
+  .reviews-band__drop--b {
+    right: 8%;
+    bottom: -24px;
+    color: rgba(56, 182, 232, 0.1);
+  }
+  .reviews-band__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .reviews-band h2 {
+    color: #fff;
+    margin-top: 0.75rem;
+  }
+  .eyebrow--light {
+    color: #8fc0ee;
+  }
+  .review-cards {
+    list-style: none;
+    padding: 0;
+    margin-top: 2.375rem;
+  }
+  .review-card {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    padding: 1.625rem;
+    backdrop-filter: blur(4px);
+  }
+  .review-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #e3eefa;
+    margin-top: 0.875rem;
+  }
+  .stars {
+    color: var(--star);
+    font-size: 1.0625rem;
+    letter-spacing: 2px;
+  }
+  .review-card__name {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 1rem;
+  }
+  .review-card__detail {
+    font-size: var(--fs-xs);
+    color: #9db8d4;
+  }
+  .reviews-band__note {
+    font-size: 0.78125rem;
+    color: var(--on-dark-faint);
+    margin-top: 1.125rem;
+  }
+
+  .faq-wrap {
+    max-width: var(--measure);
+    margin-inline: auto;
+  }
+  .faq-wrap .section-head--center {
+    margin-bottom: 0.5rem;
+  }
+
+  @media (max-width: 900px) {
+    .split,
+    .split--reverse,
+    .split--even {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+    .framed--right img {
+      height: 340px;
+    }
+    .services-grid {
+      margin-top: 3rem;
+    }
+  }
+</style>

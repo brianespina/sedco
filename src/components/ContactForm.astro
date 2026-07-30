@@ -1,0 +1,293 @@
+---
+/**
+ * Request-service form, posted to Web3Forms so each client's leads land in
+ * their own inbox (access key from WEB3FORMS_ACCESS_KEY).
+ *
+ *  - variant="compact"  Homepage hero card: name, phone, city, service, notes.
+ *  - variant="full"     Contact page: adds email and preferred time
+ *                       (guide Part 3 Contact spec).
+ *
+ * Submission is handled with a small vanilla-JS fetch — success and error
+ * states swap in place, with no full-page reload.
+ */
+import { site } from '@config/site';
+import { th } from '@lib/tokens';
+import Droplet from './Droplet.astro';
+
+interface Props {
+  variant?: 'compact' | 'full';
+  heading?: string;
+  blurb?: string;
+  /** Heading level, so the form fits each page's heading order */
+  as?: 'h2' | 'h3';
+  /** Pre-select a city, e.g. on a city page */
+  city?: string;
+  /** Pre-select a service, e.g. on a service page */
+  service?: string;
+  id?: string;
+}
+
+const {
+  variant = 'compact',
+  heading = 'Request Service',
+  blurb = "Tell us what's going on — we'll reply with an honest assessment and an upfront price.",
+  as: Tag = 'h3',
+  city,
+  service,
+  id = 'request',
+} = Astro.props;
+
+const accessKey = site.integrations.web3formsKey;
+const isFull = variant === 'full';
+
+const cityOptions = [...site.cities.map((c) => c.name), 'Other — San Diego County'];
+const serviceOptions = [...site.services.map((s) => s.name), 'Not sure / something else'];
+---
+
+<div class={`request-card ${isFull ? 'request-card--full' : ''}`} id={id}>
+  {
+    !isFull && (
+      <div class="pipe-joint" aria-hidden="true">
+        <Droplet size={16} highlight />
+      </div>
+    )
+  }
+
+  <div data-form-panel>
+    <Tag>{heading}</Tag>
+    <p class="request-card__blurb">{blurb}</p>
+
+    <form class="form-grid" data-contact-form novalidate>
+      <input type="hidden" name="access_key" value={accessKey} />
+      <input
+        type="hidden"
+        name="subject"
+        value={`New service request — ${site.business.name} website`}
+      />
+      <input type="hidden" name="from_name" value={`${site.business.name} website`} />
+      <!-- Web3Forms honeypot -->
+      <input type="checkbox" name="botcheck" class="visually-hidden" tabindex="-1" />
+
+      <div class="field">
+        <label for={`${id}-name`}>Name</label>
+        <input id={`${id}-name`} name="name" type="text" autocomplete="name" required />
+        <span class="field__error">Please enter your name.</span>
+      </div>
+
+      <div class="field">
+        <label for={`${id}-phone`}>Phone</label>
+        <input
+          id={`${id}-phone`}
+          name="phone"
+          type="tel"
+          inputmode="tel"
+          autocomplete="tel"
+          required
+        />
+        <span class="field__error">Please enter a phone number we can reach you on.</span>
+      </div>
+
+      {
+        isFull && (
+          <div class="field">
+            <label for={`${id}-email`}>Email</label>
+            <input id={`${id}-email`} name="email" type="email" autocomplete="email" />
+            <span class="field__error">Please check the email address.</span>
+          </div>
+        )
+      }
+
+      <div class="field">
+        <label for={`${id}-city`}>Service address city</label>
+        <select id={`${id}-city`} name="city">
+          <option value="">Your city…</option>
+          {
+            cityOptions.map((option) => (
+              <option value={option} selected={option === city}>
+                {option}
+              </option>
+            ))
+          }
+        </select>
+      </div>
+
+      <div class="field">
+        <label for={`${id}-service`}>What do you need help with?</label>
+        <select id={`${id}-service`} name="service">
+          <option value="">Choose a service…</option>
+          {
+            serviceOptions.map((option) => (
+              <option value={option} selected={option === service}>
+                {option}
+              </option>
+            ))
+          }
+        </select>
+      </div>
+
+      <div class="field">
+        <label for={`${id}-details`}>Brief description</label>
+        <textarea id={`${id}-details`} name="details" rows={isFull ? 4 : 2}></textarea>
+      </div>
+
+      {
+        isFull && (
+          <div class="field">
+            <label for={`${id}-preferred`}>Preferred time</label>
+            <input
+              id={`${id}-preferred`}
+              name="preferred_time"
+              type="text"
+              placeholder="e.g. weekday mornings, ASAP"
+            />
+          </div>
+        )
+      }
+
+      <p class="form-error" data-form-error hidden></p>
+
+      <button class="btn btn--primary btn--block" type="submit">Request Service</button>
+
+      <p class="form-note">Same-day appointments usually available. No obligation.</p>
+    </form>
+  </div>
+
+  <div class="form-success" data-form-success hidden>
+    <div class="form-success__mark" aria-hidden="true">✓</div>
+    <h3>Request received</h3>
+    <p>
+      Thanks — we'll call you back promptly during business hours. Need help now? Call
+      <span set:html={th('[PHONE]')} />.
+    </p>
+  </div>
+</div>
+
+<style>
+  .request-card {
+    position: relative;
+    background: #fff;
+    border-radius: var(--r-card-lg);
+    padding: 1.75rem;
+    color: var(--text);
+    border-top: 5px solid var(--brand-primary);
+    box-shadow: var(--sh-hero-card);
+  }
+  .request-card--full {
+    box-shadow: var(--sh-card);
+    border: 1px solid var(--border);
+    border-top: 5px solid var(--brand-primary);
+  }
+  .request-card__blurb {
+    font-size: var(--fs-sm);
+    color: var(--text-muted);
+    margin-top: 0.25rem;
+  }
+  .request-card h3 {
+    font-size: 1.4375rem;
+    font-weight: 800;
+  }
+
+  /* Chrome pipe-joint accent tab from the design */
+  .pipe-joint {
+    position: absolute;
+    top: -16px;
+    right: 26px;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: linear-gradient(180deg, #eaf2fa, #9fb8cd 48%, #6f8ba3 52%, #c3d5e5);
+    box-shadow: 0 6px 14px rgba(15, 58, 99, 0.28);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--brand-primary);
+    user-select: none;
+  }
+</style>
+
+<script>
+  const PHONE_RE = /^[\d\s()+.\-]{7,}$/;
+  const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  document.querySelectorAll<HTMLFormElement>('[data-contact-form]').forEach((form) => {
+    const card = form.closest('.request-card');
+    const panel = card?.querySelector<HTMLElement>('[data-form-panel]');
+    const success = card?.querySelector<HTMLElement>('[data-form-success]');
+    const errorBox = form.querySelector<HTMLElement>('[data-form-error]');
+    const submit = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+
+    const setInvalid = (input: HTMLElement | null, invalid: boolean) => {
+      input?.closest('.field')?.toggleAttribute('data-invalid', invalid);
+    };
+
+    const validate = (): boolean => {
+      let ok = true;
+      const name = form.querySelector<HTMLInputElement>('[name="name"]');
+      const phone = form.querySelector<HTMLInputElement>('[name="phone"]');
+      const email = form.querySelector<HTMLInputElement>('[name="email"]');
+
+      const nameOk = Boolean(name?.value.trim());
+      setInvalid(name, !nameOk);
+      ok = ok && nameOk;
+
+      const phoneOk = PHONE_RE.test(phone?.value.trim() ?? '');
+      setInvalid(phone, !phoneOk);
+      ok = ok && phoneOk;
+
+      if (email && email.value.trim()) {
+        const emailOk = EMAIL_RE.test(email.value.trim());
+        setInvalid(email, !emailOk);
+        ok = ok && emailOk;
+      } else {
+        setInvalid(email, false);
+      }
+
+      return ok;
+    };
+
+    form.addEventListener('input', (event) => {
+      const target = event.target as HTMLElement;
+      if (target.closest('.field[data-invalid]')) validate();
+    });
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (errorBox) errorBox.hidden = true;
+      if (!validate()) return;
+
+      const label = submit?.textContent ?? '';
+      if (submit) {
+        submit.disabled = true;
+        submit.textContent = 'Sending…';
+      }
+
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify(Object.fromEntries(new FormData(form).entries())),
+        });
+        const result = await response.json();
+
+        if (!response.ok || result.success === false) {
+          throw new Error(result.message || 'Submission failed');
+        }
+
+        if (panel) panel.hidden = true;
+        if (success) success.hidden = false;
+        success?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      } catch {
+        if (errorBox) {
+          errorBox.textContent =
+            "Sorry — that didn't go through. Please call us instead, or try again in a moment.";
+          errorBox.hidden = false;
+        }
+      } finally {
+        if (submit) {
+          submit.disabled = false;
+          submit.textContent = label;
+        }
+      }
+    });
+  });
+</script>

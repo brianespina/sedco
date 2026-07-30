@@ -1,0 +1,110 @@
+---
+/**
+ * PRIVACY POLICY — linked from the footer (guide Part 2).
+ *
+ * PLACEHOLDER CONTENT: this is a plain-language starting point covering what
+ * the site actually collects (contact form submissions via Web3Forms, and
+ * analytics if enabled). Have the client review it — and take legal advice if
+ * they operate under CCPA thresholds — before launch.
+ */
+import { site, paths } from '@config/site';
+import { th, emailHref } from '@lib/tokens';
+
+import BaseLayout from '@layouts/BaseLayout.astro';
+
+const title = `Privacy Policy | ${site.business.name}`;
+const description = `How ${site.business.name} collects and uses the information you submit through this website.`;
+const path = paths.privacy;
+
+const crumbs = [{ name: 'Home', href: paths.home }, { name: 'Privacy Policy' }];
+
+const updated = new Intl.DateTimeFormat('en-US', {
+  month: 'long',
+  year: 'numeric',
+}).format(new Date());
+---
+
+<BaseLayout title={title} description={description} path={path} crumbs={crumbs} noindex>
+  <section class="section">
+    <div class="container">
+      <article class="prose measure">
+        <h1>Privacy Policy</h1>
+        <p class="updated">Last updated {updated}</p>
+
+        <p class="review-note">
+          <span class="ph-chip">REVIEW BEFORE LAUNCH</span> This policy is a starting point that reflects
+          what the website actually collects. Have {site.business.name} review and approve it — and seek
+          legal advice on California privacy obligations — before go-live.
+        </p>
+
+        <h2>What We Collect</h2>
+        <p>
+          When you submit our contact form, we collect the details you enter: your name, phone number, email
+          address, service address city, the service you need, your description of the problem, and your
+          preferred time. We collect this only because you chose to send it to us.
+        </p>
+        <p>
+          Our form is processed by Web3Forms, which delivers the submission to our email inbox. We do not
+          store form submissions on this website.
+        </p>
+
+        <h2>How We Use It</h2>
+        <p>
+          We use what you send to respond to your request, schedule service, and follow up about the work. We
+          do not sell your information, and we do not share it with anyone except where it is necessary to
+          perform the service you asked for.
+        </p>
+
+        <h2>Analytics</h2>
+        <p>
+          If web analytics are enabled on this site, they collect aggregate information about how pages are
+          used — such as which pages are visited and roughly where visitors are located. This is used to
+          improve the website and is not tied to your name or contact details.
+        </p>
+
+        <h2>Cookies</h2>
+        <p>
+          This website does not set advertising or tracking cookies of its own. Any cookies present come from
+          analytics, if enabled, and can be blocked through your browser settings without affecting how the
+          site works.
+        </p>
+
+        <h2>Your Choices</h2>
+        <p>
+          You can ask us what information we hold about you, ask us to correct it, or ask us to delete it.
+          Email <a href={emailHref()}><span set:html={th('[EMAIL]')} /></a> or call
+          <span set:html={th('[PHONE]')} /> and we will take care of it.
+        </p>
+
+        <h2>Contact Us</h2>
+        <p>
+          {site.business.name} · {site.business.locality}, {site.business.region} ·
+          <span set:html={th('[PHONE]')} /> · <span set:html={th('[EMAIL]')} />
+          <br />
+          California {site.business.licenseClass} plumbing contractor license
+          <span set:html={th('[LICENSE #]')} />.
+        </p>
+
+        <p>
+          Questions about a service request instead? Use our <a href={paths.contact}>contact page</a>.
+        </p>
+      </article>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .updated {
+    font-size: 0.875rem !important;
+    color: var(--text-muted) !important;
+  }
+  .review-note {
+    background: var(--ph-bg);
+    border: 1px dashed var(--ph-border);
+    border-radius: var(--r-card);
+    padding: 1rem 1.125rem;
+    font-size: var(--fs-sm) !important;
+    line-height: 1.6 !important;
+    color: var(--ph-text) !important;
+  }
+</style>

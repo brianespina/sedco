@@ -1,0 +1,13 @@
+{
+	// Cloudflare Workers deploy target. Rename `name` per client.
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "sedco-plumbing",
+	"main": "@astrojs/cloudflare/entrypoints/server",
+	"compatibility_date": "2026-07-01",
+	"compatibility_flags": [
+		"nodejs_compat"
+	],
+	"observability": {
+		"enabled": true
+	}
+}

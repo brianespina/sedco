@@ -1,0 +1,92 @@
+service: drain-cleaning
+city: spring-valley
+
+title: Drain Cleaning in Spring Valley, CA | Sedco Plumbing
+description: >-
+  Slow drains in Spring Valley? Sedco Plumbing safely clears aging cast iron and galvanized lines in older homes.
+  Flat-rate pricing. Call [PHONE].
+primaryKeyword: drain cleaning Spring Valley
+supportingKeywords:
+  - clogged drain Spring Valley
+  - drain snake Spring Valley
+  - hydro jetting Spring Valley CA
+  - cast iron drain cleaning
+  - main line clog 91977
+
+heroStat: Same day
+heroStatLabel: The norm, not the exception
+heroPoints:
+  - Pipe condition assessed before we pick a tool
+  - Pressure matched to what old cast iron can tolerate
+  - Correct cleanout located, no pulled toilets
+  - Flat-rate pricing from a licensed C-36 contractor
+
+h1: Drain Cleaning in Spring Valley, CA
+intro:
+  - >-
+    Homes in Spring Valley have character — and character, in plumbing terms, often means drains that were
+    installed when Eisenhower was president. Sedco Plumbing clears clogged and sluggish drains throughout Spring
+    Valley, from Casa de Oro to La Presa to the slopes of Dictionary Hill, with methods matched to the age and
+    condition of your pipes.
+
+sections:
+  - heading: What Clogs Spring Valley Drains
+    paragraphs:
+      - >-
+        Much of the community’s housing stock dates to the mid-1900s, which means original cast iron drains whose
+        interiors have grown rough and scaly with corrosion — a texture that grabs grease, hair, and paper. Galvanized
+        branch lines narrow year by year until a sink that once drained fine barely gurgles. Add mature trees sending
+        roots into aging laterals and you have the three problems behind most of our Spring Valley drain calls.
+
+  - heading: A Lighter Touch for Older Pipes
+    paragraphs:
+      - >-
+        Aggressive cabling can punch through the wall of a badly corroded cast iron drain, turning a clog into a flood.
+        Our technicians assess pipe condition first — with a camera when warranted — then choose the right tool, whether
+        that is a carefully sized cable, an enzyme treatment, or hydro jetting at a pressure the pipe can tolerate. If a
+        line is truly at the end of its life, we say so, with footage to prove it, rather than billing you for cleanings
+        that cannot last.
+
+  - heading: Hillside Homes and Hidden Cleanouts
+    paragraphs:
+      - >-
+        On Dictionary Hill and other sloped streets, cleanouts hide behind retaining walls, under decks, or partway down
+        a terraced yard. We locate the correct access point instead of forcing equipment through a roof vent or pulling a
+        toilet unnecessarily — a small thing that keeps the job faster and cleaner.
+
+faqs:
+  - question: Why do drains in older Spring Valley homes clog so often?
+    answer:
+      - >-
+        Decades of internal corrosion leave cast iron and galvanized pipes with rough, narrowed interiors that catch
+        debris. Cleaning restores flow, but the pipe’s condition is the underlying cause — a camera inspection shows how
+        much useful life remains.
+  - question: Is hydro jetting safe for old cast iron pipes?
+    answer:
+      - >-
+        Sometimes. It depends on how much sound metal is left. We scope questionable lines first and adjust pressure to
+        the pipe’s condition, or recommend cabling when jetting poses a risk.
+  - question: How fast can you reach Spring Valley from El Cajon?
+    answer:
+      - >-
+        Our shop is just up the road — most Spring Valley addresses are a short drive via Jamacha Road or SR-94.
+        Same-day drain service is the norm rather than the exception, and emergency availability is [HOURS].
+
+ctaHeading: Clear Drains, No Guesswork
+ctaBody: >-
+  You get flat-rate pricing before the work starts and a licensed C-36 contractor ([LICENSE #]) doing it. Call Sedco
+  Plumbing at [PHONE] to book drain cleaning in Spring Valley today.
+
+internalLinks:
+  - href: /services/drain-cleaning/
+    anchor: drain cleaning services
+    group: service
+  - href: /service-areas/spring-valley/
+    anchor: plumber in Spring Valley
+    group: city
+  - href: /services/sewer-lines/spring-valley/
+    anchor: sewer line repair in Spring Valley
+    group: combo
+  - href: /contact/
+    anchor: book a visit
+    group: page

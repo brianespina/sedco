@@ -1,0 +1,46 @@
+---
+/**
+ * Service-area city cards (design ServiceAreasHub: gradient 📍 chip, the city's
+ * one-line descriptor, "View {city} page →").
+ */
+import { paths, type CityDef } from '@config/site';
+import Droplet from './Droplet.astro';
+
+interface Props {
+  cities: CityDef[];
+  columns?: 3 | 4;
+}
+
+const { cities, columns = 3 } = Astro.props;
+---
+
+<ul class={`grid grid--${columns} city-grid`} role="list">
+  {
+    cities.map((city) => (
+      <li>
+        <a class="card" href={paths.city(city.slug)}>
+          <Droplet class="card__watermark" size={60} />
+          <span class="card__num" aria-hidden="true">
+            📍
+          </span>
+          <h3>{city.name}, {'CA'}</h3>
+          <p>{city.descriptor}</p>
+          <span class="card__more" aria-hidden="true">View {city.name} page →</span>
+        </a>
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  .city-grid {
+    list-style: none;
+    padding: 0;
+  }
+  .city-grid > li {
+    display: flex;
+  }
+  .city-grid .card {
+    width: 100%;
+  }
+</style>

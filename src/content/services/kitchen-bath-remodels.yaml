@@ -1,0 +1,112 @@
+service: kitchen-bath-remodels
+
+title: Kitchen & Bath Remodel Plumbing in El Cajon | Sedco Plumbing
+description: >-
+  Remodel plumbing for El Cajon kitchens and baths — rough-in, fixture setting, and CA low-flow compliance,
+  coordinated with your contractor. Call [PHONE].
+primaryKeyword: bathroom remodel plumbing El Cajon
+supportingKeywords:
+  - kitchen remodel plumber El Cajon
+  - rough-in plumbing
+  - remodel plumbing contractor
+  - fixture installation
+  - low-flow fixture requirements California
+
+heroBadge: Rough-in through final fixture
+heroStat: 1.28 gpf
+heroStatLabel: California remodel standard
+heroPoints:
+  - Stub-outs measured from your cabinet and tile drawings
+  - Rough-in inspections signed off before walls close
+  - Accessible shutoffs at every fixture
+  - License, bonding, and insurance docs on request
+
+h1: Kitchen & Bathroom Remodel Plumbing in El Cajon
+intro:
+  - >-
+    Kitchens and bathrooms are where remodel budgets go — and where plumbing mistakes get buried under
+    beautiful finishes. Sedco Plumbing is the plumbing trade on remodels across El Cajon and East County,
+    handling everything from the first rough-in to the final faucet. Whether you are opening up a 1960s
+    Fletcher Hills kitchen or gutting a hall bath in Rancho San Diego, we make sure the systems inside your new
+    walls are as well built as the surfaces outside them.
+
+sections:
+  - heading: 'The Rough-In: Your Remodel’s Foundation'
+    paragraphs:
+      - >-
+        Rough-in is the stage where drains, vents, and supply lines are placed for the new layout, and it is
+        where experience pays. Moving a sink to an island means running drain and vent lines that actually meet
+        code, not just reach the cabinet. Relocating a toilet in a slab home means saw-cutting concrete and
+        re-sloping the drain correctly the first time, because there is no second look after the pour-back. We
+        size supply lines for the fixture count, add accessible shutoffs at every fixture, and stub out to
+        precise measurements from your cabinet and tile drawings — so nothing gets improvised on installation
+        day. Rough-in inspections are signed off before a single wall closes.
+
+  - heading: How We Work With Your Contractor or Designer
+    paragraphs:
+      - >-
+        Remodels live and die by scheduling, so we behave like the trade partner your general contractor wishes
+        every sub was. That means showing up in the window we committed to, coordinating directly with the GC,
+        tile setter, and electrician, flagging conflicts on the plans before demolition rather than after, and
+        returning promptly for trim-out when finishes are ready. Homeowners running their own projects get the
+        same treatment, plus plain-language guidance on sequencing and inspections. We carry CA C-36 license
+        [LICENSE #], bonding, and insurance — documentation your contractor or lender can have on request.
+
+  - heading: California’s Low-Flow Fixture Rules, Handled
+    paragraphs:
+      - >-
+        State law requires water-conserving fixtures when you remodel, and your final inspection can hinge on
+        them. Current standards call for toilets at 1.28 gallons per flush, showerheads at 1.8 gallons per
+        minute, bathroom faucets at 1.2 gpm, and kitchen faucets at 1.8 gpm. The good news is that today’s
+        WaterSense-rated fixtures perform far better than the weak first-generation models that gave low-flow a
+        bad name. We help you select fixtures that meet code and still feel great, and every fixture we install
+        is compliant — which protects both your inspection sign-off and your position when you eventually sell.
+
+faqs:
+  - question: When should the plumber get involved in my remodel?
+    answer:
+      - >-
+        At the design stage, before demolition. Reviewing the plans early lets us confirm the new layout is
+        plumbable within budget, price the rough-in accurately, and reserve your spot in the construction
+        schedule.
+  - question: Can I move my kitchen sink or toilet to a new location?
+    answer:
+      - >-
+        Almost always, yes — the question is cost. In El Cajon’s slab-built homes, relocating a drain means
+        cutting and repouring concrete, so we price both your preferred layout and a keep-it-close alternative
+        so you can decide with real numbers.
+  - question: What are California’s low-flow requirements for a remodel?
+    answer:
+      - >-
+        Remodels must use fixtures meeting state efficiency standards: 1.28-gallon toilets, 1.8-gpm
+        showerheads, 1.2-gpm bathroom faucets, and 1.8-gpm kitchen faucets. Compliant fixtures are required for
+        final inspection, and we install to these standards by default.
+  - question: Do you handle the plumbing permits for a remodel?
+    answer:
+      - >-
+        Yes, we pull the plumbing permits for our scope and meet the inspector on site for rough and final
+        inspections. Your GC’s building permit covers the overall project, and we slot our inspections into
+        that schedule.
+
+ctaHeading: Build Your Remodel on Plumbing Done Right
+ctaBody: >-
+  The tile will get the compliments; the rough-in will determine whether the room works for the next thirty
+  years. For remodel plumbing in El Cajon and throughout East County — designed, permitted, and installed by
+  a local licensed contractor — call Sedco Plumbing at [PHONE] and let us look at your plans.
+
+internalLinks:
+  - href: /services/shower-installation/
+    anchor: shower installation and remodel
+    group: service
+  - href: /services/sink-services/
+    anchor: sink installation
+    group: service
+  - href: /services/gas-lines/
+    anchor: gas lines for ranges
+    group: service
+  - href: /services/faucet-services/
+    anchor: faucet installation
+    group: service
+  - href: /contact/
+    anchor: coordinate your remodel
+    group: page

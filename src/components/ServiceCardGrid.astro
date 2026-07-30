@@ -1,0 +1,77 @@
+---
+/**
+ * Service card grid.
+ *
+ *  - variant="numbered"  Homepage: 4-up, gradient number chip, `cardLine` copy.
+ *  - variant="glyph"     Services hub: 3-up, section glyph, `hubLine` copy and
+ *                        a "Learn more" affordance.
+ *
+ * Card titles link to their service page, so the homepage-to-all-16 and
+ * hub-to-all-16 internal links of the guide's link map come from one component.
+ */
+import { paths, type ServiceDef } from '@config/site';
+import Droplet from './Droplet.astro';
+
+interface Props {
+  services: ServiceDef[];
+  variant?: 'numbered' | 'glyph';
+  /** Section glyph for variant="glyph" */
+  glyph?: string;
+  /** Number the first card starts from, so the homepage grid runs 1-16 */
+  startIndex?: number;
+  columns?: 3 | 4;
+}
+
+const {
+  services,
+  variant = 'numbered',
+  glyph = '🔧',
+  startIndex = 1,
+  columns = variant === 'numbered' ? 4 : 3,
+} = Astro.props;
+---
+
+<ul class={`grid grid--${columns} card-grid`} role="list">
+  {
+    services.map((service, index) => (
+      <li>
+        <a class="card" href={paths.service(service.slug)}>
+          <Droplet class="card__watermark" size={60} />
+
+          {variant === 'numbered' ? (
+            <span class="card__num" aria-hidden="true">
+              {String(startIndex + index).padStart(2, '0')}
+            </span>
+          ) : (
+            <span class="card__glyph" aria-hidden="true">
+              {glyph}
+            </span>
+          )}
+
+          <h3>{variant === 'numbered' ? service.name : service.hubLabel}</h3>
+          <p>{variant === 'numbered' ? service.cardLine : service.hubLine}</p>
+
+          {variant === 'glyph' && (
+            <span class="card__more" aria-hidden="true">
+              Learn more →
+            </span>
+          )}
+        </a>
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  .card-grid {
+    list-style: none;
+    padding: 0;
+  }
+  .card-grid > li {
+    display: flex;
+  }
+  .card-grid .card {
+    width: 100%;
+    min-height: 152px;
+  }
+</style>

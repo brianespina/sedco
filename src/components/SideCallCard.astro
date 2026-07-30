@@ -1,0 +1,53 @@
+---
+/**
+ * Dark "Request Service" card for the sticky sidebar on service, city, and
+ * blog-post templates (design Service.dc.html sidebar).
+ */
+import { paths } from '@config/site';
+import { phoneHref } from '@lib/tokens';
+import Phone from './Phone.astro';
+
+interface Props {
+  heading?: string;
+  body?: string;
+  points?: string[];
+}
+
+const {
+  heading = 'Request Service',
+  body = 'Talk to a licensed local plumber and get an upfront price before any work begins.',
+  points = ['Licensed & insured', 'Flat-rate pricing', 'Same-day availability'],
+} = Astro.props;
+---
+
+<div class="side-card side-card--dark on-dark">
+  <h2>{heading}</h2>
+  <p>{body}</p>
+
+  <a class="btn btn--accent btn--block side-call" href={phoneHref()}>
+    <span aria-hidden="true">📞</span> Call <Phone />
+  </a>
+  <a class="btn btn--glass btn--block" href={paths.contact}>Request online</a>
+
+  <ul>
+    {
+      points.map((point) => (
+        <li>
+          <span class="check" aria-hidden="true">
+            ✓
+          </span>
+          {point}
+        </li>
+      ))
+    }
+  </ul>
+</div>
+
+<style>
+  .side-call {
+    margin-top: 1.25rem;
+  }
+  .side-card--dark .btn--block + .btn--block {
+    margin-top: 0.5rem;
+  }
+</style>

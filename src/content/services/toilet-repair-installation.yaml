@@ -1,0 +1,109 @@
+service: toilet-repair-installation
+
+title: Toilet Repair & Installation in El Cajon | Sedco Plumbing
+description: >-
+  Running, leaking, or clogged toilet in El Cajon? Fast repairs and clean installs from a licensed local
+  plumber. Upfront flat pricing. Call [PHONE].
+primaryKeyword: toilet repair El Cajon
+supportingKeywords:
+  - toilet installation El Cajon
+  - running toilet fix
+  - toilet replacement East County
+  - leaking toilet repair
+  - low-flow toilet install
+
+heroBadge: Same-day repairs, parts stocked on the truck
+heroStat: 1–2 hrs
+heroStatLabel: Typical replacement
+heroPoints:
+  - Most repairs finished in a single visit
+  - WaterSense 1.28 gpf models installed to California code
+  - Old fixture hauled away
+  - Flat-rate price before we start
+
+h1: Toilet Repair and Installation in El Cajon
+intro:
+  - >-
+    Few plumbing problems disrupt a household faster than a toilet that will not flush — or will not
+    stop. Sedco Plumbing repairs and replaces toilets across El Cajon and the East County communities
+    around it, usually in a single visit with parts stocked on the truck. Whether you are dealing with
+    a constant run, a rocking base, a stubborn clog, or a fixture that has simply served its time, we
+    will give you an honest read on the cheapest sensible fix.
+
+sections:
+  - heading: Common Toilet Problems We Fix the Same Day
+    paragraphs:
+      - >-
+        Most toilet calls come down to a handful of worn parts. A toilet that runs constantly or
+        “phantom flushes” at night usually needs a new flapper or fill valve — a quick repair that can
+        save thousands of gallons a month on your Helix Water District bill. Water seeping around the
+        base typically points to a failed wax ring, while moisture on the tank or floor can be a cracked
+        tank, sweating porcelain, or a loose supply connection. We also handle weak flushes, clogs that
+        a plunger cannot beat, loose handles, and toilets that rock because the flange beneath them has
+        corroded or broken.
+
+  - heading: Time for a New Toilet? Installation and Replacement
+    paragraphs:
+      - >-
+        If your toilet is decades old, cracks, or clogs constantly, replacement often costs less over
+        time than repeat repairs. California requires high-efficiency 1.28-gallon-per-flush models on
+        new installations, and the good news is that modern WaterSense toilets flush far better than the
+        first-generation low-flow units that gave efficiency a bad name. We help you choose the right
+        bowl shape, height (many El Cajon customers love comfort-height models), and flush design for
+        your bathroom, then remove the old fixture, set the new one on a fresh wax ring or waxless seal,
+        and haul the old toilet away.
+
+  - heading: Hard Water Is Rough on Toilets, Too
+    paragraphs:
+      - >-
+        East County’s mineral-heavy water does not spare your bathroom. Scale slowly plugs the small rim
+        jets under the bowl’s edge, weakening the flush year after year, and it stiffens fill valves
+        until they fail. If your toilet flushes noticeably worse than it used to, mineral buildup is a
+        likely suspect, and it is one of the reasons local toilets tend to wear out sooner than the same
+        models installed in soft-water regions. We can descale, repair, or replace as needed — and tell
+        you plainly which option makes financial sense.
+
+faqs:
+  - question: Should I repair my toilet or replace it?
+    answer:
+      - >-
+        As a rule of thumb, repair a toilet under ten years old with a single failed part, and consider
+        replacement if it is older, cracked, or needs multiple repairs. We give you a flat-rate price for
+        both options so you can compare directly.
+  - question: Why does my toilet keep running?
+    answer:
+      - >-
+        A running toilet almost always means a worn flapper, a misadjusted float, or a failing fill
+        valve inside the tank. It wastes a surprising amount of water, so it is worth fixing quickly.
+  - question: How long does a toilet installation take?
+    answer:
+      - >-
+        A straightforward replacement takes about one to two hours. If we find a damaged flange or
+        subfloor issue under the old toilet, we will show you the problem and price the fix before
+        continuing.
+  - question: Do low-flow toilets clog more often?
+    answer:
+      - >-
+        Modern WaterSense models flush very effectively — the clog-prone reputation comes from
+        early-1990s designs. If a newer toilet clogs frequently, the real problem is usually in the drain
+        line, not the fixture.
+
+ctaHeading: Get That Toilet Fixed Today
+ctaBody: >-
+  A misbehaving toilet never picks a good time. Call Sedco Plumbing at [PHONE] for same-day toilet
+  repair and installation in El Cajon, or schedule online through our contact page and we will confirm
+  your appointment promptly.
+
+internalLinks:
+  - href: /services/drain-cleaning/
+    anchor: clear a clogged toilet line
+    group: service
+  - href: /services/sink-services/
+    anchor: bathroom sink installation and repair
+    group: service
+  - href: /service-areas/lakeside/
+    anchor: toilet repair near Lakeside
+    group: city
+  - href: /contact/
+    anchor: book a repair visit
+    group: page

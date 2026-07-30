@@ -1,0 +1,91 @@
+service: toilet-repair-installation
+city: santee
+
+title: Toilet Repair in Santee, CA | Sedco Plumbing
+description: >-
+  From worn-out originals to modern low-flow upgrades, Sedco Plumbing repairs and installs toilets in Santee
+  homes, usually same day. Call [PHONE].
+primaryKeyword: toilet repair Santee
+supportingKeywords:
+  - toilet installation Santee
+  - toilet replacement Santee
+  - running toilet Santee
+  - weak flush repair
+  - low-flow toilet upgrade
+
+heroStat: Under 1 hr
+heroStatLabel: Most repairs
+heroPoints:
+  - Parts stocked on the truck
+  - Worn angle stops and supply lines swapped while we are there
+  - Old fixture hauled away on every installation
+  - Bathroom left cleaner than we found it
+
+h1: Toilet Repair & Installation in Santee, CA
+intro:
+  - >-
+    Is the toilet in your hall bathroom original to the house? In Santee, the answer is often yes — and a fixture
+    that has been flushing since the Carter administration has earned its retirement. Sedco Plumbing repairs and
+    installs toilets across Santee with parts stocked on the truck, flat-rate pricing, and technicians who leave the
+    bathroom cleaner than they found it. Most jobs are finished in one visit.
+
+sections:
+  - heading: Hard Water Is Hard on Toilets
+    paragraphs:
+      - >-
+        Padre Dam’s mineral-rich supply shortens the life of every rubber and plastic part inside a tank. Flappers
+        stiffen and stop sealing, fill valves scale up and hiss, and deposits clog the small rim jets under the bowl’s
+        edge until the flush turns weak and swirly. These are inexpensive fixes when handled early — and quiet
+        water-wasters when ignored, since a failing flapper can send thousands of gallons a month straight past your
+        meter.
+
+  - heading: Repairs We Handle in a Single Visit
+    paragraphs:
+      - >-
+        Running toilets, phantom flushes, weak flushes, clogs, leaks at the base or supply line, cracked seats and
+        hardware, shutoff valves that no longer shut off — we carry the parts for all of it. If the porcelain itself
+        is sound, repair is usually the economical choice, and we will say so. While we are there, we also swap out
+        worn angle stops and corroded supply lines — the cheap parts whose slow under-tank drips quietly ruin vanities
+        and flooring.
+
+  - heading: When It Is Time for an Upgrade
+    paragraphs:
+      - >-
+        Toilets original to Santee’s 1970s–80s homes use 3.5 to 5 gallons per flush. Swapping one for a modern
+        1.28-gallon high-efficiency model saves a typical family thousands of gallons a year on the Padre Dam bill,
+        and current pressure-assisted and gravity designs outperform the originals in every way that matters. In newer
+        Sky Ranch homes, upgrades are usually about comfort — taller bowls, quieter fills, better styling — and we
+        install owner-supplied fixtures as happily as ones we provide.
+
+faqs:
+  - question: How soon can someone be at my Santee home?
+    answer:
+      - >-
+        Generally the same day — Santee is one of the closest cities to our El Cajon home base, and toilet calls are
+        easy to slot in because most repairs take under an hour.
+  - question: My toilet flushes weakly even though nothing is clogged. Why?
+    answer:
+      - >-
+        With Santee’s water, the usual culprit is mineral scale blocking the rim jets and siphon jet, throttling the
+        flush. Cleaning the jets — or replacing a worn-out older toilet — restores full performance.
+  - question: Do you haul away the old toilet?
+    answer:
+      - >-
+        Yes. Every installation includes removal and disposal of the old fixture, a new wax ring or seal, a new supply
+        line, and a leak check before we leave.
+
+ctaHeading: One Call, One Visit, Done
+ctaBody: >-
+  A misbehaving toilet is a daily annoyance with a same-day solution. Call Sedco Plumbing at [PHONE] to schedule
+  toilet repair or a new installation anywhere in Santee.
+
+internalLinks:
+  - href: /services/toilet-repair-installation/
+    anchor: toilet services
+    group: service
+  - href: /service-areas/santee/
+    anchor: Santee plumber
+    group: city
+  - href: /services/drain-cleaning/santee/
+    anchor: drain cleaning in Santee
+    group: combo

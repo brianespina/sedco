@@ -1,0 +1,39 @@
+---
+/**
+ * Light breadcrumb bar shown above every non-home hero (guide Part 2, design
+ * "breadcrumb bar"). The matching BreadcrumbList schema is emitted separately
+ * from the same data by BaseLayout.
+ */
+import type { Crumb } from '@lib/types';
+
+interface Props {
+  crumbs: Crumb[];
+}
+
+const { crumbs } = Astro.props;
+---
+
+<nav class="crumbs" aria-label="Breadcrumb">
+  <div class="container">
+    <ol>
+      {
+        crumbs.map((crumb, index) => (
+          <>
+            <li>
+              {crumb.href ? (
+                <a href={crumb.href}>{crumb.name}</a>
+              ) : (
+                <span aria-current="page">{crumb.name}</span>
+              )}
+            </li>
+            {index < crumbs.length - 1 && (
+              <li class="sep" aria-hidden="true">
+                /
+              </li>
+            )}
+          </>
+        ))
+      }
+    </ol>
+  </div>
+</nav>

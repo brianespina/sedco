@@ -1,0 +1,91 @@
+service: drain-cleaning
+city: la-mesa
+
+title: Drain Cleaning in La Mesa, CA | Sedco Plumbing
+description: >-
+  Slow or clogged drains in La Mesa? Sedco Plumbing clears kitchen, bath, and main lines with upfront pricing
+  and fast East County response. Call [PHONE].
+primaryKeyword: drain cleaning La Mesa
+supportingKeywords:
+  - clogged drain La Mesa
+  - hydro jetting La Mesa
+  - main line clog La Mesa
+  - rooter service La Mesa
+  - kitchen sink backup
+
+heroStat: ~10 min
+heroStatLabel: Drive from our El Cajon shop
+heroPoints:
+  - Right equipment on the truck, first visit
+  - Flat rate quoted before we start
+  - Camera inspection when clogs keep returning
+  - Home left as tidy as we found it
+
+h1: Drain Cleaning in La Mesa, CA
+intro:
+  - >-
+    Few things slow a household down like a drain that will not clear. Sedco Plumbing clears clogged kitchen
+    sinks, showers, tubs, and main lines throughout La Mesa — from La Mesa Village to the slopes of Mount Helix
+    — and because our shop sits just up the road in El Cajon, you are never waiting long for help. We arrive with
+    the right equipment on the truck, quote a flat rate before we start, and leave your home as tidy as we found
+    it.
+
+sections:
+  - heading: Why La Mesa Drains Clog the Way They Do
+    paragraphs:
+      - >-
+        La Mesa’s charm is its age, and its age shows up in its plumbing. Much of the housing here went up between
+        the 1940s and 1960s, which means original cast iron and galvanized drain lines that have spent decades
+        collecting scale and grease. As the interior walls of those pipes roughen, food waste, soap, and hair grab
+        hold far more easily than they would in smooth modern pipe. Add the mature trees shading the streets around
+        La Mesa Village and Grossmont — their roots work into yard drains and laterals in search of moisture — and
+        clogs keep returning. On Mount Helix, long hillside drain runs give waste more places to slow down.
+
+  - heading: How We Clear the Line — and Keep It Clear
+    paragraphs:
+      - >-
+        We start by finding out where the blockage actually is, not just where the symptom shows up. A backed-up
+        tub can point to a branch line problem or to something deeper in the main. Depending on what we find, we
+        clear the line with a professional cable machine or with hydro jetting, which scrubs grease and roots off
+        the pipe walls instead of simply punching a hole through the clog. When a blockage keeps coming back, we run
+        a camera so you can see the pipe’s condition for yourself before deciding on anything more. Every option is
+        priced upfront, and we will say plainly when a simple snaking is all you need.
+
+faqs:
+  - question: Is hydro jetting safe for the older pipes in a La Mesa home?
+    answer:
+      - >-
+        In most cases, yes. We inspect the line first, and if aging cast iron or clay pipe is too fragile for
+        full-pressure jetting, we dial the pressure back or recommend a gentler method. That inspection is what
+        keeps the decision safe.
+  - question: How quickly can you reach La Mesa from El Cajon?
+    answer:
+      - >-
+        Our technicians are based in El Cajon, roughly a ten-minute drive from most La Mesa neighborhoods. For
+        urgent backups we offer same-day and emergency service [HOURS], and we will give you an honest arrival
+        window when you call.
+  - question: Why does my kitchen drain clog again a few weeks after I clear it?
+    answer:
+      - >-
+        Repeat clogs usually mean the pipe wall itself is coated in grease or scale, so each quick fix only opens a
+        narrow channel. Jetting the line clean — or addressing a bellied or root-invaded section — solves the
+        underlying problem rather than the symptom.
+
+ctaHeading: Get Your Drains Moving Again
+ctaBody: >-
+  Whether it is one stubborn sink or every fixture in the house draining slowly, we are close by and ready to
+  help. Call Sedco Plumbing at [PHONE] to schedule drain cleaning in La Mesa today.
+
+internalLinks:
+  - href: /services/drain-cleaning/
+    anchor: drain cleaning services
+    group: service
+  - href: /service-areas/la-mesa/
+    anchor: plumber in La Mesa
+    group: city
+  - href: /services/sewer-lines/la-mesa/
+    anchor: sewer line repair in La Mesa
+    group: combo
+  - href: /services/toilet-repair-installation/la-mesa/
+    anchor: La Mesa toilet repair
+    group: combo

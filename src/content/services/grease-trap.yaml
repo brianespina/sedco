@@ -1,0 +1,110 @@
+service: grease-trap
+
+title: Grease Trap Services in El Cajon, CA | Sedco Plumbing
+description: >-
+  Grease trap pumping, cleaning, and repair for El Cajon restaurants. Stay ready for county health
+  inspections with a licensed local crew. Call [PHONE].
+primaryKeyword: grease trap services El Cajon
+supportingKeywords:
+  - grease trap cleaning El Cajon
+  - grease trap pumping
+  - restaurant plumbing East County
+  - grease interceptor installation
+  - FOG compliance San Diego County
+
+heroBadge: Commercial kitchens & food-service accounts
+heroStat: 25%
+heroStatLabel: The rule we keep you under
+heroPoints:
+  - Service scheduled around your hours, not ours
+  - Full evacuation, walls and baffles scraped
+  - Every visit documented for inspectors
+  - Repairs, replacements, and new interceptors
+
+h1: Grease Trap Services in El Cajon, CA
+intro:
+  - >-
+    If you run a restaurant, cafe, or commercial kitchen in El Cajon, your grease trap is one of those
+    things nobody thinks about until it becomes the only thing anybody thinks about. A neglected trap
+    backs up floor drains mid-service, breeds odors your customers notice before you do, and puts your
+    next health inspection at risk. Sedco Plumbing provides grease trap pumping, cleaning, repair, and
+    installation for food-service businesses along the Main Street corridor, throughout downtown El
+    Cajon, and across East County and greater San Diego County.
+
+sections:
+  - heading: Pumping and Cleaning on a Schedule That Fits Your Service Hours
+    paragraphs:
+      - >-
+        The dining rooms and drive-thrus of El Cajon do not shut down for maintenance, so we work around
+        your hours — early mornings, closed days, or after the last ticket clears. Our technicians fully
+        evacuate the trap rather than skimming the surface layer, scrape down the walls and baffles,
+        inspect inlet and outlet tees, and confirm the trap is flowing correctly before your next shift
+        begins. Regular full-service cleaning is what keeps fats, oils, and grease (FOG) from slipping
+        past the trap into your building’s drain lines and the city sewer, where blockages get expensive
+        fast.
+
+  - heading: Stay Ready for the Health Inspector
+    paragraphs:
+      - >-
+        San Diego County food facilities are inspected without much warning, and FOG management is
+        squarely on the checklist. The widely enforced standard is the 25 percent rule: when accumulated
+        grease and solids fill a quarter of your trap’s liquid depth, it is due for pumping — no matter
+        how recently it was last serviced. We help you set a cleaning interval that keeps you comfortably
+        under that threshold, and we document every visit so your maintenance records are organized and
+        ready to show an inspector from the County Department of Environmental Health or the city. For
+        busy kitchens, that paper trail is as valuable as the pumping itself.
+
+  - heading: Repair, Replacement, and New Installations
+    paragraphs:
+      - >-
+        Traps corrode, baffles break loose, and lids crack under years of kitchen traffic. We repair what
+        can be repaired and replace what cannot, and when you are opening a new location or upgrading a
+        kitchen, we size and install the right interceptor for your fixture count and menu — from compact
+        under-sink units to larger in-floor traps. We handle the permitting conversation with the City of
+        El Cajon and make sure the finished installation meets plumbing code, so your buildout inspection
+        goes smoothly.
+
+faqs:
+  - question: How often should a grease trap be pumped?
+    answer:
+      - >-
+        Most El Cajon restaurants need pumping every one to three months, though a busy fry-heavy kitchen
+        may need it more often. The deciding factor is the 25 percent rule — once grease and solids reach
+        a quarter of the trap’s capacity, it is time.
+  - question: What is the 25 percent rule?
+    answer:
+      - >-
+        It is the compliance standard used across San Diego County: a grease trap must be serviced before
+        accumulated FOG and solids occupy 25 percent of its liquid volume. Exceeding it risks citations,
+        sewer blockages, and surcharges.
+  - question: Does a small cafe or coffee shop need a grease trap?
+    answer:
+      - >-
+        In most cases, yes. Any food facility that generates FOG — even primarily from dishwashing — is
+        typically required to have an appropriately sized trap or interceptor. We can assess your setup and
+        tell you exactly where you stand.
+  - question: Can you service our trap outside business hours?
+    answer:
+      - >-
+        Absolutely. Most of our commercial clients schedule service before opening or after close so there
+        is no disruption, no odor during dining hours, and no equipment in anyone’s way.
+
+ctaHeading: Keep Your Kitchen Open and Compliant
+ctaBody: >-
+  Your trap should never be the reason a shift goes sideways or an inspection goes badly. Call Sedco
+  Plumbing at [PHONE] to set up one-time or recurring grease trap service in El Cajon, or contact us
+  online and we will build a maintenance schedule around your hours.
+
+internalLinks:
+  - href: /services/drain-cleaning/
+    anchor: commercial drain cleaning and hydro jetting
+    group: service
+  - href: /services/sewer-lines/
+    anchor: sewer line repair for commercial properties
+    group: service
+  - href: /service-areas/el-cajon/
+    anchor: commercial plumbing in El Cajon
+    group: city
+  - href: /contact/
+    anchor: set up a service schedule
+    group: page

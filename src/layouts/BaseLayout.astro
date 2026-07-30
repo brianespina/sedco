@@ -1,0 +1,96 @@
+---
+/**
+ * Shared document shell: head/SEO, header, breadcrumbs, footer, and the
+ * persistent mobile click-to-call bar.
+ *
+ * JSON-LD is passed in through the `head` slot so it lands in <head> as the
+ * guide specifies (Part 7.1).
+ */
+import '@fontsource/barlow/latin-700.css';
+import '@fontsource/barlow/latin-800.css';
+import '@fontsource/barlow/latin-900.css';
+import '@fontsource-variable/libre-franklin/wght.css';
+import '../styles/tokens.css';
+import '../styles/base.css';
+
+import { site, paths } from '@config/site';
+import { phoneHref } from '@lib/tokens';
+import type { Crumb } from '@lib/types';
+import Seo from '@components/Seo.astro';
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
+import BreadcrumbSchema from '@components/schema/BreadcrumbSchema.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  path: string;
+  /** Breadcrumb trail; omit on the homepage */
+  crumbs?: Crumb[];
+  ogImage?: string;
+  publishedTime?: Date;
+  noindex?: boolean;
+}
+
+const { title, description, path, crumbs, ogImage, publishedTime, noindex } = Astro.props;
+const ga4 = site.integrations.ga4;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta name="generator" content={Astro.generator} />
+
+    <Seo
+      title={title}
+      description={description}
+      path={path}
+      ogImage={ogImage}
+      publishedTime={publishedTime}
+      noindex={noindex}
+    />
+
+    {crumbs && crumbs.length > 1 && <BreadcrumbSchema crumbs={crumbs} />}
+    <slot name="head" />
+
+    {
+      ga4 && (
+        <>
+          <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${ga4}`} />
+          <script is:inline define:vars={{ ga4 }}>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', ga4);
+          </script>
+        </>
+      )
+    }
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <Header />
+
+    {crumbs && crumbs.length > 1 && <Breadcrumbs crumbs={crumbs} />}
+
+    <main id="main">
+      <slot />
+    </main>
+
+    <Footer />
+
+    <!-- Persistent mobile click-to-call (guide Part 7.4) -->
+    <div class="call-bar">
+      <a href={phoneHref()}><span aria-hidden="true">📞</span> Call Now</a>
+      <a href={paths.contact}><span aria-hidden="true">🛠️</span> Request Service</a>
+    </div>
+  </body>
+</html>

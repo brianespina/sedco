@@ -1,0 +1,102 @@
+---
+/**
+ * SERVICES HUB — guide Part 3 "Services Hub", design ServicesHub.dc.html.
+ * Centered hero → 4 grouped card sections → dark "Not Sure What You Need?".
+ */
+import { site, paths } from '@config/site';
+import { servicesByGroup } from '@config/site';
+import { images } from '@lib/images';
+
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Hero from '@components/Hero.astro';
+import HeroCtas from '@components/HeroCtas.astro';
+import ServiceCardGrid from '@components/ServiceCardGrid.astro';
+import CtaSection from '@components/CtaSection.astro';
+import PageSchema from '@components/schema/PageSchema.astro';
+
+const title = 'Plumbing Services in El Cajon & San Diego County | Sedco';
+const description =
+  'Full-service plumbing for San Diego County homes and businesses — drains, water heaters, slab leaks, sewer, gas lines and more. Call [PHONE].';
+const path = paths.servicesHub;
+
+const crumbs = [{ name: 'Home', href: paths.home }, { name: 'Services' }];
+---
+
+<BaseLayout title={title} description={description} path={path} crumbs={crumbs}>
+  <Fragment slot="head">
+    <PageSchema type="CollectionPage" name={title} description={description} path={path} />
+  </Fragment>
+
+  <Hero
+    variant="center"
+    image={images.heroService}
+    badge="Residential & commercial plumbing"
+    heading="Plumbing Services for San Diego County Homes and Businesses"
+    intro="Sedco Plumbing handles everything connected to the water, drain, and gas systems of your property — repair, replacement, installation, and maintenance. Every job is performed by a licensed technician (CA C-36 [LICENSE #]) and priced upfront. Choose a service below to learn more, or call [PHONE] and tell us what’s going on."
+  >
+    <HeroCtas slot="cta" center />
+  </Hero>
+
+  {
+    site.serviceGroups.map((group, index) => (
+      <section class={index === 0 ? 'section' : 'section section--tight'}>
+        <div class="container">
+          <h2 class="group-heading">
+            <span class="group-glyph" aria-hidden="true">
+              {group.glyph}
+            </span>
+            {group.heading}
+          </h2>
+          <ServiceCardGrid
+            services={servicesByGroup(group.id)}
+            variant="glyph"
+            glyph={group.glyph}
+            columns={3}
+          />
+        </div>
+      </section>
+    ))
+  }
+
+  <section class="section section--tight">
+    <div class="container">
+      <p class="hub-links measure">
+        Not sure which page you need? See <a href={paths.areasHub}
+          >every city and community we serve</a
+        > or <a href={paths.contact}>request a service call</a> and describe the symptom.
+      </p>
+    </div>
+  </section>
+
+  <CtaSection
+    variant="dark"
+    heading="Not Sure What You Need?"
+    body="Describe the symptom — a noise, a smell, a stain, a spike in your water bill — and we will tell you what it likely is and what it costs to fix. Call Sedco Plumbing at [PHONE]."
+  />
+</BaseLayout>
+
+<style>
+  .group-heading {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: var(--fs-h2-sm);
+    margin-bottom: 1.75rem;
+  }
+  .group-glyph {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: var(--tint);
+    font-size: 1.25rem;
+    flex-shrink: 0;
+  }
+  .hub-links {
+    font-size: var(--fs-prose);
+    color: var(--text-soft);
+    text-align: center;
+  }
+</style>

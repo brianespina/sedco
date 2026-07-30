@@ -1,0 +1,50 @@
+---
+/**
+ * Site-wide business entity (guide Part 7.1 template A).
+ *
+ * Lives on the homepage and on every city page (which the guide specifies as
+ * "LocalBusiness (Plumber) with areaServed"). The same `@id` and the same
+ * areaServed list are emitted in both places, so the entity is referenced
+ * consistently rather than published with conflicting data.
+ *
+ * Service-area business: no street address, locality/region/ZIP only.
+ */
+import { site, absolute, BUSINESS_ID } from '@config/site';
+import { t, isPlaceholder } from '@lib/tokens';
+import { images } from '@lib/images';
+import JsonLd from './JsonLd.astro';
+
+const { business, profiles } = site;
+
+const sameAs = [profiles.google, profiles.yelp, profiles.facebook].filter(
+  (url) => !isPlaceholder(url) && url.length > 0,
+);
+
+const data: Record<string, unknown> = {
+  '@context': 'https://schema.org',
+  '@type': 'Plumber',
+  '@id': BUSINESS_ID,
+  name: business.name,
+  url: absolute('/'),
+  telephone: t('[PHONE]'),
+  email: t('[EMAIL]'),
+  image: absolute(images.logo.src.src),
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: business.locality,
+    addressRegion: business.region,
+    postalCode: t('[ZIP]'),
+    addressCountry: business.country,
+  },
+  areaServed: [
+    ...site.cities.map((city) => ({ '@type': 'City', name: city.name })),
+    { '@type': 'AdministrativeArea', name: business.county },
+  ],
+  priceRange: business.priceRange,
+  openingHours: business.hoursSchema,
+};
+
+if (sameAs.length > 0) data.sameAs = sameAs;
+---
+
+<JsonLd data={data} />

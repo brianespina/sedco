@@ -1,0 +1,112 @@
+service: sink-services
+
+title: Sink Installation & Repair in El Cajon | Sedco Plumbing
+description: >-
+  Kitchen, bathroom, and utility sink installation and repair in El Cajon. Leak fixes, clean installs, and
+  upfront flat-rate pricing. Call [PHONE].
+primaryKeyword: sink installation El Cajon
+supportingKeywords:
+  - sink repair El Cajon
+  - kitchen sink replacement
+  - bathroom sink install
+  - utility sink installation East County
+  - under-sink leak repair
+
+heroBadge: Kitchen, bath, laundry & bar sinks
+heroStat: 2–3 hrs
+heroStatLabel: Typical like-for-like swap
+heroPoints:
+  - Leaks traced to the actual source, not taped over
+  - New supply lines and working shutoff valves
+  - Disposal and dishwasher reconnected and tested
+  - We check what your new fixture connects to
+
+h1: Sink Installation and Repair in El Cajon, CA
+intro:
+  - >-
+    Your sinks work harder than almost any fixture in the house, and they complain in small ways first — a
+    damp cabinet floor, a slow swirl instead of a clean drain, a wobble in the basin. Sedco Plumbing
+    installs and repairs kitchen sinks, bathroom vanities, laundry and utility sinks, and bar sinks for
+    homes and businesses throughout El Cajon, with the licensed, tidy workmanship East County has trusted
+    since [YEAR FOUNDED].
+
+sections:
+  - heading: Sink Repairs That Stop the Drip and the Damage
+    paragraphs:
+      - >-
+        Under-sink leaks rarely announce themselves; they soak particleboard cabinets quietly until the
+        smell or the warping gives them away. We track leaks to their actual source — a loosened drain
+        flange, a cracked P-trap, a failed basket strainer, worn supply lines, or a shutoff valve that no
+        longer shuts off — and fix it properly instead of layering on another wrap of tape. We also reseal
+        basins that have separated from countertops, re-secure wall-hung bathroom sinks, and clear the slow
+        drains that make a sink feel older than it is.
+
+  - heading: New Sinks for Kitchens, Bathrooms, and Laundry Rooms
+    paragraphs:
+      - >-
+        Swapping a sink transforms a room faster than nearly any other upgrade. We install every common
+        style — undermount, drop-in, farmhouse and apron-front, vessel sinks, pedestal sinks, and deep
+        utility basins for garages and laundry rooms — and we make sure the plumbing behind the scenes
+        matches the beauty out front. That includes correctly sloped drains, new supply lines and shutoff
+        valves, faucet mounting, and reconnecting your garbage disposal and dishwasher so everything works
+        together on day one. Planning a bigger project? Our remodel plumbing team can rough in a whole new
+        layout.
+
+  - heading: Why the Plumbing Under the Sink Deserves Attention
+    paragraphs:
+      - >-
+        In many El Cajon homes built in the 1950s through 1970s, the shiny new sink sits on top of original
+        galvanized supply stubs and brittle chrome traps that are decades past their prime. When we open a
+        cabinet, we check what the fixture connects to — because installing new hardware onto corroded pipe
+        is how small leaks come back as big ones. If something behind the wall needs updating, we will show
+        you honestly, price it flat, and let you decide. That habit of looking one step deeper is a big
+        part of why neighbors across East County call us back.
+
+faqs:
+  - question: Can you install a sink I bought myself?
+    answer:
+      - >-
+        Of course. Bring home any sink you love and we will handle the installation, including
+        modifications to drain height or supply lines if your new sink’s configuration differs from the old
+        one.
+  - question: How long does a sink replacement take?
+    answer:
+      - >-
+        Most like-for-like swaps take two to three hours. Farmhouse conversions, new countertop cutouts, or
+        repairs to hidden pipe damage add time, and we will give you a clear flat-rate quote before any
+        work begins.
+  - question: Why does my sink only leak sometimes?
+    answer:
+      - >-
+        Intermittent leaks usually depend on how the sink is used — a drain-flange leak appears only when
+        the basin holds water, while a supply leak may show only when the faucet runs. We test each
+        scenario to pinpoint the true source.
+  - question: Do you replace shutoff valves during a sink install?
+    answer:
+      - >-
+        Whenever the existing valves are corroded, stuck, or original to an older home, yes — and we
+        recommend it. Working shutoffs under every sink let you stop a future leak in seconds instead of
+        hunting for the main valve.
+
+ctaHeading: Ready for a Sink That Just Works?
+ctaBody: >-
+  Whether you need a stubborn leak gone by dinner or a farmhouse sink installed for the remodel you have
+  been planning, we are nearby and ready. Call Sedco Plumbing at [PHONE] or request your flat-rate quote
+  through our contact page today.
+
+internalLinks:
+  - href: /services/faucet-services/
+    anchor: faucet repair and installation
+    group: service
+  - href: /services/garbage-disposal/
+    anchor: disposal hookup with your new sink
+    group: service
+  - href: /services/kitchen-bath-remodels/
+    anchor: remodel plumbing services
+    group: service
+  - href: /service-areas/lemon-grove/
+    anchor: sink service near Lemon Grove
+    group: city
+  - href: /contact/
+    anchor: get a flat-rate quote
+    group: page

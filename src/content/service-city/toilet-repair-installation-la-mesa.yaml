@@ -1,0 +1,85 @@
+service: toilet-repair-installation
+city: la-mesa
+
+title: Toilet Repair in La Mesa, CA | Sedco Plumbing
+description: >-
+  Running, leaking, or wobbly toilet? Sedco Plumbing handles toilet repair and installation across La Mesa with
+  flat-rate pricing. Call [PHONE].
+primaryKeyword: toilet repair La Mesa
+supportingKeywords:
+  - toilet installation La Mesa
+  - running toilet repair
+  - toilet replacement La Mesa
+  - clogged toilet La Mesa
+  - high-efficiency toilet upgrade
+
+heroStat: One visit
+heroStatLabel: Most repairs, start to finish
+heroPoints:
+  - Parts carried on the truck
+  - Corroded cast iron flanges repaired properly
+  - Flat-rate pricing you approve before we start
+  - Work backed by [WARRANTY TERMS]
+
+h1: Toilet Repair & Installation in La Mesa, CA
+intro:
+  - >-
+    A toilet that runs all night, rocks on its base, or refuses to flush properly is a small problem that never
+    stays small. Sedco Plumbing repairs and installs toilets across La Mesa, usually in a single visit, with
+    flat-rate pricing you approve before we start. Our technicians drive over from El Cajon, so “we can fit you in
+    next week” is not something you will hear from us.
+
+sections:
+  - heading: Common Toilet Problems We Fix
+    paragraphs:
+      - >-
+        Most calls come down to a handful of culprits: worn flappers and fill valves that keep water trickling,
+        clogged trapways, failed wax rings that let water seep at the base, and loose or corroded closet bolts. In La
+        Mesa’s mid-century homes we also see a problem newer neighborhoods rarely have — original cast iron closet
+        flanges that have rusted or cracked after decades in service. Resetting a toilet on a broken flange is a
+        temporary fix at best; we repair the flange properly so the toilet seals and stays put.
+
+  - heading: When Replacement Makes Better Sense
+    paragraphs:
+      - >-
+        If your toilet dates from before 1994, it may be sending 3.5 gallons or more down with every flush. With
+        Helix Water District rates climbing and drought a fact of life in East County, a modern high-efficiency
+        toilet at 1.28 gallons per flush typically pays for itself, and today’s models clear the bowl better than
+        the old water-guzzlers ever did. Replacement is also the smart call for repeated clogs, cracked porcelain, or
+        a fixture that no longer suits a refreshed bathroom in your La Mesa Village or Grossmont home. We can supply
+        a quality unit or install one you have already purchased.
+
+faqs:
+  - question: My toilet keeps backing up even after plunging. What is going on?
+    answer:
+      - >-
+        When plunging only buys you a few days, the blockage is often beyond the toilet — in the branch drain or the
+        sewer lateral, where tree roots are common in older La Mesa neighborhoods. We can auger the toilet and, if
+        needed, camera the line to find the real cause.
+  - question: How quickly can you get to my La Mesa home for a toilet repair?
+    answer:
+      - >-
+        Same-day service is standard — our El Cajon base is a few minutes from anywhere in La Mesa, and most toilet
+        repairs are completed on the first visit from parts we carry on the truck.
+  - question: Is a running toilet really worth a service call?
+    answer:
+      - >-
+        Yes — a steadily running toilet can waste hundreds of gallons a day, which shows up quickly on a Helix Water
+        District bill. The repair is inexpensive and usually takes under an hour.
+
+ctaHeading: Fix It Once, Fix It Right
+ctaBody: >-
+  From a five-minute flapper swap to a full replacement with a flange repair, we handle it cleanly and stand
+  behind the work [WARRANTY TERMS]. Call Sedco Plumbing at [PHONE] to schedule toilet repair or installation in
+  La Mesa.
+
+internalLinks:
+  - href: /services/toilet-repair-installation/
+    anchor: toilet repair & installation
+    group: service
+  - href: /service-areas/la-mesa/
+    anchor: La Mesa plumber
+    group: city
+  - href: /services/sewer-lines/la-mesa/
+    anchor: La Mesa sewer line service
+    group: combo

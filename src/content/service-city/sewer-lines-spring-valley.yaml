@@ -1,0 +1,91 @@
+service: sewer-lines
+city: spring-valley
+
+title: Sewer Line Repair in Spring Valley, CA | Sedco Plumbing
+description: >-
+  Sewer line repair and replacement in Spring Valley — from root-bound clay laterals to trenchless fixes on sloped
+  lots. Flat-rate quotes. Call [PHONE].
+primaryKeyword: sewer line repair Spring Valley
+supportingKeywords:
+  - sewer line replacement Spring Valley
+  - trenchless sewer repair Spring Valley
+  - clay sewer lateral repair
+  - sewer camera inspection 91977
+  - root damage sewer line
+
+heroStat: Same day
+heroStatLabel: Backups, often within hours
+heroPoints:
+  - Camera footage you can watch yourself
+  - Trenchless work suited to terraced, sloped lots
+  - Retaining walls and hardscape left undisturbed
+  - Permits handled by us as contractor of record
+
+h1: Sewer Line Repair & Replacement in Spring Valley, CA
+intro:
+  - >-
+    A sewer lateral installed in 1958 owes nobody an apology for failing now. Much of Spring Valley’s housing dates to
+    that era, and the clay sewer lines beneath those homes are well past their design life. Sedco Plumbing inspects,
+    repairs, and replaces sewer laterals across Spring Valley — including trenchless solutions suited to the community’s
+    sloped lots.
+
+sections:
+  - heading: Why Clay Laterals in Older Neighborhoods Fail
+    paragraphs:
+      - >-
+        Clay pipe was assembled in short segments, and every joint is an invitation. In established neighborhoods like La
+        Presa and Casa de Oro, mature trees have had sixty-plus years to work roots into those joints. Meanwhile, decades
+        of soil movement on hillside terrain shift segments out of alignment, creating offsets and low spots where waste
+        collects. The result is a familiar cycle: backup, cabling, a year of peace, backup again.
+
+  - heading: Slopes Help Flow — and Complicate Repairs
+    paragraphs:
+      - >-
+        Downhill grade gives many Spring Valley laterals excellent fall, which is good for drainage. But when a line under
+        a terraced yard or beside a retaining wall needs replacement, open excavation gets complicated and expensive in a
+        hurry. That is where trenchless methods earn their keep: pipe bursting or cured-in-place lining renews the lateral
+        through small access pits, leaving slopes, hardscape, and root systems undisturbed.
+
+  - heading: Inspection, Evidence, Options
+    paragraphs:
+      - >-
+        Every recommendation we make is backed by camera footage you can watch yourself. Depending on what the line shows,
+        the answer may be a spot repair, a liner, or full replacement — each quoted flat-rate, with permits handled by us
+        as the licensed contractor of record (CA C-36 [LICENSE #]).
+
+faqs:
+  - question: What are the warning signs of a failing sewer line?
+    answer:
+      - >-
+        Watch for slow drains throughout the house rather than at one fixture, gurgling from toilets or tubs, sewage odors
+        in the yard, and unusually green or soggy strips of lawn along the lateral’s path. Recurring main-line clogs are the
+        strongest signal.
+  - question: Does trenchless sewer replacement work on hillside lots?
+    answer:
+      - >-
+        Yes — it is often the best fit for them. Access pits at each end of the run replace open trenching across a slope,
+        protecting retaining walls, terracing, and landscaping while the new pipe goes in.
+  - question: What is your response time to Spring Valley?
+    answer:
+      - >-
+        Short. We dispatch from El Cajon, and a sewage backup is treated as the emergency it is — crews typically arrive
+        the same day, often within hours, with emergency availability [HOURS].
+
+ctaHeading: Know What Is Under Your Yard
+ctaBody: >-
+  If your drains are telling you something is wrong below ground, get the facts on camera and a flat-rate path forward.
+  Call Sedco Plumbing at [PHONE] for sewer line service in Spring Valley.
+
+internalLinks:
+  - href: /services/sewer-lines/
+    anchor: sewer services
+    group: service
+  - href: /service-areas/spring-valley/
+    anchor: plumbing in Spring Valley
+    group: city
+  - href: /services/drain-cleaning/spring-valley/
+    anchor: drain cleaning in Spring Valley
+    group: combo
+  - href: /contact/
+    anchor: schedule a camera inspection
+    group: page

@@ -1,0 +1,95 @@
+service: water-heater
+city: la-mesa
+
+title: Water Heater Repair in La Mesa, CA | Sedco Plumbing
+description: >-
+  Water heater not keeping up? Sedco Plumbing repairs and replaces tank and tankless units across La Mesa,
+  from Grossmont to Mount Helix. Call [PHONE].
+primaryKeyword: water heater repair La Mesa
+supportingKeywords:
+  - water heater replacement La Mesa
+  - tankless water heater La Mesa
+  - water heater installation La Mesa
+  - no hot water
+  - expansion tank installation
+
+heroStat: Same day
+heroStatLabel: Usual turnaround
+heroPoints:
+  - Licensed CA C-36 ([LICENSE #]), bonded and insured
+  - Repair cost laid next to replacement cost
+  - Code corrections included, not surprise add-ons
+  - Common tank sizes stocked on the trucks
+
+h1: Water Heater Repair & Installation in La Mesa, CA
+intro:
+  - >-
+    When the shower runs cold, you want two things: a straight answer and a fast fix. Sedco Plumbing repairs and
+    replaces water heaters throughout La Mesa — gas, electric, and tankless — and since we are headquartered next
+    door in El Cajon, a technician can usually be at your door the same day. We are licensed (CA C-36 [LICENSE
+    #]), bonded, and insured, and you will know the full cost before we touch a fitting.
+
+sections:
+  - heading: Repair or Replace? We Start With an Honest Answer
+    paragraphs:
+      - >-
+        Not every cold shower means buying a new unit. Failed thermocouples, worn heating elements, sediment
+        buildup, and faulty gas valves are all repairable, often in a single visit. But when a tank is past twelve
+        years old or rusting at the seams, putting money into it rarely pays off. We lay the repair cost next to the
+        replacement cost and let you decide — no pressure, no scare tactics.
+
+  - heading: What La Mesa Homes Ask of a Water Heater
+    paragraphs:
+      - >-
+        Homes here work their water heaters harder than most. Helix Water District supplies much of La Mesa with
+        imported Colorado River water that runs hard, and that mineral load settles into tanks as scale, robbing
+        efficiency and shortening lifespan. Hillside properties on and around Mount Helix often see street pressure
+        well above 80 psi, which stresses tanks and fittings — many need a pressure regulator and a thermal
+        expansion tank to protect the new unit and satisfy code. And in plenty of 1940s–1960s houses, the heater
+        lives in a tight closet or garage corner that no longer meets current clearance, strapping, or venting
+        requirements. We handle those code corrections as part of a proper installation, not as surprise add-ons.
+
+  - heading: Considering Tankless?
+    paragraphs:
+      - >-
+        If your family keeps outrunning the tank, a tankless unit delivers endless hot water and frees up storage
+        space — a real benefit in compact mid-century floor plans. We assess your gas line and venting first, since
+        older La Mesa homes sometimes need upgrades to support one, and we will tell you honestly whether the
+        numbers make sense for your household.
+
+faqs:
+  - question: How long does a water heater last with La Mesa’s hard water?
+    answer:
+      - >-
+        Eight to twelve years is typical, and unflushed tanks land at the low end because scale accumulates quickly
+        at local hardness levels. Annual flushing and a timely anode rod swap can add years of service.
+  - question: Can you replace my water heater the same day you come out?
+    answer:
+      - >-
+        Usually, yes. We stock common tank sizes and dispatch from minutes away in El Cajon, so most La Mesa
+        replacements are finished the day you call, with hot water restored by evening.
+  - question: Do I really need an expansion tank?
+    answer:
+      - >-
+        If your home has a pressure regulator or check valve — common on hillside lots — California code requires
+        one, and it genuinely protects your plumbing. Heated water expands, and without somewhere to go, that extra
+        pressure hammers your pipes and fixtures.
+
+ctaHeading: Hot Water, Handled
+ctaBody: >-
+  Cold showers do not fix themselves. Call Sedco Plumbing at [PHONE] and we will have your La Mesa home’s hot
+  water back — repaired or replaced — as soon as today.
+
+internalLinks:
+  - href: /services/water-heater/
+    anchor: water heater repair & installation
+    group: service
+  - href: /service-areas/la-mesa/
+    anchor: La Mesa plumbing services
+    group: city
+  - href: /services/slab-leak-repair/la-mesa/
+    anchor: slab leak detection in La Mesa
+    group: combo
+  - href: /services/water-filtration/
+    anchor: water filtration & softener systems
+    group: service

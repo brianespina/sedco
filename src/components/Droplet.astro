@@ -1,0 +1,37 @@
+---
+/**
+ * The water-droplet glyph from the design's visual motif. Inherits `color`.
+ *
+ * Any extra attributes are spread onto the <svg>. That matters: it lets Astro's
+ * scoped-style attribute (`data-astro-cid-*`) reach the root element, so a
+ * parent's scoped CSS can target this component by class. Without the spread,
+ * scoped rules silently fail to match and the droplet renders unstyled — in
+ * normal flow, inheriting the surrounding text colour.
+ */
+interface Props {
+  size?: number;
+  class?: string;
+  style?: string;
+  /** Adds the small white highlight used on larger droplets */
+  highlight?: boolean;
+  [key: string]: unknown;
+}
+
+const { size = 14, class: className, style, highlight = false, ...rest } = Astro.props;
+const height = Math.round((size / 14) * 18);
+---
+
+<svg
+  width={size}
+  height={height}
+  viewBox="0 0 14 18"
+  class={className}
+  style={style}
+  aria-hidden="true"
+  focusable="false"
+  {...rest}
+>
+  <path d="M7 0C7 0 .5 7.5 .5 11.5a6.5 6.5 0 0 0 13 0C13.5 7.5 7 0 7 0Z" fill="currentColor"
+  ></path>
+  {highlight && <ellipse cx="4.6" cy="11" rx="1.4" ry="2.1" fill="rgba(255,255,255,.6)" />}
+</svg>

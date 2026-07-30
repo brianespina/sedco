@@ -1,0 +1,127 @@
+city: el-cajon
+
+title: Plumber in El Cajon, CA | Sedco Plumbing
+description: >-
+  Sedco Plumbing is based right here in El Cajon — licensed, with upfront pricing on drains, water heaters,
+  and slab leaks. Call [PHONE] today.
+primaryKeyword: plumber El Cajon
+supportingKeywords:
+  - El Cajon plumbing company
+  - emergency plumber El Cajon
+  - slab leak repair El Cajon
+  - water heater repair El Cajon
+  - drain cleaning El Cajon
+  - licensed plumber 92020
+
+heroBadge: Our hometown and home base
+heroStat: 10–15 min
+heroStatLabel: Typical response time
+heroPoints:
+  - Trucks parked here, technicians who live here
+  - Permits pulled directly from the City of El Cajon
+  - Flat-rate quote before any work begins
+  - Workmanship warranty [WARRANTY TERMS]
+
+h1: Your El Cajon Plumber, Based Right Here in El Cajon
+intro:
+  - >-
+    Sedco Plumbing doesn’t serve El Cajon from across the county — this is home. Our trucks park here, our
+    technicians live here, and since [YEAR FOUNDED] the same neighbors we run into at the grocery store have
+    trusted us with their drains, water heaters, and slab leaks. When you call [PHONE], you reach a local
+    company, and help is usually only minutes from your door.
+
+sections:
+  - heading: A Hometown Company, Not a Franchise
+    paragraphs:
+      - >-
+        Sedco Plumbing is owned and operated by [OWNER NAME], holds a California C-36 plumbing contractor
+        license ([LICENSE #]), and is bonded and insured. Because we’re not a franchise, there’s no national
+        call center between you and the person turning the wrench. You get a flat-rate quote before any work
+        begins, a clean and respectful technician at your door, and a workmanship warranty [WARRANTY TERMS]
+        backed by people you can actually find in town. That accountability is the whole point of hiring local.
+
+  - heading: The Plumbing Problems El Cajon Homes Actually Have
+    paragraphs:
+      - >-
+        A large share of El Cajon’s housing went up between the 1950s and 1970s, most of it on slab
+        foundations. That era produces two of our most common calls: slab leaks, where a pressurized line fails
+        under the concrete, and aging galvanized supply lines that corrode from the inside until pressure slows
+        to a trickle. In Fletcher Hills, Bostonia, and Granite Hills we see both every week, and we’ve shaped
+        our leak detection and repiping work around them.
+      - >-
+        Water quality matters here too. Much of the local supply, delivered by Helix Water District, is imported
+        Colorado River water that runs hard. All that mineral content builds scale inside water heaters,
+        faucets, and shower valves, which is why tank flushes, softeners, and filtration systems are steady work
+        for us. Add inland summers that push plumbing equipment hard, and El Cajon fixtures simply age faster
+        than coastal averages suggest. When a job needs a permit, we pull it directly from the City of El Cajon
+        and handle the inspection schedule ourselves.
+
+  - heading: Plumbing Services We Provide in El Cajon
+    paragraphs:
+      - >-
+        Because El Cajon is our home base, our main service pages are written for this city first. The work we
+        do most often here includes:
+    list:
+      - Drain cleaning for slow fixtures and mainline clogs
+      - Water heater repair and installation, including tankless upgrades
+      - Slab leak detection and repair
+      - Water line repair and repiping for galvanized-era homes
+      - Sewer line repair and replacement, with trenchless options
+      - Toilet repair and installation
+      - Water filtration and softener systems to fight hard-water scale
+      - >-
+        Gas lines, garbage disposals, faucets, sinks, and remodel plumbing — [browse all
+        services](/services/)
+
+  - heading: From Downtown to the Hills
+    paragraphs:
+      - >-
+        We work everywhere in the city: condos and apartments near downtown El Cajon, ranch homes across
+        Bostonia, and hillside properties in Fletcher Hills and Granite Hills. The restaurants and shops along
+        Main Street count on us for grease trap service and commercial repairs too. Residential or commercial,
+        the same trucks and the same standards show up.
+
+faqs:
+  - question: How fast can you get to my El Cajon home?
+    answer:
+      - >-
+        This is our home base, so El Cajon response times are the fastest we offer — most addresses in the city
+        sit within a 10–15 minute drive of our technicians. Same-day service is the norm, and we’re available
+        [HOURS] for emergencies.
+  - question: Do I need a permit for plumbing work in El Cajon?
+    answer:
+      - >-
+        Water heater replacements, repipes, and sewer work generally require a permit from the City of El Cajon,
+        while minor like-for-like repairs usually don’t. We pull the permits and schedule the inspections, so you
+        never have to manage any of it.
+  - question: Why does my El Cajon water heater keep scaling up?
+    answer:
+      - >-
+        Local water is hard — much of it imported Colorado River supply — and dissolved minerals settle out as
+        scale whenever water is heated. Regular flushes extend a heater’s life, and a softener or whole-house
+        filtration system addresses the cause rather than the symptom.
+
+ctaHeading: Call the Plumber Down the Street
+ctaBody: >-
+  Whether it’s a slow drain, a failing water heater, or a warm spot on the floor that hints at a slab leak,
+  help is close. Call Sedco Plumbing at [PHONE] or email [EMAIL], and get a licensed local plumber who can be
+  there fast — often the same day.
+
+alsoServing: 'Also serving nearby: La Mesa, Santee, Lakeside, and Rancho San Diego.'
+
+internalLinks:
+  - href: /services/
+    anchor: every plumbing service we offer
+    group: page
+  - href: /services/slab-leak-repair/
+    anchor: slab leak detection and repair
+    group: service
+  - href: /services/water-heater/
+    anchor: water heater repair and installation
+    group: service
+  - href: /about/
+    anchor: meet [OWNER NAME] and the team
+    group: page
+  - href: /service-areas/
+    anchor: all communities we serve
+    group: page

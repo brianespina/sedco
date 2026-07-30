@@ -1,0 +1,124 @@
+service: water-heater
+
+title: Water Heater Repair & Install El Cajon | Sedco Plumbing
+description: >-
+  Water heater repair, replacement & tankless installation in El Cajon. Code-compliant work with seismic
+  straps and expansion tanks. Call [PHONE].
+primaryKeyword: water heater repair El Cajon
+supportingKeywords:
+  - water heater installation El Cajon
+  - tankless water heater El Cajon
+  - water heater replacement East County
+  - no hot water repair
+  - expansion tank installation
+
+heroBadge: Gas, electric, and tankless
+heroStat: Same day
+heroStatLabel: Hot water restored
+heroPoints:
+  - Two seismic straps on every install, per California code
+  - Permits pulled with the City of El Cajon
+  - Expansion tanks where closed systems require them
+  - Old unit hauled away
+
+h1: Water Heater Repair and Installation in El Cajon, CA
+intro:
+  - >-
+    A cold shower has a way of reordering your priorities. Sedco Plumbing repairs, replaces, and installs
+    water heaters of every type — gas, electric, and tankless — for homes and businesses in El Cajon and
+    across East County. Water heaters here work harder than most: our mineral-rich water builds sediment
+    in the tank, and the valley’s long, hot summers put stress on components year-round. We know how
+    these units fail locally, which is why so many East County homeowners keep our number on the garage
+    wall right next to the heater.
+
+sections:
+  - heading: Water Heater Repair
+    paragraphs:
+      - >-
+        If your hot water has turned lukewarm, run out faster than it used to, or picked up a rusty tint
+        or rotten-egg odor, repair may be all you need. We service thermocouples, pilot assemblies, and
+        igniters on gas units, heating elements and thermostats on electric models, and
+        temperature-and-pressure relief valves on both. A popping or rumbling tank usually means sediment
+        — a direct product of El Cajon’s hard water — and a professional flush can quiet the unit and
+        recover lost efficiency. We diagnose first, quote a flat rate, and never push a replacement when
+        a repair will genuinely solve the problem.
+
+  - heading: Replacement and New Installation
+    paragraphs:
+      - >-
+        When a tank is leaking from its body or has passed the ten-to-twelve-year mark, replacement is the
+        responsible call — a failing tank in a garage or hall closet can release dozens of gallons with no
+        warning. We help you choose the right capacity and fuel type, pull the required permit with the
+        City of El Cajon, install the new unit to current code, and haul the old one away. Every
+        installation includes new supply connections, proper venting checks, and a full test of
+        temperature and pressure before we sign off.
+
+  - heading: Thinking About Going Tankless?
+    paragraphs:
+      - >-
+        Tankless water heaters deliver endless hot water, free up closet or garage space, and typically
+        run more efficiently because they heat only on demand. They are a great fit for many El Cajon
+        homes, with two honest caveats. First, most gas tankless units need a larger gas supply line than
+        a standard tank, which we can evaluate and upsize. Second, East County’s hard water means a
+        tankless unit should be descaled regularly — or paired with a softener or filtration system — to
+        protect its heat exchanger. We will walk you through the math so you can decide with clear eyes.
+
+  - heading: 'California Code: Seismic Straps, Expansion Tanks, and Permits'
+    paragraphs:
+      - >-
+        California requires every water heater to be braced with two seismic straps — one in the upper
+        third of the tank, one in the lower — so it cannot topple and shear its gas line in an earthquake.
+        Many homes also need a thermal expansion tank: when a pressure regulator or check valve creates a
+        “closed” plumbing system, heated water has nowhere to expand, and pressure spikes can damage the
+        heater and fixtures. That matters locally, since street pressure in parts of El Cajon and the
+        surrounding hills exceeds 80 psi. Every heater we install or replace leaves fully strapped,
+        properly vented, permitted, and code-compliant.
+
+faqs:
+  - question: How long do water heaters last in El Cajon?
+    answer:
+      - >-
+        Expect roughly eight to twelve years from a tank unit here — often toward the low end because
+        hard-water sediment accelerates wear. Annual flushing and a healthy anode rod can meaningfully
+        extend that lifespan.
+  - question: Should I repair or replace my water heater?
+    answer:
+      - >-
+        Repair usually makes sense for units under eight years old with a single failed component. If the
+        tank itself is leaking, or the unit is past ten years and losing performance, replacement is
+        almost always the better investment.
+  - question: Is a tankless water heater worth it here?
+    answer:
+      - >-
+        For many households, yes — especially if you value endless hot water and space savings. Just
+        budget for possible gas line upsizing and periodic descaling, both of which we can handle and
+        price for you up front.
+  - question: Do I need a permit to replace a water heater in El Cajon?
+    answer:
+      - >-
+        Yes, water heater replacement requires a permit from the City of El Cajon, and the finished work
+        must include seismic strapping and code-compliant connections. We pull the permit and handle the
+        details as part of the job.
+
+ctaHeading: Hot Water Back, Usually the Same Day
+ctaBody: >-
+  There is no reason to schedule your life around cold showers. Call Sedco Plumbing at [PHONE] for water
+  heater repair, replacement, or a tankless consultation anywhere in El Cajon and East County, or book
+  through our contact page today.
+
+internalLinks:
+  - href: /services/water-filtration/
+    anchor: protect your heater from hard water
+    group: service
+  - href: /services/gas-lines/
+    anchor: gas line sizing for tankless upgrades
+    group: service
+  - href: /service-areas/santee/
+    anchor: water heater service in Santee
+    group: city
+  - href: /service-areas/la-mesa/
+    anchor: water heater service in La Mesa
+    group: city
+  - href: /contact/
+    anchor: request a quote
+    group: page

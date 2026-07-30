@@ -1,0 +1,112 @@
+service: shower-installation
+
+title: Shower Installation & Remodel in El Cajon | Sedco Plumbing
+description: >-
+  Shower installation and remodels in El Cajon, CA — walk-in conversions, valve replacements, and tile-ready
+  waterproofing done right. Call [PHONE].
+primaryKeyword: shower installation El Cajon
+supportingKeywords:
+  - shower remodel El Cajon
+  - tub to shower conversion
+  - shower valve replacement
+  - walk-in shower installation
+  - shower pan replacement
+
+heroBadge: Licensed plumbers, not a bath-wrap franchise
+heroStat: 1 day
+heroStatLabel: Typical valve replacement
+heroPoints:
+  - Pan liners sloped and flood-tested before tile
+  - Pressure-balanced valves, as California code requires
+  - Corroded galvanized stubs corrected, not covered up
+  - We work alongside your tile setter or contractor
+
+h1: Shower Installation & Remodel in El Cajon
+intro:
+  - >-
+    A great shower is the best two minutes to twenty minutes of a lot of people’s day, and a failing one is a
+    daily irritation with a leak hiding behind it. Sedco Plumbing installs and remodels showers across El
+    Cajon and the East County communities around it — everything from swapping a worn-out valve to converting
+    a never-used tub into a spacious walk-in shower. The visible finishes get the compliments, but it is the
+    plumbing behind the wall that decides whether your new shower is still perfect in fifteen years.
+
+sections:
+  - heading: Shower Projects We Take On
+    list:
+      - Complete shower replacements, from demolition to working fixture
+      - Tub-to-shower conversions for accessibility or simply better use of space
+      - Shower valve replacement and pressure-balancing upgrades
+      - Shower pan and drain replacement when the old pan has failed
+      - New shower additions in bathroom remodels and garage conversions
+      - 'Fixture upgrades: rain heads, handheld sprayers, and thermostatic controls'
+    paragraphs:
+      - >-
+        We work as the plumbing trade alongside your tile setter or contractor, or we can quarterback smaller
+        projects start to finish.
+
+  - heading: 'Behind the Wall: Where Showers Succeed or Fail'
+    paragraphs:
+      - >-
+        The parts of a shower you cannot see are the parts that matter most. We set correctly sized supply
+        lines so a flushing toilet does not scald anyone, install pressure-balanced or thermostatic valves as
+        California code requires, slope and test the pan liner before any tile goes down, and flood-test drains
+        so a slow hidden leak never gets the chance to rot framing. In El Cajon’s older homes we frequently
+        uncover corroded galvanized stubs and undersized drains during demolition; because we are licensed
+        plumbers rather than a bath-wrap franchise, we can correct those problems on the spot instead of
+        covering them back up.
+
+  - heading: Tub-to-Shower Conversions
+    paragraphs:
+      - >-
+        If nobody in your house has drawn a bath since the last World Cup, that tub is sixteen square feet of
+        wasted bathroom. A conversion removes it, relocates or adapts the drain, brings the valve up to current
+        standards, and finishes with a low-curb or curbless entry that is dramatically easier to step into — a
+        real consideration for anyone planning to age in place. Most conversions keep plumbing in roughly the
+        same wall, which controls costs. One honest note from your plumber: keeping at least one tub in the
+        house is worth weighing if a future sale to families matters to you.
+
+faqs:
+  - question: How long does a shower remodel take?
+    answer:
+      - >-
+        A valve replacement is typically a one-day job, while a full tear-out and rebuild generally runs one to
+        two weeks including waterproofing cure times, tile, and glass. We give you a written schedule before
+        demolition starts.
+  - question: Do I need a permit to remodel a shower in El Cajon?
+    answer:
+      - >-
+        Replacing fixtures like-for-like usually does not require one, but moving drains, altering valves and
+        piping, or converting a tub to a shower typically does. We pull the required City of El Cajon permits
+        as part of the project.
+  - question: What is a pressure-balancing shower valve?
+    answer:
+      - >-
+        It is a valve that instantly compensates when cold water pressure drops — like when a toilet flushes —
+        so the shower temperature stays steady instead of spiking. Current code requires anti-scald protection
+        on new and remodeled showers.
+  - question: Can you make my shower curbless?
+    answer:
+      - >-
+        Often, yes, though it depends on the drain location and the structure below the floor. Slab-on-grade
+        homes common in El Cajon can be excellent candidates, and we will assess feasibility during the
+        estimate.
+
+ctaHeading: Start Your Shower Project With the Right Trade
+ctaBody: >-
+  Beautiful tile over bad plumbing is just an expensive countdown. Get the water side of your shower designed
+  and installed by a licensed C-36 contractor who is local to El Cajon. Call Sedco Plumbing at [PHONE] to
+  walk through your project, [HOURS].
+
+internalLinks:
+  - href: /services/kitchen-bath-remodels/
+    anchor: full bathroom remodel plumbing
+    group: service
+  - href: /services/water-heater/
+    anchor: tankless water heaters
+    group: service
+  - href: /services/drain-cleaning/
+    anchor: shower drain cleaning
+    group: service
+  - href: /contact/
+    anchor: plan your shower project
+    group: page

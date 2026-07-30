@@ -1,0 +1,16 @@
+---
+/**
+ * Renders one JSON-LD block. Every schema component below wraps this so the
+ * serialization (and its escaping) lives in exactly one place.
+ */
+interface Props {
+  data: Record<string, unknown>;
+}
+
+const { data } = Astro.props;
+
+// `<` is escaped so a stray value can never break out of the script element.
+const json = JSON.stringify(data, null, 2).replace(/</g, '\\u003c');
+---
+
+<script is:inline type="application/ld+json" set:html={json} />

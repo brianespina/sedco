@@ -1,0 +1,132 @@
+---
+/**
+ * Hero system (design README "Hero system — two tiers").
+ *
+ *  - variant="center"  Tier 1: centered, compact. Hubs, About, Contact,
+ *                      Reviews, Blog.
+ *  - variant="split"   Tier 2: asymmetric 2-column with a frosted card in the
+ *                      `aside` slot. Service and city templates.
+ *  - variant="home"    Split, with more vertical room for the request form.
+ *
+ * Every hero gets the dark photo background, cyan glow, floating droplets, and
+ * the white water "wave" that transitions into the page.
+ */
+import { Image } from 'astro:assets';
+import type { SiteImage } from '@lib/images';
+import { th } from '@lib/tokens';
+import Droplet from './Droplet.astro';
+
+interface Props {
+  variant?: 'center' | 'split' | 'home';
+  image: SiteImage;
+  /** Badge pill text above the H1 */
+  badge?: string;
+  /** Badge glyph: a droplet by default, or a literal like 📍 */
+  badgeGlyph?: 'droplet' | string;
+  heading: string;
+  /** Intro paragraph; may contain guide placeholder tokens */
+  intro?: string;
+  /** Vertical focus point of the background photo */
+  focus?: string;
+  /** Render the H1 as-is rather than through token resolution */
+  eager?: boolean;
+}
+
+const {
+  variant = 'center',
+  image,
+  badge,
+  badgeGlyph = 'droplet',
+  heading,
+  intro,
+  focus = 'center 35%',
+  eager = true,
+} = Astro.props;
+
+const hasAside = Astro.slots.has('aside');
+---
+
+<section class={`hero hero--${variant}`}>
+  <Image
+    class="hero__bg"
+    src={image.src}
+    alt=""
+    widths={[900, 1400, 1920]}
+    sizes="100vw"
+    loading={eager ? 'eager' : 'lazy'}
+    fetchpriority={eager ? 'high' : 'auto'}
+    style={`object-position:${focus}`}
+    aria-hidden="true"
+  />
+  <div class="hero__overlay"></div>
+  <div class="hero__glow"></div>
+
+  <Droplet class="droplet" size={26} style="left:6%;top:26%;color:var(--cyan-light);opacity:.5" />
+  <Droplet
+    class="droplet"
+    size={18}
+    style="left:44%;top:14%;color:var(--cyan-lighter);opacity:.45;animation-duration:6.5s;animation-delay:.8s"
+  />
+  <Droplet
+    class="droplet"
+    size={20}
+    style="left:33%;bottom:24%;color:var(--cyan-mid);opacity:.4;animation-duration:5.8s;animation-delay:1.6s"
+  />
+
+  <div class="container hero__inner">
+    <div class="hero__copy">
+      {
+        badge && (
+          <span class="hero__badge">
+            {badgeGlyph === 'droplet' ? (
+              <Droplet size={13} style="color:var(--cyan-lighter)" />
+            ) : (
+              <span aria-hidden="true">{badgeGlyph}</span>
+            )}
+            <span set:html={th(badge)} />
+          </span>
+        )
+      }
+
+      <h1 set:html={th(heading)} />
+
+      {intro && <p class="hero__intro" set:html={th(intro)} />}
+
+      <slot name="cta" />
+      <slot name="below" />
+    </div>
+
+    {hasAside && <div class="hero__aside"><slot name="aside" /></div>}
+  </div>
+
+  <svg
+    class="hero__wave"
+    viewBox="0 0 1440 90"
+    preserveAspectRatio="none"
+    aria-hidden="true"
+    focusable="false"
+  >
+    <path
+      d="M0 46 C240 96 470 6 720 34 C980 64 1200 14 1440 44 L1440 90 L0 90 Z"
+      fill="#ffffff"></path>
+  </svg>
+</section>
+
+<style>
+  .hero__bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -3;
+  }
+  .hero--center .hero__copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero--center .hero__copy :global(.btn-row) {
+    justify-content: center;
+  }
+</style>

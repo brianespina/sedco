@@ -1,0 +1,245 @@
+---
+/**
+ * Site footer (guide Part 2 footer spec, design SiteFooter.dc.html).
+ * 4 columns: NAP block, all 16 services, all 10 cities, company links.
+ */
+import { Image } from 'astro:assets';
+import { site, paths } from '@config/site';
+import { th, phoneHref, emailHref, isPlaceholder } from '@lib/tokens';
+import { images } from '@lib/images';
+
+const year = new Date().getFullYear();
+
+const socials = [
+  { label: 'Google Business Profile', href: site.profiles.google, glyph: 'G' },
+  { label: 'Yelp', href: site.profiles.yelp, glyph: 'Y' },
+  { label: 'Facebook', href: site.profiles.facebook, glyph: 'f' },
+].filter((social) => !isPlaceholder(social.href) && social.href.length > 0);
+---
+
+<footer class="site-footer">
+  <div class="site-footer__accent"></div>
+
+  <div class="container site-footer__grid">
+    <div>
+      <a class="foot-lockup" href={paths.home}>
+        <Image
+          src={images.logo.src}
+          alt={images.logo.alt}
+          width={80}
+          height={80}
+          loading="lazy"
+          class="foot-lockup__logo"
+        />
+        <span>
+          <strong>{site.business.name}</strong>
+          <span>{site.business.tagline}</span>
+        </span>
+      </a>
+
+      <address class="nap">
+        <span>{site.business.locality}, {site.business.region}</span>
+        <a href={phoneHref()}><span set:html={th('[PHONE]')} /></a>
+        <a href={emailHref()}><span set:html={th('[EMAIL]')} /></a>
+        <span>CA License <span set:html={th('[LICENSE #]')} /></span>
+        <span>Hours <span set:html={th('[HOURS]')} /></span>
+      </address>
+
+      <p class="nap__note">
+        Serving {site.business.county} as a mobile service-area business — we come to you.
+      </p>
+
+      {
+        socials.length > 0 && (
+          <ul class="socials">
+            {socials.map((social) => (
+              <li>
+                <a href={social.href} rel="noopener" aria-label={social.label}>
+                  <span aria-hidden="true">{social.glyph}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        )
+      }
+    </div>
+
+    <nav aria-labelledby="foot-services">
+      <h2 id="foot-services">Services</h2>
+      <ul>
+        {
+          site.services.map((service) => (
+            <li>
+              <a href={paths.service(service.slug)}>{service.navLabel}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <nav aria-labelledby="foot-areas">
+      <h2 id="foot-areas">Service Areas</h2>
+      <ul>
+        {
+          site.cities.map((city) => (
+            <li>
+              <a href={paths.city(city.slug)}>{city.name}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <nav aria-labelledby="foot-company">
+      <h2 id="foot-company">Company</h2>
+      <ul>
+        <li><a href={paths.about}>About</a></li>
+        <li><a href={paths.reviews}>Reviews</a></li>
+        <li><a href={paths.blog}>Blog</a></li>
+        <li><a href={paths.contact}>Contact</a></li>
+        <li><a href={paths.privacy}>Privacy Policy</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="site-footer__bottom">
+    <div class="container">
+      <p>
+        &copy; {year} {site.business.name}. Licensed, bonded, and insured California {
+          site.business.licenseClass
+        } plumbing contractor.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--brand-footer);
+    color: var(--on-dark-muted);
+    font-size: 0.875rem;
+  }
+  .site-footer__accent {
+    height: 3px;
+    background: var(--grad-footer-bar);
+  }
+
+  .site-footer__grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 2.625rem;
+    padding-block: 4rem 2rem;
+  }
+
+  .site-footer h2 {
+    font-family: var(--font-display);
+    font-size: 0.9375rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+
+  .site-footer ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 0.5rem;
+  }
+  .site-footer a {
+    color: var(--on-dark-muted);
+  }
+  .site-footer a:hover {
+    color: #fff;
+  }
+
+  .foot-lockup {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .foot-lockup__logo {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--r-input);
+  }
+  .foot-lockup span {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+  .foot-lockup strong {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.0625rem;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  .foot-lockup span span {
+    font-size: 0.625rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--on-dark-faint);
+  }
+
+  .nap {
+    display: grid;
+    gap: 0.4375rem;
+    margin-top: 1.25rem;
+    font-style: normal;
+    line-height: 1.5;
+  }
+  .nap__note {
+    margin-top: 0.875rem;
+    font-size: 0.8125rem;
+    color: var(--on-dark-faint);
+    max-width: 34ch;
+  }
+
+  /* Placeholder chips on the dark footer */
+  .site-footer :global(.ph-chip) {
+    background: #123b5e;
+    border-color: #4d78a0;
+    color: #dceaf6;
+  }
+
+  .socials {
+    display: flex !important;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+  }
+  .socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #123b5e;
+    font-family: var(--font-display);
+    font-weight: 800;
+    color: #fff;
+  }
+  .socials a:hover {
+    background: var(--brand-primary);
+  }
+
+  .site-footer__bottom {
+    border-top: 1px solid var(--border-footer);
+    padding-block: 1.25rem;
+    font-size: 0.8125rem;
+    color: var(--on-dark-faint);
+  }
+
+  @media (max-width: 900px) {
+    .site-footer__grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+  }
+  @media (max-width: 560px) {
+    .site-footer__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

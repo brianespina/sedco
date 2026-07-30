@@ -1,0 +1,126 @@
+---
+/**
+ * ABOUT — guide Part 3 "About Us", design About.dc.html.
+ * Centered hero → 4 stat cards → prose sections → dark final CTA.
+ */
+import { paths } from '@config/site';
+import { th } from '@lib/tokens';
+import { images } from '@lib/images';
+
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Hero from '@components/Hero.astro';
+import HeroCtas from '@components/HeroCtas.astro';
+import CtaSection from '@components/CtaSection.astro';
+import PageSchema from '@components/schema/PageSchema.astro';
+
+const title = 'About Sedco Plumbing | El Cajon, CA Plumbing Company';
+const description =
+  'Sedco Plumbing is a locally owned El Cajon plumbing company serving San Diego County. Licensed, insured, upfront pricing. Meet the team. Call [PHONE].';
+const path = paths.about;
+
+const crumbs = [{ name: 'Home', href: paths.home }, { name: 'About' }];
+
+const stats = [
+  { value: 'C-36', label: 'Licensed & bonded contractor' },
+  { value: 'Flat-rate', label: 'Upfront pricing, always' },
+  { value: 'Same-day', label: 'Fast local response' },
+  { value: 'Local', label: 'Owned & operated in El Cajon' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} crumbs={crumbs}>
+  <Fragment slot="head">
+    <PageSchema type="AboutPage" name={title} description={description} path={path} />
+  </Fragment>
+
+  <Hero
+    variant="center"
+    image={images.heroGeneral}
+    badge="Locally owned in El Cajon"
+    badgeGlyph="📍"
+    heading="A Local El Cajon Plumbing Company You Can Count On"
+    intro="Sedco Plumbing was founded in [YEAR FOUNDED] with a simple idea: treat every home like it belongs to a neighbor — because in El Cajon, it usually does. [OWNER NAME] built this company on straightforward pricing, clean workmanship, and showing up when we say we will. Today our technicians serve families and businesses across East County and all of San Diego County."
+  >
+    <HeroCtas slot="cta" center />
+  </Hero>
+
+  <section class="section section--tight">
+    <div class="container">
+      <ul class="grid grid--4 stat-cards" role="list">
+        {
+          stats.map((stat) => (
+            <li class="stat">
+              <div class="stat__value">{stat.value}</div>
+              <div class="stat__label">{stat.label}</div>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="container">
+      <article class="prose measure">
+        <h2>How We Work</h2>
+        <p set:html={th(
+          'Every job starts with a conversation and a clear, written price. We explain what’s wrong, what your options are, and what each option costs — before any work begins. Our technicians protect your floors, clean up after themselves, and walk you through the finished work. If something isn’t right, we come back and make it right under our workmanship warranty [WARRANTY TERMS].',
+        )} />
+
+        <h2>Licensed, Bonded, and Insured</h2>
+        <p set:html={th(
+          'Sedco Plumbing holds California C-36 plumbing contractor license [LICENSE #]. We carry full liability insurance and bonding, we pull permits when the job requires them, and our work is done to current California plumbing code — including the details that matter here, like seismic strapping on water heaters and pressure regulators on high-pressure hillside lines.',
+        )} />
+
+        <h2>Rooted in East County</h2>
+        <p>
+          We live and work where you do. Our team knows the housing stock of El Cajon, <a
+            href={paths.city('la-mesa')}>La Mesa</a
+          >, <a href={paths.city('santee')}>Santee</a>, and the surrounding communities — the
+          mid-century slab homes, the hard water that scales up water heaters, the mature trees that
+          invade older sewer laterals. That familiarity means faster diagnosis and repairs that
+          actually last.
+        </p>
+
+        <p class="editor-note">
+          <span class="ph-chip">ADD TEAM PHOTOS</span> Team photos, community involvement, and
+          sponsorships go here once the client supplies them.
+        </p>
+
+        <p class="link-row">
+          Explore <a href={paths.servicesHub}>every plumbing service we offer</a>, see our <a
+            href={paths.city('el-cajon')}>plumbing work in El Cajon neighborhoods</a
+          >, or read <a href={paths.reviews}>what your neighbors say about Sedco Plumbing</a>.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <CtaSection
+    variant="dark"
+    heading="Ready When You Need Us"
+    body="Whether it’s a dripping faucet or a full repipe, we would be glad to earn your business. Call Sedco Plumbing at [PHONE] or request service online, and see why your neighbors across San Diego County trust us with their homes."
+  />
+</BaseLayout>
+
+<style>
+  .stat-cards {
+    list-style: none;
+    padding: 0;
+  }
+  .stat-cards .stat {
+    height: 100%;
+  }
+  .editor-note {
+    background: var(--tint);
+    border: 1px dashed var(--border-input);
+    border-radius: var(--r-card);
+    padding: 1rem 1.125rem;
+    font-size: var(--fs-sm) !important;
+    color: var(--text-muted) !important;
+  }
+  .link-row {
+    border-top: 1px solid var(--border);
+    padding-top: 1.5rem;
+  }
+</style>

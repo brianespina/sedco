@@ -1,0 +1,58 @@
+---
+/**
+ * FAQ section: the guide's H2 plus H3 questions, rendered as the design's
+ * single-open accordion. The first item is open by default.
+ *
+ * FAQPage schema is generated from this same `faqs` array by FaqSchema.astro,
+ * which the page places in <head> — the answers can't drift from the copy.
+ */
+import { th } from '@lib/tokens';
+import type { Faq } from '@lib/types';
+
+interface Props {
+  faqs: Faq[];
+  /** The H2 exactly as the guide writes it */
+  heading?: string;
+  center?: boolean;
+}
+
+const { faqs, heading = 'Frequently Asked Questions', center = false } = Astro.props;
+---
+
+<div class={center ? 'faq-block faq-block--center' : 'faq-block'}>
+  <h2 set:html={th(heading)} />
+
+  <div class="faq" data-faq>
+    {
+      faqs.map((faq, index) => (
+        <details class="faq__item" open={index === 0} name="faq">
+          {/* The H3 lives inside <summary> so heading order matches the guide */}
+          <summary class="faq__q">
+            <h3 set:html={th(faq.question)} />
+          </summary>
+          <div class="faq__a">
+            {faq.answer.map((paragraph) => (
+              <p set:html={th(paragraph)} />
+            ))}
+          </div>
+        </details>
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  .faq-block h2 {
+    margin-bottom: 1.5rem;
+  }
+  .faq-block--center {
+    max-width: var(--measure-prose);
+    margin-inline: auto;
+    text-align: center;
+  }
+  .faq-block--center .faq {
+    text-align: left;
+  }
+  /* The question H3's typography and margin reset live with the rest of the
+     accordion in base.css, so they apply on every page the block appears on. */
+</style>

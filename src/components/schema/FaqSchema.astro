@@ -1,0 +1,33 @@
+---
+/**
+ * FAQPage schema (guide Part 7.1 template C).
+ *
+ * Generated from the same FAQ data the page renders, so the answers can never
+ * drift from the visible copy. One block per page, all questions inside it.
+ */
+import { t } from '@lib/tokens';
+import type { Faq } from '@lib/types';
+import JsonLd from './JsonLd.astro';
+
+interface Props {
+  faqs: Faq[];
+}
+
+const { faqs } = Astro.props;
+
+const data = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: t(faq.question),
+    acceptedAnswer: {
+      '@type': 'Answer',
+      // Plain-text version of the answer paragraphs shown on the page.
+      text: faq.answer.map((paragraph) => t(paragraph)).join(' '),
+    },
+  })),
+};
+---
+
+<JsonLd data={data} />

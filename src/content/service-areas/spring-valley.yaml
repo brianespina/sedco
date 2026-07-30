@@ -1,0 +1,115 @@
+city: spring-valley
+
+title: Plumber in Spring Valley, CA | Sedco Plumbing
+description: >-
+  High pressure on Dictionary Hill? Aging pipes in Casa de Oro? Sedco Plumbing serves Spring Valley with
+  flat-rate pricing. Call [PHONE] today.
+primaryKeyword: plumber Spring Valley
+supportingKeywords:
+  - Spring Valley CA plumbing company
+  - water pressure regulator Spring Valley
+  - drain cleaning Spring Valley
+  - repiping Spring Valley
+  - emergency plumber Spring Valley
+
+heroBadge: Hillside pressure specialists
+heroStat: 80 psi
+heroStatLabel: Where code draws the line
+heroPoints:
+  - Static pressure measured on nearly every call here
+  - Regulators replaced in the same visit
+  - We work both Helix and Otay district areas
+  - Flat-rate quote you see before we start
+
+h1: Spring Valley Plumbing, From the Valley Floor to Dictionary Hill
+intro:
+  - >-
+    Here’s a number worth knowing if you live on a Spring Valley hillside: 80 psi. That’s the pressure above
+    which California plumbing code requires a regulator, and on the slopes of Dictionary Hill and the streets
+    climbing out of Casa de Oro and La Presa, street pressure can blow well past it. Sedco Plumbing measures
+    pressure on nearly every call in this community, because so many of the “random” failures we’re asked to fix
+    — burst supply hoses, dripping relief valves, short-lived faucets — aren’t random at all.
+
+sections:
+  - heading: Living on a Hillside Is Hard on Pipes
+    paragraphs:
+      - >-
+        Water districts push high pressure through hillside mains so the homes at the top get decent flow, which
+        means the homes lower in the zone absorb the excess. An aging or absent pressure regulator lets that
+        force hammer every fixture you own, around the clock. If your pipes bang when a valve closes, your toilet
+        fill valves wear out yearly, or your water heater’s relief valve weeps, we can test your static pressure
+        in minutes and replace the regulator the same visit. Paired with an expansion tank on the water heater,
+        it’s some of the least expensive insurance a hillside home can buy.
+
+  - heading: Older Homes, Two Water Districts
+    paragraphs:
+      - >-
+        Spring Valley’s housing stock skews older, and the neighborhoods tell the story — postwar homes through
+        Casa de Oro and La Presa still carrying original galvanized lines, with all the rusty water and shrinking
+        flow that implies. The community is also split between Helix Water District and Otay Water District
+        depending on where you live, so billing quirks and shutoff locations vary from street to street. We work
+        both sides daily. Whatever district sends your bill, the fix at the house is ours: locating leaks,
+        replacing corroded lines, and modernizing fixtures on a flat-rate quote you see before we start.
+
+  - heading: Plumbing Services We Provide in Spring Valley
+    list:
+      - >-
+        [Drain cleaning in Spring Valley](/services/drain-cleaning/spring-valley/) — from single fixtures to the
+        main line
+      - >-
+        [Water heater repair and installation in Spring Valley](/services/water-heater/spring-valley/)
+      - >-
+        [Slab leak detection and repair in Spring Valley](/services/slab-leak-repair/spring-valley/)
+      - >-
+        [Sewer line repair in Spring Valley](/services/sewer-lines/spring-valley/) — inspections, spot repairs,
+        replacements
+      - >-
+        [Toilet repair and installation in Spring
+        Valley](/services/toilet-repair-installation/spring-valley/)
+      - >-
+        [Pressure regulator replacement](/services/water-pressure-regulators/), repiping, faucets, and more on
+        [our services page](/services/)
+
+faqs:
+  - question: What’s your response time to Spring Valley from El Cajon?
+    answer:
+      - >-
+        Most of Spring Valley — Casa de Oro, La Presa, and Dictionary Hill included — is a 15–20 minute drive
+        from our El Cajon base via Highway 94 or Sweetwater Springs Boulevard. We hold same-day slots and
+        dispatch emergencies [HOURS].
+  - question: How can I tell if my pressure regulator is failing?
+    answer:
+      - >-
+        Test gauges are cheap, but the symptoms are usually loud enough: banging pipes, fixtures that fail early,
+        and readings above 80 psi at an outdoor spigot. Regulators typically last 10–15 years, so if yours is
+        original, it’s due for a check.
+  - question: Do you serve both the Helix and Otay water district areas of Spring Valley?
+    answer:
+      - >-
+        Yes — district boundaries don’t affect where we work, only where your water comes from. We handle
+        everything on the homeowner’s side of the meter anywhere in Spring Valley.
+
+ctaHeading: Take the Pressure Off Your Plumbing
+ctaBody: >-
+  If your hillside home has been eating fixtures or your postwar pipes are showing their age, get a diagnosis
+  you can trust and a price you approve first. Call Sedco Plumbing at [PHONE] to schedule your Spring Valley
+  visit.
+
+alsoServing: 'Also serving nearby: La Mesa, Lemon Grove, Rancho San Diego, and Jamul.'
+
+internalLinks:
+  - href: /services/water-pressure-regulators/
+    anchor: pressure regulator replacement
+    group: service
+  - href: /services/drain-cleaning/spring-valley/
+    anchor: drain cleaning in Spring Valley
+    group: combo
+  - href: /services/water-heater/spring-valley/
+    anchor: water heater service in Spring Valley
+    group: combo
+  - href: /service-areas/la-mesa/
+    anchor: neighboring La Mesa
+    group: city
+  - href: /service-areas/rancho-san-diego/
+    anchor: neighboring Rancho San Diego
+    group: city

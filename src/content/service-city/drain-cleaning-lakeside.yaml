@@ -1,0 +1,97 @@
+service: drain-cleaning
+city: lakeside
+
+title: Drain Cleaning in Lakeside, CA | Sedco Plumbing
+description: >-
+  Clogged drain in Lakeside? Sedco Plumbing clears kitchen, bath, and main-line blockages with septic-safe
+  methods for semi-rural homes. Call [PHONE].
+primaryKeyword: drain cleaning Lakeside CA
+supportingKeywords:
+  - clogged drain Lakeside
+  - main line clog Lakeside CA
+  - hydro jetting Lakeside
+  - septic-safe drain cleaning
+  - drain snake service East County
+
+heroStat: Same day
+heroStatLabel: Usually available
+heroPoints:
+  - Equipment sized for hundred-foot laterals
+  - We ask about septic before choosing a method
+  - Flat-rate price before any work begins
+  - Licensed CA C-36 ([LICENSE #]) and insured
+
+h1: Drain Cleaning in Lakeside, CA
+intro:
+  - >-
+    On a half-acre lot in Eucalyptus Hills, a clogged main line is rarely just a clogged main line. Drain problems
+    on Lakeside’s larger properties tend to involve longer pipe runs, older materials, and — on plenty of homes — a
+    septic tank at the end of the line. Sedco Plumbing clears drains all over Lakeside from our home base in El
+    Cajon, a few minutes down Highway 67, with equipment sized for everything from a farmhouse kitchen sink to a
+    hundred-foot lateral.
+
+sections:
+  - heading: Why Lakeside Drains Are Different
+    paragraphs:
+      - >-
+        Semi-rural properties come with plumbing that suburban tract homes simply do not have. Longer distances
+        between the house and the street — or the septic tank — give grease and debris more pipe to settle in. Original
+        farmhouses in the area still carry galvanized drain lines that have narrowed with decades of corrosion. Horse
+        properties add wash racks, utility sinks, and outbuilding drains that see heavy use. And while Winter Gardens
+        and central Lakeside are largely on sewer, many outlying homes are not, which changes how a clog should be
+        diagnosed and cleared.
+
+  - heading: Septic-Safe Drain Clearing
+    paragraphs:
+      - >-
+        If your home drains to a septic system, the wrong fix can cause real damage. Chemical drain openers can kill
+        the bacteria your tank depends on, and an aggressive cable run at the wrong spot can disturb the inlet baffle.
+        Our technicians ask about septic before we start, choose cabling or hydro jetting accordingly, and confirm flow
+        is restored end to end. If the real problem turns out to be the tank or leach field rather than the drain line,
+        we tell you straight instead of selling you a cleaning you do not need.
+
+  - heading: What to Expect When We Arrive
+    paragraphs:
+      - >-
+        You get a firm, flat-rate price before any work begins, a clean work area when we leave, and honest advice
+        about whether a camera inspection makes sense. For recurring clogs — common in aging galvanized and cast iron
+        drains — we can scope the line and show you exactly what is happening inside the pipe.
+
+faqs:
+  - question: How fast can you get to Lakeside from El Cajon?
+    answer:
+      - >-
+        Quickly — Lakeside is one of the closest communities to our El Cajon shop, a short drive up Highway 67 or
+        Mapleview Street. Same-day drain service is usually available, and we offer emergency availability [HOURS].
+  - question: Is hydro jetting safe for a home on a septic system?
+    answer:
+      - >-
+        Yes, when it is done with the right pressure and the tank’s location in mind. We jet the drain line itself, not
+        the tank, and we verify where your system components sit before starting. Jetting is often the best way to
+        scour grease from long drain runs.
+  - question: Why does the same drain keep clogging?
+    answer:
+      - >-
+        Repeat clogs usually point to a problem inside the pipe — corrosion buildup in old galvanized lines, a sag in a
+        long lateral, or root intrusion. A camera inspection identifies the cause so you can fix it once rather than
+        snaking it every few months.
+
+ctaHeading: Get Lakeside Drains Flowing Again
+ctaBody: >-
+  From Winter Gardens kitchens to Eucalyptus Hills horse properties, Sedco Plumbing handles clogs of every size
+  with upfront pricing and licensed, insured technicians (CA C-36 [LICENSE #]). Call Sedco Plumbing at [PHONE] to
+  schedule same-day drain cleaning in Lakeside.
+
+internalLinks:
+  - href: /services/drain-cleaning/
+    anchor: drain cleaning services
+    group: service
+  - href: /service-areas/lakeside/
+    anchor: plumber in Lakeside
+    group: city
+  - href: /services/sewer-lines/lakeside/
+    anchor: sewer line repair in Lakeside
+    group: combo
+  - href: /contact/
+    anchor: schedule service
+    group: page

@@ -1,0 +1,158 @@
+/**
+ * DESIGN TOKENS — Sedco Plumbing
+ * Values taken from the approved design handoff (design README + prototypes).
+ * Rebranding for another client should mostly mean editing this file.
+ */
+
+:root {
+  /* ---- Brand / color ---- */
+  --brand-deep: #0f3a63;
+  --brand-deep-2: #0a2a4a;
+  --brand-footer: #0b2c4c;
+  --brand-primary: #1c5fa4;
+  --brand-primary-hover: #164e88;
+  --brand-mid: #14487a;
+  --brand-trust-band: #0c2f52;
+
+  --cyan: #38b6e8;
+  --cyan-light: #7fd1f2;
+  --cyan-lighter: #8fdcff;
+  --cyan-mid: #6fc7ee;
+
+  --accent: #f0851f;
+  --accent-hover: #d9741a;
+  --accent-dark: #e0721a;
+
+  --text: #1a2733;
+  --text-soft: #3d4d5c;
+  --text-soft-2: #33424f;
+  --text-muted: #5a6b7a;
+  --text-muted-2: #6b8199;
+  --text-faint: #8a99a8;
+
+  --on-dark: #ffffff;
+  --on-dark-soft: #d5e5f4;
+  --on-dark-muted: #b9cbdd;
+  --on-dark-faint: #7d9cbd;
+  --on-dark-badge: #e3f1fb;
+  --on-dark-trust: #e9f2fb;
+
+  --tint: #eef4fa;
+  --tint-2: #f2f8fc;
+  --tint-3: #f5f9fd;
+  --field-bg: #f8fafc;
+
+  --border: #e2eaf1;
+  --border-2: #dce8f2;
+  --border-input: #d3dde6;
+  --border-footer: #163d5f;
+
+  --success: #2a9d5c;
+  --success-light: #7ee6a6;
+  --success-bg: #e6f6ec;
+  --star: #f5b027;
+
+  /* Dashed placeholder chips for unreplaced [TOKENS] */
+  --ph-bg: #fff3e0;
+  --ph-border: #e0a55c;
+  --ph-text: #b5691a;
+
+  /* ---- Typography ---- */
+  --font-display: 'Barlow', system-ui, -apple-system, sans-serif;
+  --font-body: 'Libre Franklin', system-ui, -apple-system, sans-serif;
+
+  --fs-h1: 3.375rem; /* 54px */
+  --fs-h1-sub: 2.875rem; /* 46px — tier-1 hero pages */
+  --fs-h2: 2.625rem; /* 42px */
+  --fs-h2-sm: 1.75rem; /* 28px */
+  --fs-h3: 1.1875rem; /* 19px */
+  --fs-lead: 1.1875rem; /* 19px */
+  --fs-body: 1rem;
+  --fs-prose: 1.0625rem; /* 17px */
+  --fs-sm: 0.875rem;
+  --fs-xs: 0.8125rem; /* 13px */
+  --fs-eyebrow: 0.8125rem;
+
+  --lh-heading: 1.08;
+  --lh-body: 1.55;
+  --lh-prose: 1.7;
+
+  /* ---- Layout ---- */
+  --container: 1240px;
+  --measure: 900px;
+  --measure-prose: 760px;
+  --gutter: 1.75rem; /* 28px */
+  --section-y: 6rem; /* 96px */
+  --section-y-sm: 3.5rem; /* 56px */
+
+  /* Height of the white water "wave" overlaying the bottom of every hero. The
+     wave is absolutely positioned, so it sits ON TOP of the hero's bottom
+     padding — every hero therefore adds this value to its own bottom spacing so
+     content clears the wave instead of crowding it. Change it here only. */
+  --hero-wave-h: 74px;
+
+  /* Header nav rhythm. Raise both to spread the top-level nav items further
+     apart; the padding also sizes each item's hover pill. The nav collapses to
+     a hamburger at 1180px, and at these values it still has room to spare
+     there — so if you increase them a lot, re-check the header at ~1200px. */
+  --nav-gap: 0.375rem; /* 6px between items */
+  --nav-link-padding-x: 0.75rem; /* 12px each side */
+
+  /* ---- Radius ---- */
+  --r-chip: 4px;
+  --r-sm: 7px;
+  --r-input: 9px;
+  --r-btn: 11px;
+  --r-card: 14px;
+  --r-card-lg: 18px;
+  --r-pill: 999px;
+
+  /* ---- Shadow ---- */
+  --sh-header: 0 2px 14px rgba(15, 58, 99, 0.08);
+  --sh-card: 0 4px 14px rgba(15, 58, 99, 0.05);
+  --sh-card-hover: 0 14px 30px rgba(15, 58, 99, 0.12);
+  --sh-dropdown: 0 18px 44px rgba(15, 58, 99, 0.16);
+  --sh-float: 0 12px 28px rgba(15, 58, 99, 0.2);
+  --sh-photo: 0 20px 44px rgba(15, 58, 99, 0.22);
+  --sh-hero-card: 0 30px 70px rgba(4, 22, 42, 0.5);
+  --sh-glass-card: 0 22px 50px rgba(4, 22, 42, 0.4);
+  --sh-accent: 0 8px 22px rgba(240, 133, 31, 0.45);
+  --sh-accent-sm: 0 4px 12px rgba(240, 133, 31, 0.32);
+  --sh-primary: 0 6px 16px rgba(28, 95, 164, 0.28);
+
+  /* ---- Signature gradients ---- */
+  --grad-accent-bar: linear-gradient(90deg, #0f3a63, #1c5fa4 40%, #38b6e8 70%, #f0851f);
+  --grad-footer-bar: linear-gradient(90deg, #f0851f, #38b6e8 40%, #1c5fa4);
+  --grad-chip: linear-gradient(140deg, #1c5fa4, #14487a);
+  --grad-cta: linear-gradient(135deg, #f0851f, #e0721a);
+  --grad-hero-overlay: linear-gradient(
+    100deg,
+    #0a2a4a 0%,
+    rgba(11, 44, 78, 0.95) 40%,
+    rgba(15, 58, 99, 0.7) 66%,
+    rgba(20, 80, 130, 0.4) 100%
+  );
+  --grad-hero-overlay-center: linear-gradient(
+    180deg,
+    rgba(9, 34, 60, 0.86),
+    rgba(11, 44, 78, 0.72) 55%,
+    rgba(15, 58, 99, 0.66)
+  );
+  --grad-hero-glow: radial-gradient(circle at 82% 18%, rgba(56, 182, 232, 0.22), transparent 42%);
+
+  /* ---- Motion ---- */
+  --t-fast: 150ms ease;
+  --t-med: 200ms ease;
+}
+
+/* Fluid heading sizes on small screens */
+@media (max-width: 900px) {
+  :root {
+    --fs-h1: clamp(2rem, 7vw, 2.75rem);
+    --fs-h1-sub: clamp(1.875rem, 6.5vw, 2.5rem);
+    --fs-h2: clamp(1.625rem, 5.5vw, 2.125rem);
+    --section-y: 4rem;
+    /* Shorter wave on small screens; hero bottom padding tracks it via calc(). */
+    --hero-wave-h: 48px;
+  }
+}

@@ -1,0 +1,131 @@
+service: slab-leak-repair
+
+title: Slab Leak Detection & Repair in El Cajon | Sedco Plumbing
+description: >-
+  Suspect a slab leak in your El Cajon home? Electronic leak detection, honest repair options, and help with
+  insurance paperwork. Call [PHONE].
+primaryKeyword: slab leak repair El Cajon
+supportingKeywords:
+  - slab leak detection El Cajon
+  - electronic leak detection
+  - hot water slab leak
+  - copper pipe leak under slab
+  - repipe El Cajon
+  - slab leak insurance claim
+
+heroBadge: Electronic detection before any concrete is cut
+heroStat: 1950s–70s
+heroStatLabel: The slab homes we know best
+heroPoints:
+  - Acoustic listening and electronic line tracing
+  - Spot repair, reroute, or repipe — explained plainly
+  - Written detection report, photos, itemized invoice
+  - We will speak with your insurance adjuster directly
+
+h1: Slab Leak Detection & Repair in El Cajon
+intro:
+  - >-
+    Thousands of El Cajon homes were built between the 1950s and 1970s on concrete slab foundations, with
+    copper water lines routed through or beneath the concrete. After fifty-plus years of hard water, soil
+    movement, and high pressure, those lines develop pinhole leaks — and because the evidence is hidden
+    under your floor, the damage can run for weeks before anyone notices. Sedco Plumbing locates and repairs
+    slab leaks throughout El Cajon and East County using electronic detection equipment, so we open the slab
+    only where necessary, or avoid opening it entirely.
+
+sections:
+  - heading: Warning Signs of a Slab Leak
+    paragraphs:
+      - >-
+        Slab leaks rarely announce themselves with a puddle. Watch for the quieter clues: a water bill that
+        jumps with no change in habits, the sound of running water when every fixture is off, warm spots on
+        the floor (a classic sign of a hot-side leak), hairline cracks appearing in tile or slab, damp carpet
+        edges, a musty smell, or a water heater that suddenly runs constantly. If your meter’s leak indicator
+        spins while the house is shut down, water is escaping — and under the slab is a prime suspect in
+        homes of this era.
+
+  - heading: 'Electronic Leak Detection: Find It Without Tearing Up Your Floor'
+    paragraphs:
+      - >-
+        Guesswork and jackhammers are a terrible combination. We pinpoint slab leaks with acoustic listening
+        equipment that hears pressurized water escaping through concrete, electronic line tracing to map
+        exactly where your pipes run, and pressure isolation testing to confirm which line — hot or cold —
+        has failed. By the time any concrete is cut, we know the leak’s location within a small area, which
+        keeps demolition, dust, and restoration costs to a minimum. Detection is also the honest starting
+        point for deciding what repair actually makes sense.
+
+  - heading: 'Spot Repair, Reroute, or Repipe: Choosing the Right Fix'
+    paragraphs:
+      - >-
+        Not every slab leak calls for the same answer, and we will lay out the trade-offs before you commit
+        to anything.
+    list:
+      - >-
+        Spot repair opens the slab at the leak and fixes that section. It is the least invasive option up
+        front, and a reasonable choice when the rest of the system is healthy.
+      - >-
+        Reroute abandons the failed line in place and runs a new one overhead through walls and the attic.
+        There is no concrete cutting, and the new line is accessible forever. This is often the smart middle
+        path for a first or second leak.
+      - >-
+        Whole-home repipe replaces the aging supply system entirely. When a 1960s house has had multiple
+        leaks, each “cheap” fix starts to look expensive; a repipe ends the cycle.
+
+  - heading: Help With Your Insurance Documentation
+    paragraphs:
+      - >-
+        Age of the home, leak history, pipe condition, and your plans for the house all factor in. You get
+        our recommendation and the reasoning behind it, not a one-size-fits-all pitch.
+      - >-
+        Homeowners policies frequently cover the cost of locating a slab leak and repairing resulting damage,
+        even when the pipe itself is excluded. We provide a written detection report, photos, and an itemized
+        invoice that separates access, plumbing repair, and detection charges — the documentation adjusters
+        ask for. We are glad to speak with your adjuster directly so nothing gets lost in translation.
+
+faqs:
+  - question: How do I know if I have a slab leak?
+    answer:
+      - >-
+        Shut off every fixture and check your water meter; if the low-flow indicator still moves, water is
+        leaking somewhere. Warm floor spots, unexplained bill increases, and the sound of running water in a
+        quiet house all point toward a slab leak that professional detection can confirm.
+  - question: Is a slab leak an emergency?
+    answer:
+      - >-
+        It is urgent, though rarely a same-hour catastrophe. Continuous leaking erodes soil under the
+        foundation and feeds mold, so shut off water at the house valve when you are away and schedule
+        detection promptly.
+  - question: Will my homeowners insurance pay for slab leak repair?
+    answer:
+      - >-
+        Many policies cover leak detection, access through the slab, and water damage restoration, while
+        excluding the failed pipe itself. Our itemized reports and photos give your adjuster exactly what the
+        claim requires.
+  - question: How long does slab leak repair take?
+    answer:
+      - >-
+        Detection typically takes a couple of hours. A spot repair or single-line reroute is usually finished
+        in one to two days, while a whole-home repipe generally runs two to four days depending on the size
+        of the house.
+
+ctaHeading: Think You Have a Slab Leak? Do Not Wait It Out
+ctaBody: >-
+  Every day a slab leak runs, it undermines the very foundation your home stands on. Sedco Plumbing serves
+  El Cajon and East County with fast, accurate leak detection and repair options explained in plain English.
+  Call Sedco Plumbing at [PHONE] and we will find it before it finds your flooring.
+
+internalLinks:
+  - href: /services/water-lines/
+    anchor: water line repair and repiping
+    group: service
+  - href: /services/water-pressure-regulators/
+    anchor: high water pressure and regulator replacement
+    group: service
+  - href: /services/slab-leak-repair/santee/
+    anchor: slab leak repair in Santee
+    group: combo
+  - href: /service-areas/
+    anchor: East County service areas
+    group: page
+  - href: /contact/
+    anchor: schedule leak detection
+    group: page

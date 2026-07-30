@@ -1,0 +1,48 @@
+---
+/**
+ * Phone-forward closing CTA band. Orange by default, dark for the variant the
+ * design uses on hub pages ("Not Sure What You Need?").
+ *
+ * The heading and copy come from each page's final H2 in the content guide.
+ */
+import { paths } from '@config/site';
+import { phoneHref, th } from '@lib/tokens';
+import Phone from './Phone.astro';
+
+interface Props {
+  heading: string;
+  /** Body copy; may contain guide placeholder tokens */
+  body?: string;
+  variant?: 'accent' | 'dark';
+  requestHref?: string;
+  requestLabel?: string;
+  /** Heading level — pages use h2 for their final CTA section */
+  as?: 'h2' | 'h3';
+}
+
+const {
+  heading,
+  body,
+  variant = 'accent',
+  requestHref = paths.contact,
+  requestLabel = 'Request Service Online',
+  as: Tag = 'h2',
+} = Astro.props;
+---
+
+<section class={`cta-band ${variant === 'dark' ? 'cta-band--dark' : ''}`}>
+  <div class="container">
+    <div class="cta-band__inner">
+      <Tag set:html={th(heading)} />
+      {body && <p set:html={th(body)} />}
+      <div class="btn-row btn-row--center">
+        <a class={`btn ${variant === 'dark' ? 'btn--accent' : 'btn--white'}`} href={phoneHref()}>
+          <span aria-hidden="true">📞</span> Call <Phone />
+        </a>
+        <a class={`btn ${variant === 'dark' ? 'btn--glass' : 'btn--dark-glass'}`} href={requestHref}>
+          {requestLabel}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

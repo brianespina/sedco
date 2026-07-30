@@ -1,0 +1,32 @@
+---
+/**
+ * AboutPage / ContactPage / CollectionPage schema for the core and hub pages
+ * (guide Part 3 spec blocks), each referencing the Plumber entity by @id
+ * rather than restating the business.
+ */
+import { absolute, BUSINESS_ID, site } from '@config/site';
+import { t } from '@lib/tokens';
+import JsonLd from './JsonLd.astro';
+
+interface Props {
+  type: 'AboutPage' | 'ContactPage' | 'CollectionPage' | 'WebPage' | 'Blog';
+  name: string;
+  description: string;
+  path: string;
+}
+
+const { type, name, description, path } = Astro.props;
+
+const data = {
+  '@context': 'https://schema.org',
+  '@type': type,
+  name: t(name),
+  description: t(description),
+  url: absolute(path),
+  isPartOf: { '@type': 'WebSite', name: site.business.name, url: absolute('/') },
+  about: { '@id': BUSINESS_ID },
+  publisher: { '@id': BUSINESS_ID },
+};
+---
+
+<JsonLd data={data} />

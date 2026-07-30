@@ -1,0 +1,110 @@
+service: water-lines
+
+title: Water Line Repair & Repiping in El Cajon | Sedco Plumbing
+description: >-
+  Water line repair and whole-home repiping in El Cajon, CA. Sedco Plumbing replaces aging galvanized pipe
+  with upfront, flat-rate pricing. Call [PHONE].
+primaryKeyword: water line repair El Cajon
+supportingKeywords:
+  - repiping El Cajon
+  - galvanized pipe replacement
+  - main water line replacement
+  - PEX repipe
+  - copper repipe
+  - water main leak
+
+heroBadge: Main lines to the last fixture branch
+heroStat: 2–4 days
+heroStatLabel: Typical whole-home repipe
+heroPoints:
+  - PEX-A or Type L copper, your call
+  - Written flat-rate quote after a walk-through
+  - Planned access openings, patched afterward
+  - CA C-36 license [LICENSE #], [WARRANTY TERMS]
+
+h1: Water Line Repair & Repiping in El Cajon
+intro:
+  - >-
+    The pipes that carry water into and through your home were never meant to last forever, and in El
+    Cajon’s older neighborhoods, many are decades past their design life. Sedco Plumbing repairs broken
+    water lines and repipes entire homes throughout El Cajon, East County, and greater San Diego County —
+    from the main line at the meter to the last fixture branch. You get a clear diagnosis, a flat-rate price
+    approved before work starts, and pipe materials chosen for our region’s hard water and shifting soils.
+
+sections:
+  - heading: Signs Your Water Line Is Failing
+    paragraphs:
+      - >-
+        Supply pipes fail from the inside out, so the early symptoms are subtle. Rust-tinted water first thing
+        in the morning points to corroding galvanized steel. Falling water pressure at multiple fixtures
+        suggests mineral buildup narrowing the pipe bore. A soggy patch or unusually green strip in the yard
+        often marks a leaking main line between the meter and the house. Hissing sounds, water bills creeping
+        upward, and repeated pinhole leaks in copper are all evidence that the system is telling you
+        something. One failure can be repaired; a pattern of failures is a countdown.
+
+  - heading: Galvanized, Copper, and What We Replace Them With
+    paragraphs:
+      - >-
+        Homes built across El Cajon in the 1950s through 1970s commonly used galvanized steel supply lines,
+        which corrode shut over 40 to 60 years — many are now more rust than pipe. Copper came next and is a
+        fine material, but our imported Colorado River water and high pressure produce the pinhole leaks East
+        County plumbers see weekly. When we repipe, we typically install PEX-A tubing or Type L copper
+        depending on your preference and budget. PEX resists scale, tolerates minor soil movement, and allows
+        fewer joints hidden in walls; copper remains the traditional premium choice. We will explain the
+        honest pros and cons of each for your specific house.
+
+  - heading: Main Line Repair vs. Whole-Home Repipe
+    paragraphs:
+      - >-
+        If the buried line between your Helix Water District meter and the house has failed, we can often
+        trench and replace just that run in a day, restoring full pressure without touching the interior
+        plumbing. Inside the house, the math is different: once galvanized or leak-prone copper starts failing
+        in one spot, the same corrosion exists everywhere. We will give you both numbers — the targeted repair
+        and the full repipe — along with our honest read on whether the rest of the system has years left or
+        months. A whole-home repipe typically takes two to four days, and we patch our access openings and
+        leave the place clean.
+
+faqs:
+  - question: How do I know if my house still has galvanized pipes?
+    answer:
+      - >-
+        Look at the exposed pipe near your water heater or under sinks; galvanized steel is gray, threaded,
+        and often flaking, and a magnet will stick to it. Homes in El Cajon built before the mid-1970s
+        frequently still have at least some galvanized supply piping.
+  - question: How much does a whole-home repipe cost?
+    answer:
+      - >-
+        Cost depends on the home’s size, number of fixtures, pipe material, and access, so honest pricing
+        requires a walk-through. We provide a written flat-rate quote after inspecting the house, and the
+        price does not change once you approve it.
+  - question: Will a repipe destroy my walls?
+    answer:
+      - >-
+        No. We make a limited number of planned access openings, run the new lines through walls and the
+        attic, and patch the openings afterward. Most customers repaint a few patches and are done.
+  - question: Is PEX safe for drinking water?
+    answer:
+      - >-
+        Yes, modern PEX is certified to national drinking-water standards and is approved under California’s
+        plumbing code. It also resists the scale buildup that shortens the life of metallic pipe in our
+        hard-water region.
+
+ctaHeading: Restore Full, Clean Flow to Your Home
+ctaBody: >-
+  You should not have to schedule your mornings around weak showers and rusty water. For water line repairs
+  and repiping backed by CA C-36 license [LICENSE #] and [WARRANTY TERMS], call Sedco Plumbing at [PHONE] —
+  we serve all of El Cajon and East County, usually with same-week starts.
+
+internalLinks:
+  - href: /services/slab-leak-repair/
+    anchor: slab leak detection and repair
+    group: service
+  - href: /services/water-pressure-regulators/
+    anchor: pressure regulator replacement
+    group: service
+  - href: /services/water-filtration/
+    anchor: whole-home water filtration
+    group: service
+  - href: /contact/
+    anchor: get a repipe estimate
+    group: page

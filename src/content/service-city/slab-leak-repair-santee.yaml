@@ -1,0 +1,89 @@
+service: slab-leak-repair
+city: santee
+
+title: Slab Leak Repair in Santee, CA | Sedco Plumbing
+description: >-
+  Slab leak in your Santee tract home? Sedco Plumbing pinpoints leaks under concrete and repairs them with the
+  least disruption possible. Call [PHONE].
+primaryKeyword: slab leak repair Santee
+supportingKeywords:
+  - slab leak detection Santee
+  - leak under slab Santee
+  - warm spot on floor
+  - pipe reroute Santee
+  - foundation water leak
+
+heroStat: Same day
+heroStatLabel: Detection, usually
+heroPoints:
+  - Hot side isolated from cold before we locate
+  - Electronic amplification and thermal imaging
+  - Single-story reroutes often skip slab demolition
+  - Firm flat-rate quote for each viable option
+
+h1: Slab Leak Detection & Repair in Santee, CA
+intro:
+  - >-
+    Santee’s tract homes were built quickly and built on slabs — and the copper water lines the builders ran
+    beneath that concrete in the 1970s and 1980s are now well past forty years old. When one springs a pinhole, the
+    water has nowhere to go but into the soil and up into your home. Sedco Plumbing pinpoints slab leaks
+    electronically and repairs them with as little concrete work as the job honestly requires.
+
+sections:
+  - heading: Why Slab Leaks Are So Common in Santee
+    paragraphs:
+      - >-
+        Slab-on-grade construction was the standard for the tract neighborhoods of Carlton Hills and the streets
+        around Santee Lakes, with soft copper supply lines routed directly beneath the concrete. Decades of hard Padre
+        Dam water moving through those lines wears them thin from the inside, while contact with soil and slab can
+        corrode them from the outside. Hot-water lines tend to go first — heat accelerates both processes — which is
+        why the most common first clue we hear about is a floor that feels inexplicably warm in one spot.
+
+  - heading: Pinpoint Accuracy, Minimal Demolition
+    paragraphs:
+      - >-
+        Guessing is expensive when the pipe is under concrete. We verify the leak with meter and pressure testing,
+        isolate the hot side from the cold, and then locate it precisely with electronic amplification and, where
+        useful, thermal imaging. Because most Santee tract homes are single-story, we can often skip slab demolition
+        entirely by rerouting the failed line up through the walls and attic — abandoning the compromised pipe in
+        place and giving you a new, accessible line instead.
+
+  - heading: Straightforward Pricing on a Stressful Repair
+    paragraphs:
+      - >-
+        A slab leak is nobody’s idea of a good week, so we keep the process calm: a firm flat-rate quote for each
+        viable option — spot repair, reroute, or a repipe if multiple lines are near failure — with the tradeoffs of
+        each explained before you commit to anything.
+
+faqs:
+  - question: What does a slab leak sound or feel like?
+    answer:
+      - >-
+        Homeowners describe a hiss or faint rush of water with everything off, warm patches underfoot, damp carpet
+        edges, or a water bill that climbs for no reason. Two or more of those together justify a detection visit.
+  - question: Can a technician get to Santee quickly for something like this?
+    answer:
+      - >-
+        Yes — an active slab leak moves to the front of our schedule, and the drive from El Cajon to any Santee
+        neighborhood takes our techs only minutes, so detection usually happens the day you call [HOURS].
+  - question: Is a reroute as good as repairing the pipe under the slab?
+    answer:
+      - >-
+        Often it is better. A reroute retires the entire vulnerable run instead of patching one point on an aging
+        line, and the new pipe stays accessible if it ever needs attention decades from now.
+
+ctaHeading: Act While It Is Still a Small Problem
+ctaBody: >-
+  Water under a slab never stays put. Call Sedco Plumbing at [PHONE] and we will find your Santee slab leak, walk
+  you through the options, and stop it — usually within the day.
+
+internalLinks:
+  - href: /services/slab-leak-repair/
+    anchor: slab leak services
+    group: service
+  - href: /service-areas/santee/
+    anchor: our Santee service area
+    group: city
+  - href: /services/water-heater/santee/
+    anchor: Santee water heater replacement
+    group: combo

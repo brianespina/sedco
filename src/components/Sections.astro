@@ -1,0 +1,57 @@
+---
+/**
+ * Renders the guide's body copy for a page: each section's heading at the
+ * labeled level, then its paragraphs, list items, and link pills.
+ *
+ * Copy is stored verbatim in the content collections, so heading order and
+ * wording match the guide exactly; only placeholder tokens are resolved.
+ */
+import { th } from '@lib/tokens';
+import type { Section } from '@lib/types';
+
+interface Props {
+  sections: Section[];
+}
+
+const { sections } = Astro.props;
+---
+
+{
+  sections.map((section) => (
+    <>
+      {section.level === 3 ? (
+        <h3 set:html={th(section.heading)} />
+      ) : (
+        <h2 set:html={th(section.heading)} />
+      )}
+
+      {section.paragraphs?.map((paragraph) => <p set:html={th(paragraph)} />)}
+
+      {section.list && (
+        <ul>
+          {section.list.map((item) => (
+            <li set:html={th(item)} />
+          ))}
+        </ul>
+      )}
+
+      {section.links && (
+        <ul class="pill-list section-pills">
+          {section.links.map((link) => (
+            <li>
+              <a class="pill" href={link.href}>
+                {link.anchor}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
+    </>
+  ))
+}
+
+<style>
+  .section-pills {
+    margin-top: 1.25rem;
+  }
+</style>

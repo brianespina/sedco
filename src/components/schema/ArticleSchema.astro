@@ -1,0 +1,38 @@
+---
+/**
+ * BlogPosting schema for blog posts, publisher referenced by @id so the
+ * business entity is stated once, on the homepage.
+ */
+import { absolute, BUSINESS_ID, site } from '@config/site';
+import { t } from '@lib/tokens';
+import JsonLd from './JsonLd.astro';
+
+interface Props {
+  headline: string;
+  description: string;
+  path: string;
+  published: Date;
+  updated?: Date;
+  author: string;
+  image?: string;
+}
+
+const { headline, description, path, published, updated, author, image } = Astro.props;
+
+const data: Record<string, unknown> = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline,
+  description: t(description),
+  url: absolute(path),
+  mainEntityOfPage: { '@type': 'WebPage', '@id': absolute(path) },
+  datePublished: published.toISOString(),
+  author: { '@type': 'Organization', name: author || site.business.name },
+  publisher: { '@id': BUSINESS_ID },
+};
+
+if (updated) data.dateModified = updated.toISOString();
+if (image) data.image = absolute(image);
+---
+
+<JsonLd data={data} />

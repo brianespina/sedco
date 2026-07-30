@@ -1,0 +1,108 @@
+city: lemon-grove
+
+title: Plumber in Lemon Grove, CA | Sedco Plumbing
+description: >-
+  From 1920s bungalows to modern remodels, Sedco Plumbing serves Lemon Grove with licensed, flat-rate
+  plumbing from nearby El Cajon. Call [PHONE].
+primaryKeyword: plumber Lemon Grove
+supportingKeywords:
+  - Lemon Grove plumbing company
+  - sewer lateral repair Lemon Grove
+  - repiping Lemon Grove
+  - drain cleaning Lemon Grove
+  - emergency plumber Lemon Grove
+
+heroBadge: Era-home experience, modern diagnostics
+heroStat: 15 min
+heroStatLabel: Typical drive from El Cajon
+heroPoints:
+  - We map what is actually there before quoting
+  - Camera inspections on aging clay and cast iron laterals
+  - CA C-36 licensed ([LICENSE #])
+  - Work area left cleaner than it started
+
+h1: A Plumber Who Understands Lemon Grove’s Vintage Homes
+intro:
+  - >-
+    The bungalows and cottages that give Lemon Grove its character mostly date from the 1920s through the
+    1950s, which makes this one of the oldest housing stocks anywhere in East County. Owning one of these homes
+    is a point of pride — and a plumbing commitment, because much of what’s behind the walls and under the yard
+    is original. Sedco Plumbing works on these houses constantly from our base a few miles up the road in El
+    Cajon, and we treat their quirks with the respect a ninety-year-old home has earned.
+
+sections:
+  - heading: What a 1920s Bungalow Asks of Its Plumber
+    paragraphs:
+      - >-
+        Three things fail predictably in Lemon Grove’s compact older neighborhoods. Galvanized supply lines
+        corrode from the inside, narrowing until the shower turns feeble whenever the washing machine runs.
+        Original sewer laterals — often clay or cast iron — crack, sag, and invite roots, producing backups that
+        return no matter how many times the line gets snaked. And decades of piecemeal fixes leave behind odd
+        transitions, abandoned lines, and mystery valves that confuse anyone who hasn’t worked on era homes
+        before. We have, and our first job is always mapping what’s actually there so the repair you pay for is
+        the repair the house needs.
+
+  - heading: Plumbing Services We Provide in Lemon Grove
+    paragraphs:
+      - >-
+        Most of our Lemon Grove work falls into a handful of categories: [sewer line inspection, repair, and
+        replacement](/services/sewer-lines/) for aging laterals, [water line repiping](/services/water-lines/) to
+        retire galvanized pipe, [drain cleaning](/services/drain-cleaning/) for stubborn kitchen and bathroom
+        lines, and [water heater repair and installation](/services/water-heater/) — including tankless units
+        that free up precious space in smaller vintage homes. We also handle toilet repair, faucet service, and
+        [kitchen and bath remodel plumbing](/services/kitchen-bath-remodels/) for owners updating a bungalow
+        without erasing it. The complete lineup is on [our services page](/services/).
+
+  - heading: Small City, Straight Answers
+    paragraphs:
+      - >-
+        Lemon Grove is the kind of place where reputation travels fast, and we like it that way. You get a
+        California C-36 licensed contractor ([LICENSE #]), a flat-rate price approved before the first fitting is
+        touched, and a technician who leaves the work area cleaner than it started. One more local note: Helix
+        Water District supplies the city, and its imported water runs hard enough to scale up heaters and valves
+        — worth remembering when a fixture in an otherwise healthy house starts acting up.
+
+faqs:
+  - question: How long does it take you to get to Lemon Grove?
+    answer:
+      - >-
+        About 15 minutes from our El Cajon home base for most of the city, straight down Highway 94 or through La
+        Mesa. That closeness is why Lemon Grove customers get the same same-day availability our El Cajon
+        neighbors do, with emergency coverage [HOURS].
+  - question: Should I keep patching my galvanized pipes or repipe the house?
+    answer:
+      - >-
+        Once leaks start recurring or flow drops noticeably, patches become a subscription — each one buys less
+        time than the last. A repipe in copper or PEX is a bigger day but a permanent answer, and we’ll quote both
+        honestly so you can decide.
+  - question: Who is responsible for the sewer lateral at my Lemon Grove home?
+    answer:
+      - >-
+        In most cases the homeowner owns the lateral from the house to the public main, including the portion
+        under the street. A camera inspection tells you its condition before you buy, sell, or budget — and before
+        a backup decides the timing for you.
+
+ctaHeading: Give Your Vintage Home the Right Plumber
+ctaBody: >-
+  Your bungalow has outlasted every trend since the Model A; it deserves repairs done properly rather than
+  quickly. Call Sedco Plumbing at [PHONE] and get era-home experience with modern diagnostics, minutes away
+  in El Cajon.
+
+alsoServing: 'Also serving nearby: La Mesa, Spring Valley, and Rolando via our San Diego page.'
+
+internalLinks:
+  - href: /services/sewer-lines/
+    anchor: sewer line repair and replacement
+    group: service
+  - href: /services/water-lines/
+    anchor: repiping for galvanized homes
+    group: service
+  - href: /services/kitchen-bath-remodels/
+    anchor: remodel plumbing
+    group: service
+  - href: /service-areas/la-mesa/
+    anchor: neighboring La Mesa
+    group: city
+  - href: /service-areas/spring-valley/
+    anchor: neighboring Spring Valley
+    group: city

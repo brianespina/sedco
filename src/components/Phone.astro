@@ -1,0 +1,17 @@
+---
+/**
+ * Renders the business phone number, as a dashed placeholder chip until the
+ * real number is set in src/config/site.ts. Use this anywhere the number
+ * appears in markup so no page ever hardcodes it.
+ */
+import { th } from '@lib/tokens';
+
+interface Props {
+  /** Wrapper element, e.g. 'strong' */
+  as?: string;
+}
+
+const { as: Tag = 'span' } = Astro.props;
+---
+
+<Tag set:html={th('[PHONE]')} />

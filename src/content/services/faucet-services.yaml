@@ -1,0 +1,120 @@
+service: faucet-services
+
+title: Faucet Repair & Installation in El Cajon | Sedco Plumbing
+description: >-
+  Dripping or stuck faucet? Sedco Plumbing repairs and installs faucets across El Cajon with upfront
+  flat-rate pricing. Licensed C-36. Call [PHONE].
+primaryKeyword: faucet repair El Cajon
+supportingKeywords:
+  - faucet installation El Cajon
+  - leaky faucet repair
+  - kitchen faucet replacement
+  - bathroom faucet installation
+  - dripping faucet fix
+
+heroBadge: Kitchen, bath, laundry & outdoor faucets
+heroStat: 3,000 gal
+heroStatLabel: Wasted yearly by one drip
+heroPoints:
+  - Cartridges and supply lines stocked on the truck
+  - Most faucet calls resolved in a single visit
+  - Static pressure checked while we are there
+  - Workmanship backed by [WARRANTY TERMS]
+
+h1: Faucet Repair & Installation in El Cajon
+intro:
+  - >-
+    A faucet that drips once per second wastes upwards of 3,000 gallons a year, and in a county that
+    imports most of its water, that shows up on your bill faster than you might think. Sedco Plumbing
+    repairs and installs kitchen, bathroom, laundry, and outdoor faucets for homes and businesses across
+    El Cajon — Fletcher Hills, Bostonia, Granite Hills, and downtown — along with the rest of East County
+    and San Diego County. Our trucks carry the cartridges, aerators, washers, and supply lines that
+    resolve most faucet calls in a single visit, and you approve a flat-rate price before any work begins.
+
+sections:
+  - heading: Faucet Problems We Fix Every Week
+    paragraphs:
+      - >-
+        Some faucet trouble announces itself with a steady drip at 2 a.m. Other problems build slowly until
+        the fixture barely works at all. We handle the full range:
+    list:
+      - Constant dripping from worn cartridges, seats, or O-rings
+      - Handles that stick, grind, or spin without shutting off the water
+      - Weak flow caused by mineral-clogged aerators and valve bodies
+      - Leaks under the sink where supply lines and connections have loosened or corroded
+      - Pull-down sprayers that will not retract or have lost pressure
+      - Seized or seeping shutoff valves that make every future repair harder
+
+  - heading: Repair or Replace? You Get a Straight Answer
+    paragraphs:
+      - >-
+        If a fixture is worth saving, we rebuild it with quality parts. If it is not, we say so plainly and
+        walk you through replacement options at more than one price point.
+      - >-
+        A well-built faucet from a reputable manufacturer usually deserves a repair, because a new cartridge
+        costs a fraction of a new fixture and the brand will often supply parts for decades. A builder-grade
+        faucet with a corroded body, pitted finish, or discontinued internals is a different story — putting
+        money into it rarely pays off. When replacement makes sense, you can supply your own fixture or
+        choose from options we recommend for hard-water performance. Either way, we install new supply
+        lines, confirm the shutoff valves actually shut off, and pressure-test every connection before we
+        leave. Our workmanship is backed by [WARRANTY TERMS], and Sedco Plumbing holds CA C-36 license
+        [LICENSE #].
+
+  - heading: Hard Water Is Hard on El Cajon Faucets
+    paragraphs:
+      - >-
+        Much of El Cajon receives imported Colorado River water through the Helix Water District, and it
+        commonly measures 14 to 18 grains per gallon — firmly in the “very hard” range. That mineral load
+        scales up aerators, cartridges, and valve seats, which is why faucets here tend to fail years sooner
+        than their manufacturers intended. High street pressure on hillside lots compounds the wear.
+        Whenever we service a faucet, we check your home’s static pressure and flag a failing pressure
+        regulator before it quietly destroys fixtures throughout the house. If scale keeps winning, ask us
+        about a whole-home softener or filtration system.
+
+faqs:
+  - question: How much does faucet repair cost in El Cajon?
+    answer:
+      - >-
+        Most cartridge, washer, and aerator repairs cost far less than a new fixture with installation. We
+        diagnose the faucet first, then give you one flat-rate price to approve before work begins, so there
+        are no hourly surprises.
+  - question: Can you install a faucet I bought myself?
+    answer:
+      - >-
+        Yes, we install customer-supplied fixtures every week. We confirm the faucet matches your sink’s
+        hole configuration before removing the old one, and our installation workmanship is covered even
+        when the fixture is yours.
+  - question: Why does my brand-new faucet already drip?
+    answer:
+      - >-
+        The usual culprits are debris or scale that migrated into the new cartridge during installation, or
+        house pressure running too high. If your static pressure is above 80 psi, a pressure regulator will
+        protect the new faucet and every other fixture you own.
+  - question: Do you repair outdoor hose bibbs?
+    answer:
+      - >-
+        Yes. We replace leaking and stripped hose bibbs, install frost-free and quarter-turn models, and add
+        the anti-siphon protection California code expects on outdoor spigots.
+
+ctaHeading: Schedule Faucet Service in El Cajon
+ctaBody: >-
+  Whether it is a drip that will not quit or a full fixture upgrade for the kitchen, we can usually get a
+  technician to your door the same day, [HOURS]. Call Sedco Plumbing at [PHONE] or send us a note through
+  the contact page, and we will take it from there.
+
+internalLinks:
+  - href: /services/sink-services/
+    anchor: sink installation and repair
+    group: service
+  - href: /services/water-filtration/
+    anchor: water filtration and softener systems
+    group: service
+  - href: /services/water-pressure-regulators/
+    anchor: water pressure regulator replacement
+    group: service
+  - href: /services/
+    anchor: all plumbing services
+    group: page
+  - href: /contact/
+    anchor: request service online
+    group: page

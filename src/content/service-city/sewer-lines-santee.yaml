@@ -1,0 +1,91 @@
+service: sewer-lines
+city: santee
+
+title: Sewer Line Repair in Santee, CA | Sedco Plumbing
+description: >-
+  Sewer backups or slow drains throughout the house? Sedco Plumbing inspects, spot-repairs, and replaces sewer
+  lines across Santee. Call [PHONE].
+primaryKeyword: sewer line repair Santee
+supportingKeywords:
+  - sewer line replacement Santee
+  - sewer camera inspection Santee
+  - trenchless sewer Santee
+  - sewer lateral repair
+  - main line backup
+
+heroStat: Within hours
+heroStatLabel: Camera in your line
+heroPoints:
+  - Watch the camera inspection in real time
+  - Problem spots located and marked from the surface
+  - Spot repair, lining, or full replacement
+  - Emergency sewer calls go to the top of the board
+
+h1: Sewer Line Repair & Replacement in Santee, CA
+intro:
+  - >-
+    When more than one drain in the house misbehaves — a gurgling toilet here, a slow shower there, water rising in
+    the tub when the washer drains — the trouble is almost never the fixtures. It is the sewer lateral they all
+    share. Sedco Plumbing diagnoses, repairs, and replaces sewer lines throughout Santee, and because our shop is
+    in neighboring El Cajon, a camera can be in your line within hours of your call.
+
+sections:
+  - heading: What Actually Goes Wrong Under Santee Yards
+    paragraphs:
+      - >-
+        Santee’s sewer laterals are younger than those in San Diego’s oldest suburbs, but the ABS and clay lines
+        serving its 1970s–80s tract homes have failure patterns of their own. Decades of soil settling under lawns and
+        driveways leave low spots — bellies — where waste and paper collect with every flush. The landscape trees
+        planted when Carlton Hills was new are now full-grown, and their roots pry into pipe joints for moisture,
+        especially in dry years. In some homes we also find sagging or separated fittings from the original
+        construction era finally giving out. Padre Dam maintains the sewer mains; everything from your house to that
+        connection is the homeowner’s responsibility — and ours to fix.
+
+  - heading: A Diagnosis You Can Watch
+    paragraphs:
+      - >-
+        Every sewer recommendation we make starts with a camera inspection you are welcome to watch in real time. You
+        will see the belly holding water, the root mass at the joint, or clean healthy pipe — whichever is true. We
+        locate any problem spot from the surface and mark it, so the scope of the repair is defined before the price
+        is.
+
+  - heading: Spot Repair, Lining, or Full Replacement
+    paragraphs:
+      - >-
+        Not every troubled lateral needs replacing. An isolated break can often be excavated and spot-repaired in a
+        day. Lines that are structurally sound but root-prone can be lined, creating a jointless pipe roots cannot
+        enter. When a lateral is failing along its whole run, we price trenchless replacement against open-trench work
+        and recommend whichever truly serves you better.
+
+faqs:
+  - question: How often should a sewer line be inspected?
+    answer:
+      - >-
+        If your Santee home is more than thirty years old and the line has never been scoped, once now and roughly
+        every few years after — and always before buying or extensively remodeling a house.
+  - question: A backup just reached my shower. How fast can you be here?
+    answer:
+      - >-
+        Treat that as urgent, and so do we: emergency sewer calls go straight to the top of the board, and the run
+        from El Cajon into Santee takes our techs only a few minutes [HOURS].
+  - question: Will my whole yard get dug up?
+    answer:
+      - >-
+        Usually not. Between camera-guided spot repairs and trenchless lining or bursting, most Santee sewer work
+        today happens through one or two small access points rather than a trench across the lawn.
+
+ctaHeading: Find Out What Is Really Down There
+ctaBody: >-
+  Stop guessing about the pipe you cannot see. Call Sedco Plumbing at [PHONE] to schedule a Santee sewer camera
+  inspection or emergency backup service now.
+
+internalLinks:
+  - href: /services/sewer-lines/
+    anchor: sewer services overview
+    group: service
+  - href: /service-areas/santee/
+    anchor: plumber serving Santee
+    group: city
+  - href: /services/drain-cleaning/santee/
+    anchor: Santee drain cleaning
+    group: combo

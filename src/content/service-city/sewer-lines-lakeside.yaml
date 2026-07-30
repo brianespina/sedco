@@ -1,0 +1,92 @@
+service: sewer-lines
+city: lakeside
+
+title: Sewer Line Repair in Lakeside, CA | Sedco Plumbing
+description: >-
+  Sewer line repair and replacement in Lakeside, including trenchless options that protect large lots and
+  landscaping. Upfront pricing. Call [PHONE].
+primaryKeyword: sewer line repair Lakeside
+supportingKeywords:
+  - sewer line replacement Lakeside
+  - trenchless sewer repair Lakeside
+  - sewer camera inspection Lakeside
+  - root intrusion sewer line
+  - septic to sewer conversion Lakeside
+
+heroStat: Within the hour
+heroStatLabel: Sewage emergencies, often
+heroPoints:
+  - Camera with a locator on every job
+  - Trenchless methods that keep grounds intact
+  - Septic-to-sewer conversions, permit to inspection
+  - Flat-rate quote from a licensed CA C-36 contractor
+
+h1: Sewer Line Repair & Replacement in Lakeside, CA
+intro:
+  - >-
+    When sewage backs up, you need two things fast: someone who can stop the mess, and a straight answer about what
+    caused it. Sedco Plumbing repairs and replaces sewer lines across Lakeside, and because so many properties here
+    sit on large lots with long laterals — or still rely on septic systems — we diagnose thoroughly before we
+    recommend anything.
+
+sections:
+  - heading: Sewer Challenges on Lakeside’s Larger Lots
+    paragraphs:
+      - >-
+        A sewer lateral that runs eighty or a hundred feet from house to street has more opportunities to fail than a
+        short suburban one. Eucalyptus Hills lives up to its name, and eucalyptus roots are notoriously aggressive about
+        finding the moisture inside a cracked joint. Lines serving original farm properties may be clay or cast iron
+        nearing the end of their service life. And on parcels where the county has extended sewer service, we handle
+        septic-to-sewer connections from permit to final inspection.
+
+  - heading: Every Job Starts With a Camera
+    paragraphs:
+      - >-
+        Guessing is expensive on a long line. We run a sewer camera with a locator, which tells us exactly what is wrong
+        — roots, a crack, a belly, an offset joint — and precisely where and how deep it sits. On a big Lakeside parcel,
+        that precision is the difference between one targeted repair and a trench across half the property.
+
+  - heading: Trenchless Options That Spare Your Land
+    paragraphs:
+      - >-
+        Corrals, mature trees, long driveways, established landscaping — the things that make a Lakeside property worth
+        owning are the same things nobody wants excavated. Where the line’s condition allows, we use trenchless methods
+        such as pipe bursting and lining to replace or rehabilitate the lateral through small access points instead of
+        an open trench, keeping your grounds intact and the project timeline short.
+
+faqs:
+  - question: How do I know if roots have invaded my sewer line?
+    answer:
+      - >-
+        Recurring main-line clogs are the classic sign, especially if drains slow down again within months of a cleaning.
+        Gurgling toilets and soggy patches of ground along the line’s path are other clues. A camera inspection confirms
+        it definitively.
+  - question: Can you connect my septic home to the public sewer?
+    answer:
+      - >-
+        Yes. Where sewer service is available to your parcel, we manage the conversion — decommissioning the tank to
+        code, running the new lateral, and coordinating permits and inspections with the county.
+  - question: How quickly can you respond to a sewer backup in Lakeside?
+    answer:
+      - >-
+        Sewage emergencies go to the front of the line. Coming from El Cajon, our crews reach most Lakeside addresses in
+        short order — often within the hour during business hours — with emergency availability [HOURS].
+
+ctaHeading: Get a Straight Answer About Your Sewer
+ctaBody: >-
+  Before you agree to a major sewer repair, get a camera inspection and a flat-rate quote from a licensed local
+  contractor (CA C-36 [LICENSE #]). Call Sedco Plumbing at [PHONE] for sewer line service in Lakeside.
+
+internalLinks:
+  - href: /services/sewer-lines/
+    anchor: sewer line repair & replacement
+    group: service
+  - href: /service-areas/lakeside/
+    anchor: plumbing in Lakeside
+    group: city
+  - href: /services/drain-cleaning/lakeside/
+    anchor: drain cleaning in Lakeside
+    group: combo
+  - href: /contact/
+    anchor: request an inspection
+    group: page

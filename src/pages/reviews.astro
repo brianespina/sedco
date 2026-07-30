@@ -1,0 +1,216 @@
+---
+/**
+ * REVIEWS — guide Part 3 "Reviews", design Reviews.dc.html (masonry cards).
+ *
+ * No Review or AggregateRating markup: the guide (Part 7.1) permits it only for
+ * genuine first-party reviews collected on the site, never for reviews copied
+ * from Google. The cards below are placeholder content (src/config/reviews.ts).
+ */
+import { paths } from '@config/site';
+import { reviews, reviewsArePlaceholder } from '@config/reviews';
+import { isPlaceholder } from '@lib/tokens';
+import { site } from '@config/site';
+import { images } from '@lib/images';
+
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Hero from '@components/Hero.astro';
+import HeroCtas from '@components/HeroCtas.astro';
+import CtaSection from '@components/CtaSection.astro';
+import PageSchema from '@components/schema/PageSchema.astro';
+
+const title = 'Sedco Plumbing Reviews | El Cajon & San Diego County';
+const description =
+  'Read reviews from Sedco Plumbing customers across El Cajon, La Mesa, Santee and San Diego County. Licensed, upfront-priced plumbing. Call [PHONE].';
+const path = paths.reviews;
+
+const crumbs = [{ name: 'Home', href: paths.home }, { name: 'Reviews' }];
+
+const reviewLink = site.profiles.googleReview;
+const reviewLinkReady = !isPlaceholder(reviewLink) && reviewLink.length > 0;
+---
+
+<BaseLayout title={title} description={description} path={path} crumbs={crumbs}>
+  <Fragment slot="head">
+    <PageSchema type="WebPage" name={title} description={description} path={path} />
+  </Fragment>
+
+  <Hero
+    variant="center"
+    image={images.heroGeneral}
+    badge="What your neighbors say"
+    heading="What Your Neighbors Say About Sedco Plumbing"
+    intro="Nothing means more to us than the word of the families and businesses we serve. Here is what customers across El Cajon, La Mesa, Santee, and the rest of San Diego County have to say about working with us."
+  >
+    <HeroCtas slot="cta" center />
+  </Hero>
+
+  <section class="section">
+    <div class="container">
+      {
+        reviewsArePlaceholder && (
+          <p class="placeholder-banner">
+            <span class="ph-chip">SAMPLE REVIEWS</span>
+            Replace with the client's real reviews — 8-12 with first name, city, and service
+            performed — or embed a live Google reviews feed. Group them by city so visitors see proof
+            from their own area.
+          </p>
+        )
+      }
+
+      <ul class="masonry" role="list">
+        {
+          reviews.map((review) => (
+            <li class="review">
+              <div class="stars" aria-label="5 out of 5 stars">
+                ★★★★★
+              </div>
+              <p>“{review.quote}”</p>
+              <div class="review__author">
+                <span class="avatar" aria-hidden="true">
+                  {review.name.charAt(0)}
+                </span>
+                <span>
+                  <strong>{review.name}</strong>
+                  <span class="review__detail">{review.detail}</span>
+                </span>
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="container">
+      <div class="ask-card">
+        <div class="side-card">
+          <h2>Had a Great Experience?</h2>
+          <p class="card-copy">
+            Reviews that mention your city and the service we performed help your neighbors find us.
+            If we earned it, we would be grateful for a review on Google.
+          </p>
+          {
+            reviewLinkReady ? (
+              <a class="btn btn--primary" href={reviewLink} rel="noopener">
+                Leave a Google review
+              </a>
+            ) : (
+              <p class="link-missing">
+                <span class="ph-chip">[GOOGLE REVIEW LINK]</span> — add the client's direct review
+                link in src/config/site.ts to enable this button.
+              </p>
+            )
+          }
+          <p class="card-copy">
+            While you are here: browse <a href={paths.servicesHub}>our plumbing services</a> or <a
+              href={paths.contact}>request a service call</a
+            >.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CtaSection
+    heading="Ready to See for Yourself?"
+    body="Call Sedco Plumbing at [PHONE] or request service online, and let us show you why East County keeps recommending us."
+  />
+</BaseLayout>
+
+<style>
+  .placeholder-banner {
+    background: var(--ph-bg);
+    border: 1px dashed var(--ph-border);
+    color: var(--ph-text);
+    border-radius: var(--r-card);
+    padding: 1rem 1.125rem;
+    font-size: var(--fs-sm);
+    line-height: 1.55;
+    margin-bottom: 2rem;
+  }
+
+  .masonry {
+    columns: 3;
+    column-gap: 1.375rem;
+    list-style: none;
+    padding: 0;
+  }
+  .review {
+    break-inside: avoid;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--r-card);
+    padding: 1.5rem;
+    margin-bottom: 1.375rem;
+    box-shadow: var(--sh-card);
+  }
+  .review p {
+    font-size: 0.9375rem;
+    line-height: 1.65;
+    color: var(--text-soft);
+    margin-top: 0.75rem;
+  }
+  .stars {
+    color: var(--star);
+    letter-spacing: 2px;
+  }
+  .review__author {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1.125rem;
+  }
+  .review__author > span:last-child {
+    display: flex;
+    flex-direction: column;
+  }
+  .review__author strong {
+    font-size: 0.875rem;
+    color: var(--brand-deep);
+  }
+  .review__detail {
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+  }
+  .avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--grad-chip);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+
+  .ask-card {
+    max-width: var(--measure-prose);
+    margin-inline: auto;
+  }
+  .card-copy {
+    font-size: 0.9375rem;
+    color: var(--text-soft);
+    line-height: 1.6;
+    margin-block: 0.75rem 1.125rem;
+  }
+  .link-missing {
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  @media (max-width: 900px) {
+    .masonry {
+      columns: 2;
+    }
+  }
+  @media (max-width: 620px) {
+    .masonry {
+      columns: 1;
+    }
+  }
+</style>

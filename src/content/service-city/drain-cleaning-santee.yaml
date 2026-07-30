@@ -1,0 +1,84 @@
+service: drain-cleaning
+city: santee
+
+title: Drain Cleaning in Santee, CA | Sedco Plumbing
+description: >-
+  Sedco Plumbing clears stubborn clogs in Santee kitchens, bathrooms, and main lines — fast service from nearby
+  El Cajon, priced upfront. Call [PHONE].
+primaryKeyword: drain cleaning Santee
+supportingKeywords:
+  - clogged drain Santee
+  - hydro jetting Santee
+  - main line backup Santee
+  - slow drains
+  - kitchen drain clog Santee
+
+heroStat: ~1 hour
+heroStatLabel: Most visits, start to finish
+heroPoints:
+  - Trucks roll out of El Cajon fully stocked
+  - Cable machine or hydro jetting, matched to the clog
+  - Camera before we recommend anything bigger
+  - Floors protected, work area cleaned up
+
+h1: Drain Cleaning in Santee, CA
+intro:
+  - >-
+    Is it one stubborn sink, or is every drain in the house slowing down at once? The answer changes everything
+    about the fix, and it is the first question Sedco Plumbing asks when a Santee homeowner calls. One fixture
+    points to a local clog; the whole house points to the main line. Either way, our trucks roll out of El Cajon
+    fully stocked, and you approve a flat-rate price before any work begins.
+
+sections:
+  - heading: Forty Years of Daily Use in Santee’s Tract Homes
+    paragraphs:
+      - >-
+        A large share of Santee’s housing — through Carlton Hills and the neighborhoods around Santee Lakes — was
+        built in the 1970s and 1980s, and many kitchen and bathroom drain lines have been in continuous service ever
+        since. Four decades of cooking grease, coffee grounds, and soap leave a coating inside a kitchen line that no
+        store-bought product touches. Padre Dam Municipal Water District supplies notably hard water, and the mineral
+        scale it leaves behind gives grease and hair even more to cling to. The result is drains that narrow slowly
+        for years, then seem to fail all at once.
+
+  - heading: The Right Tool for the Clog
+    paragraphs:
+      - >-
+        For straightforward blockages, a cable machine restores flow quickly. For greasy kitchen lines and scaled-up
+        pipes, hydro jetting washes the buildup off the pipe walls and returns the line to nearly its original
+        diameter — the difference between relief for a month and relief for years. And when a main line keeps backing
+        up, we run a camera before recommending anything bigger, so you are never asked to pay for work you cannot
+        see the reason for. Most visits wrap up within about an hour, and we protect floors and clean up before we go
+        — the only sign we were there is a drain that finally works.
+
+faqs:
+  - question: What is that smell coming from my kitchen sink?
+    answer:
+      - >-
+        Odor usually means decades of decomposing grease and food film coating the drain line — common in original
+        1970s–80s Santee kitchens. Jetting the line clean removes the buildup at its source rather than masking it.
+  - question: How long does it take you to reach Santee?
+    answer:
+      - >-
+        Not long — we dispatch from El Cajon, about ten to fifteen minutes down Cuyamaca or Magnolia from most Santee
+        neighborhoods, and we hold room in the schedule for same-day drain calls [HOURS].
+  - question: Can I just use a liquid drain cleaner instead?
+    answer:
+      - >-
+        We would rather you did not. Caustic cleaners rarely clear a real blockage, they sit in the pipe and can
+        damage older lines, and they make the drain hazardous for whoever eventually has to open it.
+
+ctaHeading: Get It Flowing Today
+ctaBody: >-
+  A clogged drain rarely improves on its own, and a slow main line is a backup waiting for a bad moment. Call
+  Sedco Plumbing at [PHONE] for fast, upfront drain cleaning anywhere in Santee.
+
+internalLinks:
+  - href: /services/drain-cleaning/
+    anchor: drain cleaning
+    group: service
+  - href: /service-areas/santee/
+    anchor: plumber in Santee
+    group: city
+  - href: /services/sewer-lines/santee/
+    anchor: sewer line repair in Santee
+    group: combo

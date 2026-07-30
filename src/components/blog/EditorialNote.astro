@@ -1,0 +1,43 @@
+---
+/**
+ * Editorial callout inside blog copy — a visible pre-launch reminder rather
+ * than a hidden comment, so unresolved items (pricing to confirm, facts to
+ * verify) are obvious on the page until they are handled.
+ *
+ * Remove the {% note %} block from the post once its item is resolved.
+ */
+interface Props {
+  label?: string;
+}
+
+const { label = 'Before publishing' } = Astro.props;
+---
+
+<aside class="editorial-note">
+  <strong>{label}</strong>
+  <div><slot /></div>
+</aside>
+
+<style>
+  .editorial-note {
+    background: var(--ph-bg);
+    border: 1px dashed var(--ph-border);
+    border-radius: var(--r-card);
+    padding: 1rem 1.125rem;
+    margin-block: 1.5rem;
+  }
+  .editorial-note strong {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ph-text);
+    margin-bottom: 0.5rem;
+  }
+  .editorial-note :global(p) {
+    font-size: 0.875rem !important;
+    line-height: 1.6 !important;
+    color: var(--ph-text) !important;
+    margin: 0;
+  }
+</style>

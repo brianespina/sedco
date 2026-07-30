@@ -1,0 +1,49 @@
+---
+/**
+ * Sidebar link card — "Related Services" on service pages, "Also Serving
+ * Nearby" on city pages, "Keep Reading" on blog posts.
+ *
+ * Anchors are always descriptive (guide Part 7.2: never "click here").
+ */
+import type { InternalLink } from '@lib/types';
+
+interface Props {
+  heading: string;
+  links: InternalLink[];
+  /** Render as rounded pills instead of a stacked list */
+  pills?: boolean;
+}
+
+const { heading, links, pills = false } = Astro.props;
+---
+
+<div class="side-card">
+  <h2>{heading}</h2>
+
+  {
+    pills ? (
+      <ul class="pill-list side-pills">
+        {links.map((link) => (
+          <li>
+            <a class="pill" href={link.href}>
+              <span aria-hidden="true">📍</span>
+              {link.anchor}
+            </a>
+          </li>
+        ))}
+      </ul>
+    ) : (
+      <div class="side-card__links">
+        {links.map((link) => (
+          <a href={link.href}>{link.anchor}</a>
+        ))}
+      </div>
+    )
+  }
+</div>
+
+<style>
+  .side-pills {
+    margin-top: 1rem;
+  }
+</style>

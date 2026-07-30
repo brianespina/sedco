@@ -1,0 +1,94 @@
+service: water-heater
+city: santee
+
+title: Water Heater Repair in Santee, CA | Sedco Plumbing
+description: >-
+  Original water heater still limping along? Sedco Plumbing repairs and replaces tanks in Santee’s 1970s–80s
+  homes, hard-water ready. Call [PHONE].
+primaryKeyword: water heater repair Santee
+supportingKeywords:
+  - water heater replacement Santee
+  - water heater installation Santee
+  - tankless water heater Santee
+  - hard water scale
+  - hot water not lasting
+
+heroStat: Same day
+heroStatLabel: Typical installation
+heroPoints:
+  - Dual seismic straps and expansion tank where required
+  - Proper drain pan, venting, and combustion air
+  - Sediment trap on the gas line
+  - Permitted work, positioned to reach full lifespan
+
+h1: Water Heater Repair & Replacement in Santee, CA
+intro:
+  - >-
+    Plenty of Santee homes are still running the water heater that came with the house — and if the house went up
+    in the 1970s or 1980s, that unit has beaten the odds several times over. Sedco Plumbing repairs and replaces
+    water heaters throughout Santee, from Carlton Hills to Sky Ranch, with same-day service from our El Cajon
+    headquarters and honest guidance on whether your tank has another good year left or is getting ready to quit.
+
+sections:
+  - heading: Original Equipment at the End of the Line
+    paragraphs:
+      - >-
+        A tank water heater is engineered to last eight to twelve years. In Santee’s 1970s–80s tract neighborhoods,
+        we regularly find units two or three times that age limping along in garages — slower to recover, louder
+        every month, one bad morning from giving out. An aging tank rarely fails politely; it leaks, and fifty gallons
+        of water in a garage full of storage is an expensive lesson. If yours is past its first decade, an inspection
+        now beats a flooded garage later.
+
+  - heading: What Padre Dam’s Hard Water Does to a Tank
+    paragraphs:
+      - >-
+        Santee’s water arrives through Padre Dam Municipal Water District carrying a heavy mineral load — commonly in
+        the range of 14 to 18 grains per gallon across East County. Inside a tank, those minerals settle as scale —
+        blanketing the burner surface, rumbling as water boils beneath the sediment, and eating away the anode rod
+        that protects the steel liner. Regular flushing slows the damage; a softener or filtration system slows it
+        further. We offer both, and we will show you what comes out of your tank so the recommendation explains
+        itself.
+
+  - heading: Replacement Brought Up to Today’s Code
+    paragraphs:
+      - >-
+        A heater installed decades ago predates much of the current code. When we set a new tank — or a tankless unit
+        — we bring the installation current: dual seismic straps, a thermal expansion tank where the system requires
+        one, a proper drain pan and discharge line, correct venting and combustion air, and a sediment trap on the gas
+        line. You get a unit that is safe, permitted, and positioned to reach its full lifespan.
+
+faqs:
+  - question: My water heater is original to my 1978 house. Should I replace it before it fails?
+    answer:
+      - >-
+        We think so. A tank that age is living on borrowed time, and a planned replacement lets you choose the right
+        unit calmly instead of paying emergency prices while standing in a wet garage.
+  - question: How fast can you install a new water heater in Santee?
+    answer:
+      - >-
+        Typically the same day. Santee sits directly north of our El Cajon base, common tank sizes ride on our trucks,
+        and most swaps take a few hours from arrival to hot water.
+  - question: Would a tankless water heater hold up to Santee’s hard water?
+    answer:
+      - >-
+        Yes, with one caveat: tankless units need periodic descaling here, so we recommend an isolation valve kit and
+        a water treatment option at installation to keep maintenance simple and the warranty intact.
+
+ctaHeading: Get Ahead of the Cold Shower
+ctaBody: >-
+  Whether your heater needs a repair, a flush, or a dignified retirement, we will give you a straight answer and a
+  firm price. Call Sedco Plumbing at [PHONE] for water heater service anywhere in Santee.
+
+internalLinks:
+  - href: /services/water-heater/
+    anchor: water heater services
+    group: service
+  - href: /service-areas/santee/
+    anchor: Santee plumbing services
+    group: city
+  - href: /services/slab-leak-repair/santee/
+    anchor: slab leak repair in Santee
+    group: combo
+  - href: /services/water-filtration/
+    anchor: water softener & filtration options
+    group: service

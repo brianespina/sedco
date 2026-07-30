@@ -1,0 +1,107 @@
+city: san-diego
+
+title: Plumber in San Diego, CA | Sedco Plumbing
+description: >-
+  East County based, countywide reach — Sedco Plumbing serves San Diego from San Carlos to downtown with
+  flat-rate pricing. Call [PHONE] today.
+primaryKeyword: plumber San Diego
+supportingKeywords:
+  - San Diego plumbing company
+  - plumber San Carlos San Diego
+  - plumber Del Cerro
+  - plumber College Area
+  - San Diego County plumbing services
+
+heroBadge: Countywide reach, honest scheduling
+heroStat: 15–20 min
+heroStatLabel: To the eastern neighborhoods
+heroPoints:
+  - No travel surcharges anywhere in the county
+  - Scheduled appointments with a firm arrival window
+  - Residential and commercial accounts
+  - Licensed CA C-36 ([LICENSE #])
+
+h1: San Diego Plumbing Service From an East County Home Base
+intro:
+  - >-
+    Sedco Plumbing serves all of San Diego County, and we’d rather tell you plainly how that works than pretend
+    we have a shop on every corner. Our trucks roll out of El Cajon, which makes us genuinely fast to the eastern
+    side of the city of San Diego and dependable — on a scheduled basis — everywhere else in the county. For
+    thousands of San Diego households, especially east of the 15, that combination beats a big-name outfit
+    dispatching from across town.
+
+sections:
+  - heading: The San Diego Neighborhoods We Reach Fastest
+    paragraphs:
+      - >-
+        The city neighborhoods that border East County are, for practical purposes, our backyard. San Carlos and
+        Del Cerro sit minutes from our shop along the Interstate 8 corridor; Allied Gardens is just beyond them;
+        and the College Area and Rolando back right up to La Mesa streets we drive daily. Homes in these
+        neighborhoods share East County’s plumbing profile too — postwar construction, slab foundations, original
+        supply lines, and the same hard imported water that scales up heaters from the coast to the mountains. If
+        you live in one of these communities, treat us as your neighborhood plumber, because functionally we are.
+
+  - heading: Countywide Coverage, Scheduled Honestly
+    paragraphs:
+      - >-
+        Beyond the eastern neighborhoods, we take work across the county — downtown condos, rental properties,
+        commercial grease trap accounts, and homeowners who found us through a referral and don’t want anyone
+        else. For those calls we book scheduled appointments with a clear arrival window, and our flat-rate
+        pricing works the same at every address: the quote comes before the work, not after it. What we won’t do
+        is promise a 15-minute arrival in Point Loma; you’ll always get the honest version of our availability.
+        Countywide, California’s remodel rules also follow you — low-flow fixture requirements apply when you
+        renovate — and we build compliance into every remodel bid.
+
+  - heading: Plumbing Services We Provide in San Diego
+    paragraphs:
+      - >-
+        Every service on our menu travels: [drain cleaning](/services/drain-cleaning/), [water heater repair and
+        installation](/services/water-heater/), [slab leak detection](/services/slab-leak-repair/), [sewer line
+        repair](/services/sewer-lines/), [repiping](/services/water-lines/), [gas
+        lines](/services/gas-lines/), toilet and faucet service, garbage disposals, [water
+        filtration](/services/water-filtration/) for the county’s famously hard water, and kitchen and bath
+        remodel plumbing. Commercial clients across the city also use our [grease trap
+        services](/services/grease-trap/). Browse the complete list on [the services hub](/services/).
+
+faqs:
+  - question: How fast can you get to my San Diego neighborhood from El Cajon?
+    answer:
+      - >-
+        San Carlos, Del Cerro, Allied Gardens, the College Area, and Rolando are typically 15–20 minutes from our
+        shop, so same-day service is common there. For the rest of the city we schedule appointments with a firm
+        window, and true emergencies are dispatched [HOURS] wherever you are.
+  - question: Do you charge extra to come into the city of San Diego?
+    answer:
+      - >-
+        No travel surcharges — our flat-rate quote covers the job, and you approve it before work begins.
+        Distance affects scheduling, not price.
+  - question: Do you handle commercial properties in San Diego?
+    answer:
+      - >-
+        Yes. Restaurants, offices, and rental properties across the county use us for grease traps, drain
+        maintenance, water heaters, and code repairs, with service windows planned around your business hours.
+
+ctaHeading: One Call Covers the County
+ctaBody: >-
+  Whether you’re in San Carlos five minutes from our trucks or across town and tired of vague pricing, the
+  process is the same: a straight answer, a firm quote, and licensed work ([LICENSE #]) done right. Call Sedco
+  Plumbing at [PHONE] to book your San Diego service.
+
+alsoServing: 'Also serving nearby: La Mesa, Lemon Grove, Santee, and our home base of El Cajon.'
+
+internalLinks:
+  - href: /service-areas/
+    anchor: our full service-area list
+    group: page
+  - href: /services/
+    anchor: all plumbing services
+    group: page
+  - href: /services/drain-cleaning/
+    anchor: drain cleaning services
+    group: service
+  - href: /services/water-heater/
+    anchor: water heater repair and installation
+    group: service
+  - href: /service-areas/la-mesa/
+    anchor: neighboring La Mesa
+    group: city

@@ -1,0 +1,57 @@
+---
+/**
+ * Per-page SEO head tags.
+ *
+ * Title and description come verbatim from each page's spec block in the
+ * content guide — no suffix is appended, because those strings are the spec.
+ * Every page gets a self-referencing canonical (guide Part 7.4).
+ */
+import { site, absolute } from '@config/site';
+import { t } from '@lib/tokens';
+import { images } from '@lib/images';
+
+interface Props {
+  /** Title tag, exactly as specified in the guide */
+  title: string;
+  /** Meta description, exactly as specified in the guide */
+  description: string;
+  /** Site-relative path of this page, with trailing slash */
+  path: string;
+  /** Optional social share image; defaults to the logo */
+  ogImage?: string;
+  /** Article publish date for blog posts */
+  publishedTime?: Date;
+  noindex?: boolean;
+}
+
+const { title, description, path, ogImage, publishedTime, noindex = false } = Astro.props;
+
+const canonical = absolute(path);
+const shareImage = absolute(ogImage ?? images.logo.src.src);
+const resolvedTitle = t(title);
+const resolvedDescription = t(description);
+---
+
+<title>{resolvedTitle}</title>
+<meta name="description" content={resolvedDescription} />
+<link rel="canonical" href={canonical} />
+
+{noindex && <meta name="robots" content="noindex, nofollow" />}
+
+<meta property="og:type" content={publishedTime ? 'article' : 'website'} />
+<meta property="og:site_name" content={site.business.name} />
+<meta property="og:title" content={resolvedTitle} />
+<meta property="og:description" content={resolvedDescription} />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={shareImage} />
+<meta property="og:locale" content="en_US" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={resolvedTitle} />
+<meta name="twitter:description" content={resolvedDescription} />
+<meta name="twitter:image" content={shareImage} />
+
+{publishedTime && <meta property="article:published_time" content={publishedTime.toISOString()} />}
+
+<meta name="geo.region" content={`US-${site.business.region}`} />
+<meta name="geo.placename" content={site.business.locality} />

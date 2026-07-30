@@ -1,0 +1,115 @@
+service: water-pressure-regulators
+
+title: Water Pressure Regulators in El Cajon, CA | Sedco Plumbing
+description: >-
+  Street pressure over 80 psi? Sedco Plumbing replaces failing water pressure regulators in El Cajon homes
+  fast, with flat-rate pricing. Call [PHONE].
+primaryKeyword: water pressure regulator replacement El Cajon
+supportingKeywords:
+  - PRV replacement El Cajon
+  - high water pressure repair
+  - pressure reducing valve installation
+  - expansion tank installation
+  - banging pipes fix
+
+heroBadge: Usually replaced in a single visit
+heroStat: 50–70 psi
+heroStatLabel: Where your pressure belongs
+heroPoints:
+  - Pressure tested on every service call, at no charge
+  - Full-port bronze regulators with parts available for decades
+  - Outlet pressure set with a calibrated gauge
+  - Seized shutoff valve replaced at the same time
+
+h1: Water Pressure Regulator Replacement in El Cajon
+intro:
+  - >-
+    Your water pressure regulator is a fist-sized brass valve near the front hose bibb that quietly protects
+    every pipe, fixture, and appliance you own — until the day it stops working. Sedco Plumbing tests,
+    replaces, and installs pressure regulators (also called PRVs) throughout El Cajon and East County,
+    usually in a single visit. If your home sits on one of our area’s many hillsides, this small valve may be
+    doing more work than any other component in your plumbing system.
+
+sections:
+  - heading: Why Hillside Homes Get Hammered by Street Pressure
+    paragraphs:
+      - >-
+        Water districts pressurize their mains to push water uphill to the highest customers, which means
+        homes lower on the slope receive far more pressure than they need. In the hill neighborhoods around
+        Fletcher Hills, Granite Hills, and much of East County, static street pressure of 100 to 150 psi is not
+        unusual. Residential fixtures, supply lines, and appliance valves are engineered for far less. Without
+        a working regulator knocking that pressure down to a healthy 50 to 70 psi, every washer hose, toilet
+        fill valve, and ice-maker line in the house is living on borrowed time.
+
+  - heading: Over 80 psi? The Plumbing Code Requires a Regulator
+    paragraphs:
+      - >-
+        This is not just good practice — it is law. The California Plumbing Code requires a pressure-reducing
+        valve whenever static pressure at the building exceeds 80 psi. Beyond code compliance, sustained high
+        pressure voids many fixture and water heater warranties, accelerates pinhole leaks in copper, and is a
+        common contributor to the slab leaks that plague El Cajon’s older homes. Wherever a regulator is
+        installed, an expansion tank at the water heater becomes important as well, because the regulator
+        creates a closed system where heated water has nowhere to expand.
+
+  - heading: Symptoms of a Failing Regulator
+    paragraphs:
+      - >-
+        Regulators wear out in ten to fifteen years, and they rarely fail politely. Common tells include
+        banging or hammering pipes when valves close, a jet-blast shower one day and a trickle the next,
+        toilets that hiss and run at night, repeated failures of washing machine hoses or fill valves, and
+        relief-valve drips at the water heater. A two-minute gauge test on your hose bibb tells the truth. We
+        test pressure on every service call at no charge, because catching a dead regulator early is
+        dramatically cheaper than the flood it can cause.
+
+  - heading: Replacement Done Right, in One Visit
+    paragraphs:
+      - >-
+        We install full-port bronze regulators from manufacturers that supply rebuild parts for decades, set
+        the outlet pressure with a calibrated gauge, and verify performance under flow — not just at static.
+        If the original shutoff valve is seized, we replace it at the same time so you can actually turn your
+        water off in an emergency. The work is covered by [WARRANTY TERMS] and performed under CA C-36 license
+        [LICENSE #], with a flat-rate price approved before we start.
+
+faqs:
+  - question: What should my home’s water pressure be?
+    answer:
+      - >-
+        Between roughly 50 and 70 psi is the comfortable, safe range for residential plumbing. California code
+        requires a pressure-reducing valve once static pressure exceeds 80 psi at the building.
+  - question: How long does a pressure regulator last?
+    answer:
+      - >-
+        Most regulators serve reliably for ten to fifteen years before internal parts wear and pressure begins
+        to creep upward. If yours is original to a home built in the 1990s or earlier, testing it is overdue.
+  - question: Can high water pressure cause a slab leak?
+    answer:
+      - >-
+        It is a major contributing factor. Excess pressure fatigues copper lines under the slab and
+        accelerates pinhole failures, which is why regulator replacement is standard advice for older El Cajon
+        homes with any leak history.
+  - question: Do I need an expansion tank with my new regulator?
+    answer:
+      - >-
+        Usually, yes. A regulator creates a closed plumbing system, and California code requires somewhere for
+        thermally expanding hot water to go — a small expansion tank at the water heater does that job and
+        protects your relief valve.
+
+ctaHeading: Get Your Pressure Checked Before It Costs You
+ctaBody: >-
+  Five minutes with a gauge can prevent a five-figure flood claim. If your regulator is past its prime or
+  your fixtures are showing the strain, call Sedco Plumbing at [PHONE] and we will test, quote, and usually
+  replace it the same day anywhere in El Cajon or East County.
+
+internalLinks:
+  - href: /services/water-heater/
+    anchor: water heater repair and expansion tanks
+    group: service
+  - href: /services/slab-leak-repair/
+    anchor: slab leak detection
+    group: service
+  - href: /services/faucet-services/
+    anchor: faucet repair and installation
+    group: service
+  - href: /contact/
+    anchor: schedule a pressure check
+    group: page

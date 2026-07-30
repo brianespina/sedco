@@ -1,0 +1,112 @@
+city: lakeside
+
+title: Plumber in Lakeside, CA | Sedco Plumbing
+description: >-
+  Wells, long pipe runs, horse properties — Sedco Plumbing knows Lakeside’s country homes. Licensed, local,
+  minutes from El Cajon. Call [PHONE].
+primaryKeyword: plumber Lakeside
+supportingKeywords:
+  - Lakeside CA plumbing company
+  - well pump pressure plumber Lakeside
+  - repiping Lakeside
+  - drain cleaning Lakeside
+  - emergency plumber Lakeside
+
+heroBadge: Country properties, in-town response times
+heroStat: 10–15 min
+heroStatLabel: Typical drive up the 67
+heroPoints:
+  - Well pressure tanks, switches, and supply lines
+  - Long runs to barns and guest units located electronically
+  - We coordinate with your septic company when needed
+  - Flat-rate quotes on both repair and repipe
+
+h1: The Plumber Lakeside’s Country Properties Call
+intro:
+  - >-
+    Lakeside doesn’t plumb like a subdivision. Between the horse properties of Eucalyptus Hills, the larger lots
+    off Winter Gardens, and the original farmhouses scattered in between, this community has acreage,
+    outbuildings, and water systems that city-trained plumbers often haven’t seen. Sedco Plumbing has, for
+    years — and because our shop sits just down Highway 67 in El Cajon, you get country-property experience
+    with in-town response times.
+
+sections:
+  - heading: Plumbing Past the Edge of the City Grid
+    paragraphs:
+      - >-
+        Plenty of Lakeside homes draw from private wells and drain to septic rather than municipal sewer, and
+        that changes the job. We work on the pressurized side of well systems — pressure tanks, switches, and the
+        supply lines that feed the house — and on everything up to the septic connection, coordinating with your
+        septic company when a problem crosses that line. Larger lots also mean longer pipe runs to barns, guest
+        units, and irrigation, and a small leak on a 300-foot run can waste water for months before anyone
+        notices. We locate those leaks electronically instead of trenching on a hunch, and we repair or replace
+        the run with materials rated for the distance.
+
+  - heading: Old Farmhouses, Original Pipes
+    paragraphs:
+      - >-
+        The other side of Lakeside is its history. Original farmhouses and early ranch homes around Winter
+        Gardens still carry galvanized steel supply lines that have been corroding shut for half a century, and
+        the symptoms are familiar: rusty morning water, weak flow at the far bathroom, and pinhole leaks that
+        keep coming back. Patching galvanized buys months; repiping in copper or PEX buys decades. We’ll tell you
+        honestly which stage your pipes are in, show you the evidence, and price both paths so the decision is
+        yours.
+
+  - heading: Plumbing Services We Provide in Lakeside
+    paragraphs:
+      - >-
+        For the most common calls we’ve built Lakeside-specific pages: [drain cleaning in
+        Lakeside](/services/drain-cleaning/lakeside/), [water heater repair in
+        Lakeside](/services/water-heater/lakeside/), [slab leak detection in
+        Lakeside](/services/slab-leak-repair/lakeside/), [sewer line work in
+        Lakeside](/services/sewer-lines/lakeside/), and [toilet services in
+        Lakeside](/services/toilet-repair-installation/lakeside/).
+      - >-
+        We also run [water line repair and repiping](/services/water-lines/), gas line installation for ranges
+        and outdoor equipment, water filtration for well and hard municipal water alike, and the rest of [our
+        full service list](/services/) across every corner of Lakeside.
+
+faqs:
+  - question: How fast can you get out to Lakeside?
+    answer:
+      - >-
+        Our El Cajon shop is roughly 10–15 minutes from most Lakeside addresses via Highway 67 or Mapleview
+        Street, including Eucalyptus Hills and Winter Gardens. Same-day appointments are typical, and we run
+        emergency dispatch [HOURS].
+  - question: Do you work on homes with wells and septic systems?
+    answer:
+      - >-
+        Yes. We service the pressure side of well systems and all household plumbing up to the septic
+        connection, and we’ll coordinate with your septic pumper when a job involves the tank itself. Rural
+        systems are routine work for us, not a surprise.
+  - question: Is repiping worth it on an older Lakeside farmhouse?
+    answer:
+      - >-
+        If your galvanized lines are showing rust-colored water and repeat leaks, repiping usually costs less
+        over five years than the chain of patches it replaces. We give a flat-rate quote for both options so you
+        can compare real numbers.
+
+ctaHeading: Get Country-Ready Plumbing Help Today
+ctaBody: >-
+  From a slow drain in a Winter Gardens kitchen to a leak somewhere along a long run to the barn, Sedco
+  Plumbing shows up with the right gear and a price you approve first. Call Sedco Plumbing at [PHONE] and
+  we’ll head up the 67.
+
+alsoServing: 'Also serving nearby: Santee, El Cajon, and Alpine.'
+
+internalLinks:
+  - href: /services/water-lines/
+    anchor: water line repair and repiping
+    group: service
+  - href: /services/drain-cleaning/lakeside/
+    anchor: drain cleaning in Lakeside
+    group: combo
+  - href: /services/water-heater/lakeside/
+    anchor: water heater service in Lakeside
+    group: combo
+  - href: /service-areas/alpine/
+    anchor: neighboring Alpine
+    group: city
+  - href: /service-areas/santee/
+    anchor: neighboring Santee
+    group: city

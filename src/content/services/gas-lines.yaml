@@ -1,0 +1,123 @@
+service: gas-lines
+
+title: Gas Line Installation & Repair in El Cajon | Sedco Plumbing
+description: >-
+  Licensed C-36 gas line installation and repair in El Cajon, CA — BBQ, fire pit, and range lines plus
+  earthquake shutoff valves. Call [PHONE].
+primaryKeyword: gas line installation El Cajon
+supportingKeywords:
+  - gas line repair El Cajon
+  - gas leak repair
+  - BBQ gas line installation
+  - fire pit gas line
+  - earthquake gas shutoff valve
+  - gas line permit
+
+heroBadge: Permitted, pressure-tested, inspected
+heroStat: Zero
+heroStatLabel: Margin for error on gas work
+heroPoints:
+  - CA C-36 licensed ([LICENSE #])
+  - Leak-checked with instruments, not soap and hope
+  - Total demand calculated before we quote
+  - Permits pulled and inspections scheduled for you
+
+h1: Gas Line Installation & Repair in El Cajon
+intro:
+  - >-
+    Gas work is one part plumbing skill and two parts discipline. Every joint, every pressure test, every
+    sizing calculation has to be right, because the margin for error is zero. Sedco Plumbing installs,
+    repairs, and extends natural gas and propane lines for homes and businesses in El Cajon and across San
+    Diego County under our CA C-36 license [LICENSE #]. From a new range hookup in a Bostonia kitchen to a
+    full outdoor kitchen in Granite Hills, the work is permitted, pressure-tested, and inspected — no
+    shortcuts, ever.
+
+sections:
+  - heading: 'Safety First: How We Handle Gas Work'
+    paragraphs:
+      - >-
+        If you smell rotten eggs, hear hissing near a gas appliance, or see dead vegetation over a buried
+        line, leave the building, avoid switches and flames, and call SDG&E’s emergency line from outside.
+        Once the utility has made the scene safe, we locate the failure, repair or replace the affected
+        section, and pressure-test the entire system before gas is restored. Every repair we make is
+        leak-checked with instruments, not just soap solution and hope. That is the level of care your
+        family’s safety deserves, and it is the only way we work.
+
+  - heading: New Gas Lines for BBQs, Fire Pits, and Ranges
+    paragraphs:
+      - >-
+        Outdoor living is practically a birthright in East County, and we run a steady stream of new lines for
+        it:
+    list:
+      - Built-in BBQ islands and outdoor kitchens
+      - Fire pits and fire tables on patios and pool decks
+      - Patio heaters for cool desert-edge evenings
+      - Indoor range and cooktop conversions from electric to gas
+      - Clothes dryers, garage heaters, and pool or spa heaters
+
+  - heading: Earthquake Shutoff Valves
+    paragraphs:
+      - >-
+        Correct pipe sizing matters more than most homeowners realize: an undersized branch line will starve
+        a high-BTU grill or tankless unit and cause nuisance problems for years. We calculate total demand
+        across the system before quoting, so your new appliance performs the way the spec sheet promised.
+      - >-
+        Southern California homes live with seismic risk, and a ruptured gas line is one of the most dangerous
+        outcomes of a strong quake. A seismic shutoff valve installed at your meter automatically stops gas
+        flow when significant shaking occurs — no power, batteries, or human action required. Some insurers
+        offer discounts for having one, and some real estate transactions in the region require them.
+        Installation is straightforward for our team and typically finished in a single visit.
+
+  - heading: Permits and Inspections, Handled for You
+    paragraphs:
+      - >-
+        Gas piping in El Cajon requires a permit from the City of El Cajon’s building department, and
+        surrounding jurisdictions have their own processes we know well. We pull the permit, schedule the
+        inspection, and stand the work in front of the inspector ourselves. Unpermitted gas work can void
+        insurance coverage and derail a home sale, so this is not a step to skip — and with us, you never
+        have to think about it.
+
+faqs:
+  - question: What should I do if I smell gas in my house?
+    answer:
+      - >-
+        Leave immediately without touching light switches, phones, or anything that could spark, and call
+        SDG&E’s emergency line from a safe distance. After the utility secures the leak, a licensed plumber
+        can repair the line and restore service safely.
+  - question: Do I need a permit to run a gas line to a BBQ or fire pit?
+    answer:
+      - >-
+        Yes, gas piping additions in El Cajon require a permit and inspection through the city. We handle the
+        paperwork and the inspection as part of every gas project we take on.
+  - question: Can you convert my electric range to gas?
+    answer:
+      - >-
+        In most homes, yes. We extend a properly sized branch line to the kitchen, install the shutoff and
+        connector, and pressure-test the system, and we can coordinate with your electrician if the old
+        circuit needs attention.
+  - question: Are earthquake gas shutoff valves required in El Cajon?
+    answer:
+      - >-
+        They are not universally mandated for existing homes, but they are required in some transactions and
+        strongly recommended everywhere in seismically active San Diego County. Ask your insurer about
+        discounts, and ask us about a one-visit installation.
+
+ctaHeading: Get Gas Work Done Right the First Time
+ctaBody: >-
+  Gas lines are the one plumbing project where “good enough” is not in our vocabulary, and it should not be
+  in yours. For permitted, tested, inspected gas work anywhere in El Cajon or East County, call Sedco
+  Plumbing at [PHONE] and tell us what you are planning.
+
+internalLinks:
+  - href: /services/water-heater/
+    anchor: gas water heater installation
+    group: service
+  - href: /services/kitchen-bath-remodels/
+    anchor: kitchen remodel plumbing
+    group: service
+  - href: /services/
+    anchor: all plumbing services
+    group: page
+  - href: /contact/
+    anchor: request a gas line estimate
+    group: page

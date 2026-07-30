@@ -1,0 +1,92 @@
+service: toilet-repair-installation
+city: lakeside
+
+title: Toilet Repair in Lakeside, CA | Sedco Plumbing
+description: >-
+  Running, leaking, or outdated toilet? Sedco Plumbing repairs and installs toilets across Lakeside, including
+  septic properties. Call [PHONE].
+primaryKeyword: toilet repair Lakeside
+supportingKeywords:
+  - toilet installation Lakeside
+  - running toilet repair
+  - toilet replacement Lakeside CA
+  - leaking toilet repair 92040
+  - low-flow toilet installation
+
+heroStat: One visit
+heroStatLabel: Standard repair or swap
+heroPoints:
+  - Corroded stubs, frozen shutoffs, and bad flanges corrected
+  - Septic-friendly models with proven flush ratings
+  - Price approved before we start
+  - Licensed, respectful technicians
+
+h1: Toilet Repair & Installation in Lakeside, CA
+intro:
+  - >-
+    A toilet that runs all night is more than an annoyance. In a Lakeside home on a private well, it cycles your pump
+    and drains your pressure tank; on a metered connection, it can quietly add hundreds of gallons a day to your
+    bill. Sedco Plumbing repairs and replaces toilets across Lakeside — promptly, cleanly, and at a price you approve
+    before we start.
+
+sections:
+  - heading: Repairs We Handle Every Week
+    paragraphs:
+      - >-
+        Fill valves that will not shut off, flappers that leak, wax rings that seep around the base, loose or rocking
+        bowls, phantom flushing, weak flushes, and clogs that keep returning. Many of these are inexpensive fixes with
+        outsized payoffs — a five-dollar flapper can be the difference between a normal water bill and a shocking one.
+
+  - heading: What Older Lakeside Bathrooms Throw at Us
+    paragraphs:
+      - >-
+        In the area’s original farmhouses, we regularly find galvanized supply stubs too corroded to accept a new valve,
+        shutoffs frozen open from decades of disuse, and closet flanges rusted or set below modern floor height. None of
+        that slows us down; we correct the underlying problem so your new toilet sits solid and stays dry for the long
+        haul.
+
+  - heading: Choosing a Toilet That Works With a Septic System
+    paragraphs:
+      - >-
+        If your home drains to septic — as many properties in Eucalyptus Hills and outlying Lakeside do — flush
+        performance matters as much as water savings. California requires high-efficiency toilets on replacement, and
+        the good news is that today’s better 1.28-gallon models move waste effectively through the long drain runs
+        common on larger lots. We steer you toward models with proven flush ratings, not just whatever is cheapest.
+
+faqs:
+  - question: Should I repair my toilet or replace it?
+    answer:
+      - >-
+        If the bowl or tank is cracked, the toilet predates 1994, or you are fixing it for the third time, replacement
+        usually wins on cost and water savings. For a single failed part in an otherwise sound fixture, repair is the
+        smart money.
+  - question: Are low-flow toilets a problem for septic systems?
+    answer:
+      - >-
+        No — modern high-efficiency models are septic-friendly. Less water entering the tank actually reduces the load on
+        your leach field. The key is choosing a unit with strong bowl-clearing performance, which we help you do.
+  - question: How long does it take you to get to Lakeside from El Cajon?
+    answer:
+      - >-
+        Not long — it is a quick trip up Highway 67 from our shop. Most toilet calls in Lakeside are scheduled same-day,
+        and a standard repair or swap is typically finished in a single visit.
+
+ctaHeading: Fix It Once, Fix It Right
+ctaBody: >-
+  From a worn flapper in Winter Gardens to a full bathroom update on a horse property, Sedco Plumbing brings
+  licensed, respectful technicians and flat-rate pricing to every job. Call Sedco Plumbing at [PHONE] to schedule
+  toilet repair or installation in Lakeside.
+
+internalLinks:
+  - href: /services/toilet-repair-installation/
+    anchor: toilet repair & installation
+    group: service
+  - href: /service-areas/lakeside/
+    anchor: Lakeside service area
+    group: city
+  - href: /services/drain-cleaning/lakeside/
+    anchor: Lakeside drain cleaning
+    group: combo
+  - href: /reviews/
+    anchor: customer reviews
+    group: page

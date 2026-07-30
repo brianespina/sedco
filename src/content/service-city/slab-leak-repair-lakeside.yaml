@@ -1,0 +1,93 @@
+service: slab-leak-repair
+city: lakeside
+
+title: Slab Leak Repair in Lakeside, CA | Sedco Plumbing
+description: >-
+  Warm floors or a spinning water meter? Sedco Plumbing pinpoints and repairs slab leaks in Lakeside homes with
+  minimal concrete damage. Call [PHONE].
+primaryKeyword: slab leak repair Lakeside
+supportingKeywords:
+  - slab leak detection Lakeside
+  - foundation leak repair Lakeside
+  - water leak under slab
+  - leak detection 92040
+  - copper pinhole leak repair
+
+heroStat: Same day
+heroStatLabel: Detection, in most cases
+heroPoints:
+  - We confirm whether the leak is under the slab or out in the yard
+  - Sections isolated and pressure-tested first
+  - Reroutes that often avoid opening concrete at all
+  - Flat rates quoted before repair begins
+
+h1: Slab Leak Detection & Repair in Lakeside, CA
+intro:
+  - >-
+    A warm patch on the floor, the hiss of water when every fixture is off, a meter that never stops spinning — slab
+    leaks announce themselves quietly, and every day they run they cost you water and work against your foundation.
+    Sedco Plumbing locates and repairs slab leaks throughout Lakeside using electronic detection equipment that
+    finds the leak before any concrete is touched.
+
+sections:
+  - heading: Under the Slab, or Somewhere in the Yard?
+    paragraphs:
+      - >-
+        On Lakeside’s larger lots, the answer is not always obvious. A supply line can travel a hundred feet or more
+        from the meter — or from a private well — before it ever reaches the house, and a leak anywhere along that run
+        mimics the symptoms of a slab leak. We isolate sections of the system and test them under pressure, so you know
+        whether the problem sits beneath your foundation or out in the yard before anyone starts digging or cutting.
+
+  - heading: Aging Pipe in Older Lakeside Homes
+    paragraphs:
+      - >-
+        The area’s original farmhouses still carry galvanized steel supply lines that corrode from the inside out, and
+        mid-century slab-built ranch homes ran soft copper directly beneath the concrete. Add decades of hard,
+        mineral-heavy water and you get pinhole leaks that grow in silence. If your home fits either description and
+        your water bill has crept upward, a leak check is worth an hour of your time.
+
+  - heading: Repair Approaches That Fit the House
+    paragraphs:
+      - >-
+        Once the leak is pinpointed, you choose from clearly priced options: a direct spot repair through a small
+        opening in the slab, a reroute that carries new line overhead through walls or attic space, or — for homes with
+        pipe failing in multiple places — a full repipe in PEX or copper. We explain the tradeoffs of each, quote flat
+        rates, and leave the work area clean.
+
+faqs:
+  - question: What are the first signs of a slab leak?
+    answer:
+      - >-
+        Look for unexplained warm flooring, the sound of running water with fixtures off, damp baseboards or flooring, a
+        drop in water pressure, or a jump in your water bill. Any one of these justifies a professional leak check.
+  - question: Will you have to jackhammer my floor?
+    answer:
+      - >-
+        Not necessarily. Rerouting the affected line often avoids opening the slab entirely. When direct access is the
+        better option, precision detection keeps the opening small — typically a single spot rather than a trench across
+        the room.
+  - question: How soon can a technician reach my Lakeside home?
+    answer:
+      - >-
+        Fast — our El Cajon headquarters is a short drive away, and active leaks get priority scheduling. In most cases
+        we can begin detection the same day you call, with emergency availability [HOURS].
+
+ctaHeading: Stop the Leak Before It Spreads
+ctaBody: >-
+  Every hour a slab leak runs, water keeps eroding soil under your foundation. Sedco Plumbing is licensed (CA C-36
+  [LICENSE #]), bonded, and insured, with flat-rate pricing quoted before repair begins. Call Sedco Plumbing at
+  [PHONE] for slab leak detection in Lakeside.
+
+internalLinks:
+  - href: /services/slab-leak-repair/
+    anchor: slab leak detection & repair
+    group: service
+  - href: /service-areas/lakeside/
+    anchor: our Lakeside service area
+    group: city
+  - href: /services/water-heater/lakeside/
+    anchor: water heater repair in Lakeside
+    group: combo
+  - href: /services/water-lines/
+    anchor: water line repair & repiping
+    group: service

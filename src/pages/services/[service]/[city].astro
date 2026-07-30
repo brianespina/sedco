@@ -1,0 +1,152 @@
+---
+/**
+ * SERVICE x CITY PAGE TEMPLATE — guide Part 6.
+ *
+ * The highest-intent pages (e.g. "slab leak repair La Mesa"). Internal linking
+ * per guide Part 7.2: UP to the parent service page and the city page, ACROSS
+ * to one sibling combo, plus Contact.
+ *
+ * Every one of these carries unique local copy from the guide — the
+ * anti-doorway rule means no page is a clone with the city name swapped.
+ */
+import type { GetStaticPaths } from 'astro';
+import { getCollection } from 'astro:content';
+import { getCity, getService, paths, siblingCombos } from '@config/site';
+import { images } from '@lib/images';
+import { th } from '@lib/tokens';
+import type { InternalLink } from '@lib/types';
+
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Hero from '@components/Hero.astro';
+import HeroCtas from '@components/HeroCtas.astro';
+import Sections from '@components/Sections.astro';
+import FaqBlock from '@components/FaqBlock.astro';
+import CtaSection from '@components/CtaSection.astro';
+import SideCallCard from '@components/SideCallCard.astro';
+import SideLinkCard from '@components/SideLinkCard.astro';
+import ServiceSchema from '@components/schema/ServiceSchema.astro';
+import FaqSchema from '@components/schema/FaqSchema.astro';
+
+export const getStaticPaths = (async () => {
+  const entries = await getCollection('serviceCity');
+  return entries.map((entry) => ({
+    params: { service: entry.data.service, city: entry.data.city },
+    props: { entry },
+  }));
+}) satisfies GetStaticPaths;
+
+const { entry } = Astro.props;
+const data = entry.data;
+
+const service = getService(data.service);
+const city = getCity(data.city);
+const path = paths.serviceCity(service.slug, city.slug);
+
+const crumbs = [
+  { name: 'Home', href: paths.home },
+  { name: 'Services', href: paths.servicesHub },
+  { name: service.name, href: paths.service(service.slug) },
+  { name: `${city.name}, CA` },
+];
+
+// UP: parent service page and city page.
+const parentLinks: InternalLink[] = [
+  { href: paths.service(service.slug), anchor: `${service.name} services`, group: 'service' },
+  { href: paths.city(city.slug), anchor: `plumber in ${city.name}`, group: 'city' },
+];
+
+// ACROSS: sibling combos in the same city, from the content's own link list
+// where the guide names them, otherwise derived from config.
+const specifiedSiblings = data.internalLinks.filter((link) => link.group === 'combo');
+const siblingLinks: InternalLink[] =
+  specifiedSiblings.length > 0
+    ? specifiedSiblings
+    : siblingCombos(service.slug, city.slug)
+        .slice(0, 1)
+        .map((pair) => ({
+          href: paths.serviceCity(pair.service.slug, pair.city.slug),
+          anchor: `${pair.service.name} in ${city.name}`,
+        }));
+
+const relatedServices = data.internalLinks.filter((link) => link.group === 'service');
+---
+
+<BaseLayout title={data.title} description={data.description} path={path} crumbs={crumbs}>
+  <Fragment slot="head">
+    <ServiceSchema serviceType={service.name} path={path} city={city.name} />
+    {data.faqs.length > 0 && <FaqSchema faqs={data.faqs} />}
+  </Fragment>
+
+  <Hero
+    variant="split"
+    image={images.heroService}
+    badge={data.heroBadge ?? `${service.navLabel} in ${city.name}, CA`}
+    badgeGlyph="📍"
+    heading={data.h1}
+    intro={data.intro[0]}
+  >
+    <HeroCtas slot="cta" />
+
+    <div class="glass-card" slot="aside">
+      {
+        data.heroStat && (
+          <>
+            <div class="glass-card__stat">{data.heroStat}</div>
+            <div class="glass-card__label">{data.heroStatLabel}</div>
+          </>
+        )
+      }
+      <ul>
+        {
+          (data.heroPoints.length > 0
+            ? data.heroPoints
+            : [
+                `Fast response into ${city.name}`,
+                'Flat-rate price before we start',
+                'Licensed, bonded, and insured',
+              ]
+          ).map((point) => (
+            <li>
+              <span class="check" aria-hidden="true">
+                ✓
+              </span>
+              {point}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </Hero>
+
+  <section class="section">
+    <div class="container article-layout">
+      <article class="prose">
+        {data.intro.slice(1).map((paragraph) => <p set:html={th(paragraph)} />)}
+
+        <Sections sections={data.sections} />
+
+        {data.faqs.length > 0 && <FaqBlock faqs={data.faqs} heading={data.faqHeading} />}
+      </article>
+
+      <aside class="sidebar">
+        <SideCallCard
+          heading={`${service.navLabel} in ${city.name}`}
+          body="Tell us what’s happening and we’ll give you an upfront price before any work begins."
+        />
+        <SideLinkCard heading="More From Sedco" links={parentLinks} />
+        {
+          siblingLinks.length > 0 && (
+            <SideLinkCard heading={`Also in ${city.name}`} links={siblingLinks} />
+          )
+        }
+        {
+          relatedServices.length > 0 && (
+            <SideLinkCard heading="Related Services" links={relatedServices} />
+          )
+        }
+      </aside>
+    </div>
+  </section>
+
+  <CtaSection heading={data.ctaHeading} body={data.ctaBody} />
+</BaseLayout>

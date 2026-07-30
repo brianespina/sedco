@@ -1,0 +1,113 @@
+service: drain-cleaning
+
+title: Drain Cleaning in El Cajon, CA | Sedco Plumbing
+description: >-
+  Slow or clogged drains in El Cajon? Sedco Plumbing clears kitchen, bath, and main lines with snakes
+  and hydro jetting. Same-day service. Call [PHONE].
+primaryKeyword: drain cleaning El Cajon
+supportingKeywords:
+  - clogged drain El Cajon
+  - hydro jetting El Cajon
+  - drain snake service
+  - sewer camera inspection
+  - main line clog East County
+
+heroBadge: Snaking, hydro jetting & camera inspections
+heroStat: Same day
+heroStatLabel: Usual availability
+heroPoints:
+  - The right machine on the truck, not just a hand snake
+  - Camera inspection when clogs keep coming back
+  - Flat-rate price before we start
+  - Licensed CA C-36 contractor ([LICENSE #])
+
+h1: Drain Cleaning in El Cajon, CA
+intro:
+  - >-
+    A slow drain is easy to ignore right up until it stops draining at all — usually on a weekend,
+    usually with a sink full of dishes. Sedco Plumbing clears kitchen lines, bathroom drains, tubs,
+    showers, laundry lines, and main sewer lines throughout El Cajon and the surrounding East County
+    communities. Because our shop is local, we can often have a technician at your door the same day
+    you call, with the right machine on the truck to clear the line properly instead of just poking a
+    hole through the clog.
+
+sections:
+  - heading: Signs Your Drain Is Telling You Something
+    paragraphs:
+      - >-
+        Drains rarely fail without warning. Water pooling around your feet in the shower, a gurgle
+        from the toilet when the washing machine empties, a sour smell from the kitchen sink, or
+        several slow fixtures at once are all early signals. That last one matters most: when multiple
+        drains slow down together, the blockage is usually in your main line, not a single fixture,
+        and it deserves attention before wastewater finds its way back into your tub or floor drain.
+
+  - heading: 'How We Clear Drains: Snaking, Hydro Jetting, and Camera Inspections'
+    paragraphs:
+      - >-
+        We match the method to the problem. A motorized drain snake handles most everyday clogs —
+        hair, soap buildup, food waste, and the occasional toy. For grease-choked kitchen lines and
+        heavily scaled pipes, hydro jetting scours the full diameter of the pipe with high-pressure
+        water, restoring it to near-original capacity rather than leaving residue behind for the next
+        clog to grab. When blockages keep returning, we run a sewer camera through the line so you can
+        see exactly what is going on — roots, bellies, scale, or a break — and decide on a fix with
+        real information instead of guesswork.
+
+  - heading: Old Pipes, Mature Trees, and East County Clogs
+    paragraphs:
+      - >-
+        Local conditions shape what ends up blocking local drains. Many El Cajon and La Mesa
+        neighborhoods were built decades ago with clay sewer laterals, and the mature trees that make
+        those streets beautiful send roots straight into pipe joints looking for moisture. Meanwhile,
+        East County’s hard water — often 14 to 18 grains per gallon — deposits mineral scale that
+        gradually narrows older drain lines, so clogs form more easily every year. We factor all of
+        that into our recommendation, whether that means a simple clearing, a jetting, or a
+        conversation about the sewer line itself.
+
+faqs:
+  - question: How much does drain cleaning cost in El Cajon?
+    answer:
+      - >-
+        It depends on the location and severity of the clog, but we always diagnose first and quote a
+        flat rate before starting. You approve the exact price up front — no hourly meter running
+        while we work.
+  - question: Are chemical drain cleaners safe to use?
+    answer:
+      - >-
+        We recommend against them. Caustic cleaners rarely remove the whole blockage, they can damage
+        older pipes and garbage disposal seals, and they make the line hazardous for whoever
+        eventually has to open it up.
+  - question: What is hydro jetting, and do I need it?
+    answer:
+      - >-
+        Hydro jetting uses a high-pressure water hose to scrub the entire interior of a drain or sewer
+        pipe. It is the right call for recurring clogs, grease buildup, and root-prone lines where a
+        snake would only offer temporary relief.
+  - question: How do I know if the problem is my sewer line instead of a drain?
+    answer:
+      - >-
+        If more than one fixture backs up at once — especially the lowest drains in the house — the
+        main sewer line is the likely culprit. A camera inspection confirms it, and we can show you
+        the footage on the spot.
+
+ctaHeading: Get Your Drains Flowing Again Today
+ctaBody: >-
+  Do not wait for a slow drain to become a flooded floor. Call Sedco Plumbing at [PHONE] for same-day
+  drain cleaning in El Cajon and across East County, or book your appointment through our contact
+  page.
+
+internalLinks:
+  - href: /services/sewer-lines/
+    anchor: sewer line repair and replacement
+    group: service
+  - href: /services/garbage-disposal/
+    anchor: garbage disposal repair
+    group: service
+  - href: /service-areas/la-mesa/
+    anchor: drain cleaning near La Mesa
+    group: city
+  - href: /service-areas/santee/
+    anchor: plumbers serving Santee
+    group: city
+  - href: /contact/
+    anchor: schedule a drain service
+    group: page

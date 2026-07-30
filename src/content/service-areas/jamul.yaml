@@ -1,0 +1,110 @@
+city: jamul
+
+title: Plumber in Jamul, CA | Sedco Plumbing
+description: >-
+  Country property plumbing for Jamul — wells, septic-connected homes, propane and gas lines. Licensed,
+  insured, honest pricing. Call [PHONE] today.
+primaryKeyword: plumber Jamul
+supportingKeywords:
+  - Jamul plumbing company
+  - propane line plumber Jamul
+  - well water plumbing Jamul
+  - gas line installation Jamul
+  - emergency plumber Jamul
+
+heroBadge: Trucks stocked for acreage and long runs
+heroStat: 25–30 min
+heroStatLabel: Down Highway 94
+heroPoints:
+  - Long runs traced electronically, not by exploratory digging
+  - Well pressure tanks, switches, and house delivery
+  - Propane and gas lines sized, run, and pressure-tested
+  - Suspected gas leaks move to the front of the line
+
+h1: A Plumber Built for Jamul’s Country Properties
+intro:
+  - >-
+    A quarter-mile private drive, a house on acreage, a well on one side of the property and a septic field on
+    the other — that’s a normal Tuesday address for us in Jamul. Plumbing out here isn’t harder than city work,
+    but it is different, and it rewards a company that arrives expecting large lots, long lines, and
+    self-contained systems. Sedco Plumbing comes down Highway 94 from El Cajon regularly, trucks stocked for
+    exactly this kind of property.
+
+sections:
+  - heading: Country Property Plumbing, Done Properly
+    paragraphs:
+      - >-
+        Big parcels stretch everything. Supply lines run hundreds of feet from wellhead or meter to the house,
+        then branch again to barns, workshops, and guest quarters — and every added foot is another place a leak
+        can hide. We trace and repair those long runs with electronic locating rather than exploratory digging,
+        which matters when the “dig” would cross a paddock. For homes on wells, we handle the pressurized side:
+        tanks, switches, and delivery into the house, plus filtration matched to your water’s actual chemistry.
+        For septic-connected homes, we service all the household plumbing up to the tank and will coordinate with
+        your septic contractor when a job spans the boundary. Parts of Jamul do receive Otay Water District
+        service, and we work those piped properties just as often.
+
+  - heading: Gas and Propane Work You Can Trust
+    paragraphs:
+      - >-
+        Propane runs much of Jamul — water heaters, ranges, dryers, generators, outdoor kitchens — and gas piping
+        is one place where “handy” isn’t good enough. As a C-36 licensed contractor ([LICENSE #]), we size, run,
+        and pressure-test gas and propane lines to code, whether you’re adding a backup generator ahead of fire
+        season or plumbing a new range in a remodel. If you’ve smelled gas or suspect a line problem, shut off the
+        supply, step outside, and call us; suspected leaks move to the front of the line.
+
+  - heading: Plumbing Services We Provide in Jamul
+    list:
+      - '[Gas and propane line installation and repair](/services/gas-lines/)'
+      - >-
+        [Water filtration and treatment](/services/water-filtration/) for well and district water
+      - >-
+        [Water line repair and replacement](/services/water-lines/) across long rural runs
+      - >-
+        [Water heater service](/services/water-heater/), including propane-fired and tankless units
+      - >-
+        [Drain cleaning](/services/drain-cleaning/) and fixture work — toilets, faucets, sinks
+      - 'Everything else we do is on [the services page](/services/)'
+
+faqs:
+  - question: What’s the response time to Jamul from your El Cajon shop?
+    answer:
+      - >-
+        Most Jamul properties are 25–30 minutes out via Highway 94, and we quote you a realistic arrival window
+        rather than a hopeful one. Urgent problems — active leaks, no water, gas concerns — are dispatched
+        [HOURS] and prioritized over routine calls.
+  - question: My home is on septic. Will you still work on my plumbing?
+    answer:
+      - >-
+        Absolutely — the plumbing inside and under your home is the same trade regardless of where the drains end
+        up. We handle everything to the septic connection and coordinate with your pumping company for anything
+        beyond it.
+  - question: Can you run a propane line to a generator or outdoor kitchen?
+    answer:
+      - >-
+        Yes, and it’s one of our most common Jamul requests. We size the line for the appliance’s demand, trench
+        and sleeve it appropriately for the distance, and pressure-test the finished run before connecting
+        anything.
+
+ctaHeading: Put Us on Speed Dial Before You Need It
+ctaBody: >-
+  The wrong time to search for a rural-savvy plumber is during a leak at the end of a long driveway. Call Sedco
+  Plumbing at [PHONE] and keep a licensed East County crew a phone call away.
+
+alsoServing: 'Also serving nearby: Rancho San Diego, Spring Valley, and Alpine.'
+
+internalLinks:
+  - href: /services/gas-lines/
+    anchor: gas and propane line installation
+    group: service
+  - href: /services/water-filtration/
+    anchor: well water filtration
+    group: service
+  - href: /services/water-lines/
+    anchor: long-run water line repair
+    group: service
+  - href: /service-areas/rancho-san-diego/
+    anchor: neighboring Rancho San Diego
+    group: city
+  - href: /service-areas/alpine/
+    anchor: neighboring Alpine
+    group: city

@@ -1,0 +1,28 @@
+---
+/**
+ * BreadcrumbList schema for every page below the homepage
+ * (guide Part 7.1 template D). The final crumb carries no `item`.
+ */
+import { absolute } from '@config/site';
+import type { Crumb } from '@lib/types';
+import JsonLd from './JsonLd.astro';
+
+interface Props {
+  crumbs: Crumb[];
+}
+
+const { crumbs } = Astro.props;
+
+const data = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: crumbs.map((crumb, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: crumb.name,
+    ...(crumb.href ? { item: absolute(crumb.href) } : {}),
+  })),
+};
+---
+
+<JsonLd data={data} />

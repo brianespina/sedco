@@ -1,0 +1,93 @@
+service: slab-leak-repair
+city: spring-valley
+
+title: Slab Leak Repair in Spring Valley, CA | Sedco Plumbing
+description: >-
+  Sedco Plumbing finds and fixes slab leaks in Spring Valley — precision detection for older hillside homes and
+  mid-century slabs. Call [PHONE].
+primaryKeyword: slab leak repair Spring Valley
+supportingKeywords:
+  - slab leak detection Spring Valley
+  - leak detection 91977
+  - water leak under slab Spring Valley
+  - copper repipe Spring Valley
+  - high water pressure leak
+
+heroStat: Same day
+heroStatLabel: Detection, typically
+heroPoints:
+  - Pressure test first, isolating hot side from cold
+  - Acoustic listening, line tracing, and thermal imaging
+  - You see the evidence before approving a repair
+  - We verify your regulator is doing its job before we leave
+
+h1: Slab Leak Detection & Repair in Spring Valley, CA
+intro:
+  - >-
+    Most Spring Valley slab leaks are discovered the same way: a Helix or Otay water bill arrives looking like a typo.
+    By the time the number jumps, water may have been escaping under your foundation for weeks. Sedco Plumbing
+    pinpoints and repairs slab leaks throughout Spring Valley with detection equipment that finds the source without
+    exploratory demolition.
+
+sections:
+  - heading: The Pressure-and-Copper Problem
+    paragraphs:
+      - >-
+        Two facts about Spring Valley combine badly. First, much of the housing stock is mid-century, built on slabs with
+        the original soft copper lines still in service beneath them. Second, hillside lots — Dictionary Hill is the
+        classic case — often receive street pressure above 80 psi. High pressure accelerates erosion at every bend in
+        aging copper, and pinhole leaks follow. If your regulator has failed or was never installed, your pipes have been
+        living a harder life than they were designed for.
+
+  - heading: How We Find a Leak You Cannot See
+    paragraphs:
+      - >-
+        We start at your meter and run a pressure test to confirm a leak exists and isolate it to the hot or cold side.
+        Then acoustic listening equipment, line tracing, and thermal imaging narrow the location to a small, marked area
+        of the slab. You see the evidence before you approve any repair, and the concrete opening — if one is needed at
+        all — stays small.
+
+  - heading: Repairing the Leak and Retiring the Risk
+    paragraphs:
+      - >-
+        Options range from a targeted spot repair to a reroute above the slab to a whole-home repipe when pipe condition
+        justifies it. Whichever path fits, we verify your pressure regulator is doing its job before we leave — because
+        fixing one pinhole while 90 psi keeps hammering forty-year-old copper is a short-term victory.
+
+faqs:
+  - question: What does a slab leak look or sound like?
+    answer:
+      - >-
+        Common signs include warm spots on the floor, the faint sound of running water when everything is off, hairline
+        cracks in flooring or baseboards, and moisture at the slab’s edge. A rising water bill with no change in habits is
+        the most reliable early flag.
+  - question: Will one slab leak lead to more?
+    answer:
+      - >-
+        It can. A pinhole is often the first symptom of pipe reaching the end of its life, especially under sustained high
+        pressure. We give you an honest read on overall pipe condition so you can weigh a spot fix against a reroute or
+        repipe.
+  - question: How quickly can you start leak detection in Spring Valley?
+    answer:
+      - >-
+        Typically same-day. Our technicians come from El Cajon, a short run down SR-94 or Jamacha Road, and suspected slab
+        leaks get priority on the schedule. Emergency availability is [HOURS].
+
+ctaHeading: Do Not Let It Run Another Week
+ctaBody: >-
+  Slab leaks only grow. Sedco Plumbing is licensed (CA C-36 [LICENSE #]), bonded, and insured, and quotes flat-rate
+  pricing before any repair. Call Sedco Plumbing at [PHONE] for slab leak detection in Spring Valley.
+
+internalLinks:
+  - href: /services/slab-leak-repair/
+    anchor: slab leak detection & repair services
+    group: service
+  - href: /service-areas/spring-valley/
+    anchor: Spring Valley service area
+    group: city
+  - href: /services/water-heater/spring-valley/
+    anchor: water heater repair in Spring Valley
+    group: combo
+  - href: /services/water-lines/
+    anchor: repiping services
+    group: service

@@ -1,0 +1,112 @@
+service: sewer-lines
+
+title: Sewer Line Repair & Replacement in El Cajon | Sedco Plumbing
+description: >-
+  Sewer line repair and replacement in El Cajon, CA, from camera inspections to trenchless options. Local,
+  licensed, and upfront. Call [PHONE].
+primaryKeyword: sewer line repair El Cajon
+supportingKeywords:
+  - sewer camera inspection El Cajon
+  - trenchless sewer replacement
+  - clay sewer pipe repair
+  - sewer lateral replacement
+  - root intrusion sewer line
+
+heroBadge: Camera inspection before any quote
+heroStat: 50+ yrs
+heroStatLabel: Trenchless material service life
+heroPoints:
+  - You watch the camera footage with us
+  - Trenchless options that spare driveways and landscaping
+  - Recorded footage provided with our findings
+  - Honest answer when the line is actually fine
+
+h1: Sewer Line Repair & Replacement in El Cajon
+intro:
+  - >-
+    When the sewer line fails, everything upstream of it stops mattering — the nicest bathroom in El Cajon is
+    useless if wastewater cannot leave the property. Sedco Plumbing diagnoses, repairs, and replaces
+    residential and commercial sewer laterals across El Cajon and East County, and we start every job with
+    evidence instead of assumptions. Before anyone quotes you thousands of dollars for excavation, you
+    deserve to see exactly what is wrong, where it is, and what your real options are.
+
+sections:
+  - heading: It Starts With a Camera Inspection
+    paragraphs:
+      - >-
+        Our high-resolution sewer camera travels the full length of your lateral, recording the pipe’s
+        condition foot by foot while a locator above ground maps its depth and path. You watch the footage
+        with us. Together we can see whether the problem is a soft blockage that drain cleaning will clear,
+        roots at a joint, a belly holding water, or a collapsed section that no amount of snaking will fix.
+        The recording becomes your quote’s foundation — and if a camera inspection shows your line is
+        actually fine, we will tell you that, too.
+
+  - heading: Root Intrusion and Aging Clay Laterals
+    paragraphs:
+      - >-
+        Many of El Cajon’s established neighborhoods — Bostonia, Fletcher Hills, the streets around downtown
+        — were plumbed with vitrified clay sewer pipe, installed in sections with joints every few feet. Sixty
+        years of soil movement opens those joints just enough for tree roots to find the moisture inside. Once
+        in, roots grow into dense mats that snag paper and grease until the line chokes. Cutting the roots
+        restores flow for a season, but they always return to an open joint. When we find heavy intrusion on
+        camera, we will show you where the pipe can be sectionally repaired and where replacement is the only
+        fix that lasts.
+
+  - heading: Trenchless Options That Spare Your Yard
+    paragraphs:
+      - >-
+        Full-length excavation is sometimes unavoidable, but far less often than it used to be. Where
+        conditions allow, we offer trenchless replacement methods:
+    list:
+      - >-
+        Pipe bursting pulls a new high-density polyethylene pipe through the old lateral, fracturing the clay
+        outward as it goes. Two access pits replace a trench across your yard.
+      - >-
+        Cured-in-place lining installs an epoxy-saturated liner inside the existing pipe, creating a seamless,
+        jointless new pipe within the old one — no place left for roots to enter.
+
+faqs:
+  - question: Who is responsible for the sewer lateral, me or the city?
+    answer:
+      - >-
+        In El Cajon and most East County cities, the homeowner owns and maintains the lateral from the house
+        to its connection at the public main. The city maintains the main itself, so problems within your
+        lateral are yours to repair.
+  - question: How much does a sewer camera inspection cost?
+    answer:
+      - >-
+        It is one of the least expensive diagnostics in plumbing and routinely prevents four-figure guesswork.
+        We quote the inspection as a flat rate up front, and you receive the recorded footage with our
+        findings.
+  - question: Can tree roots really break a sewer pipe?
+    answer:
+      - >-
+        Yes. Roots enter through small gaps at clay pipe joints, then expand as they grow, widening the
+        opening and eventually cracking or displacing the pipe. Regular cutting manages the symptom, while
+        lining or replacement removes the entry point permanently.
+  - question: Is trenchless sewer replacement as durable as digging and replacing?
+    answer:
+      - >-
+        Both bursting and lining install materials rated for a 50-year-plus service life, comparable to new
+        open-trench pipe. Suitability depends on the existing line’s condition, which is exactly what the
+        camera inspection determines.
+
+ctaHeading: Know Before You Dig — or Before Anyone Else Does
+ctaBody: >-
+  If your drains are slowing, gurgling, or backing up, get the facts on camera before committing to a
+  repair. Sedco Plumbing serves El Cajon and all of East County with honest diagnostics and every repair
+  option on the table. Call Sedco Plumbing at [PHONE] to schedule your sewer inspection.
+
+internalLinks:
+  - href: /services/drain-cleaning/
+    anchor: drain cleaning services
+    group: service
+  - href: /services/sewer-lines/la-mesa/
+    anchor: sewer line repair in La Mesa
+    group: combo
+  - href: /service-areas/
+    anchor: cities we serve
+    group: page
+  - href: /contact/
+    anchor: book a camera inspection
+    group: page

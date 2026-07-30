@@ -1,0 +1,109 @@
+service: garbage-disposal
+
+title: Garbage Disposal Repair El Cajon, CA | Sedco Plumbing
+description: >-
+  Garbage disposal jammed, leaking, or humming? Sedco Plumbing repairs and installs disposals across El
+  Cajon and East County, often same day. Call [PHONE].
+primaryKeyword: garbage disposal repair El Cajon
+supportingKeywords:
+  - garbage disposal installation El Cajon
+  - disposal replacement
+  - jammed garbage disposal
+  - leaking disposal repair
+  - InSinkErator installation East County
+
+heroBadge: Most visits wrap up within the hour
+heroStat: Under 1 hr
+heroStatLabel: Typical repair visit
+heroPoints:
+  - Popular disposal models stocked on our trucks
+  - Honest repair-or-replace answer, priced both ways
+  - Dishwasher drain connected the way code requires
+  - Tested under load before we leave
+
+h1: Garbage Disposal Repair and Installation in El Cajon
+intro:
+  - >-
+    A dead garbage disposal turns the busiest sink in your house into a bottleneck. Sedco Plumbing
+    repairs, replaces, and installs garbage disposals for kitchens throughout El Cajon and neighboring
+    East County cities, and because disposal jobs are quick when done by someone who does them weekly,
+    most visits wrap up within the hour. We stock popular disposal models on our trucks, so if yours is
+    beyond saving, we can usually swap it out on the spot.
+
+sections:
+  - heading: Repair or Replace? An Honest Answer
+    paragraphs:
+      - >-
+        Not every silent disposal is a dead one. A unit that hums but will not spin is usually jammed —
+        often by a fruit pit, bone fragment, or utensil — and can be freed in minutes. A unit that does
+        nothing at all may just need its reset button pressed or a tripped breaker restored. On the other
+        hand, if the motor has burned out, the grinding chamber has corroded through, or water is
+        dripping from the bottom of the body, replacement is the smart move; internal seals are not
+        economically repairable. Most disposals last eight to twelve years, and East County’s hard water
+        tends to push units toward the shorter end of that range. Whatever we find, you get a
+        plain-language explanation and a flat price for each option.
+
+  - heading: Installation Done Right the First Time
+    paragraphs:
+      - >-
+        A disposal install looks simple on video, and then the mounting ring leaks, the dishwasher
+        knockout gets missed, or the outlet is not properly grounded. Our technicians size the unit to
+        your household — from compact half-horsepower models to quieter one-horsepower workhorses — seal
+        the sink flange correctly, connect the dishwasher drain the way code requires, and test
+        everything under load before we leave. Adding a disposal where there never was one? We handle the
+        drain reconfiguration and coordinate any wiring needs so the finished setup is safe and tidy
+        under the sink.
+
+  - heading: Habits That Help Your Disposal Live Longer
+    paragraphs:
+      - >-
+        A little care goes a long way. Run cold water before, during, and after grinding; skip grease,
+        coffee grounds, eggshells, and stringy vegetables like celery; and grind a few ice cubes now and
+        then to knock buildup off the impellers. If a smell develops, citrus peels help — chemical drain
+        cleaner does not, and it can ruin the unit’s seals along with your kitchen drain line.
+
+faqs:
+  - question: Why does my garbage disposal hum but not spin?
+    answer:
+      - >-
+        A humming disposal is jammed, not broken. Turn it off immediately to protect the motor, and avoid
+        reaching inside. We can clear the jam safely and check the unit for damage in a single short
+        visit.
+  - question: My disposal is leaking from the bottom. Can it be fixed?
+    answer:
+      - >-
+        Unfortunately, no. A leak from the bottom housing means the internal seals have failed, and
+        replacement is the only reliable remedy. Leaks from the top flange or side connections, however,
+        are usually repairable.
+  - question: How long does a garbage disposal installation take?
+    answer:
+      - >-
+        A straightforward replacement typically takes 45 minutes to an hour. First-time installations run
+        longer because of drain and electrical work, and we will give you an exact flat-rate quote before
+        starting.
+  - question: What size garbage disposal do I need?
+    answer:
+      - >-
+        A half-horsepower unit suits light use, while families who cook daily are happier with
+        three-quarter or one-horsepower models, which grind finer and jam less. We will recommend a size
+        based on your household and how your kitchen actually gets used.
+
+ctaHeading: Get Your Kitchen Back in Business
+ctaBody: >-
+  Whether your disposal is jammed, leaking, or ready for retirement, we can have your sink working again
+  today. Call Sedco Plumbing at [PHONE] or reach us through the contact page to schedule garbage disposal
+  service anywhere in El Cajon and East County.
+
+internalLinks:
+  - href: /services/sink-services/
+    anchor: kitchen sink repair and installation
+    group: service
+  - href: /services/drain-cleaning/
+    anchor: kitchen drain cleaning
+    group: service
+  - href: /service-areas/spring-valley/
+    anchor: disposal service near Spring Valley
+    group: city
+  - href: /contact/
+    anchor: schedule a visit
+    group: page

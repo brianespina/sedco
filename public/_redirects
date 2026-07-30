@@ -1,0 +1,19 @@
+# Path-level redirects for Cloudflare static assets.
+#
+# Only relative (path) rules are valid here — Cloudflare rejects absolute URLs
+# in this file. Add any legacy-URL redirects for the client's old site below,
+# one per line, e.g.:
+#
+#   /old-services-page/  /services/  301
+#
+# HOST CANONICALISATION (guide Part 7.4: www/non-www collapse to one form) is a
+# zone-level setting, not a rule in this file. In the Cloudflare dashboard for
+# the domain, set up:
+#
+#   1. Rules → Redirect Rules → a 301 from www.<domain>/* to <domain>/:splat
+#      (or the reverse — whichever direction matches `site` in
+#      astro.config.mjs, since that value generates every canonical tag)
+#   2. SSL/TLS → Edge Certificates → "Always Use HTTPS" enabled
+#
+# Trailing slashes are already handled by Astro's `trailingSlash: 'always'`
+# together with directory-format output.

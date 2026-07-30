@@ -1,0 +1,113 @@
+service: general-plumbing
+
+title: Plumber in El Cajon, CA | Sedco Plumbing
+description: >-
+  Licensed, insured El Cajon plumber for repairs, installations, and emergencies.
+  Upfront flat-rate pricing across all of East County. Call [PHONE].
+primaryKeyword: plumber El Cajon
+supportingKeywords:
+  - plumbing services El Cajon
+  - El Cajon plumbing company
+  - licensed plumber El Cajon CA
+  - East County plumber
+  - emergency plumber El Cajon
+
+heroBadge: Licensed CA C-36 plumbing contractor
+heroStat: Same day
+heroStatLabel: Usual availability
+heroPoints:
+  - Licensed, bonded, and insured (CA C-36 [LICENSE #])
+  - Flat-rate price approved before we start
+  - Emergency service available [HOURS]
+  - Workmanship warranty [WARRANTY TERMS]
+
+h1: Your Local Plumber in El Cajon, CA
+intro:
+  - >-
+    When a pipe lets go or a drain backs up, you want a plumber who is already nearby — not one
+    fighting traffic from the other side of San Diego. Sedco Plumbing is based right here in El
+    Cajon, so our trucks are minutes from Fletcher Hills, Bostonia, Granite Hills, and downtown, and
+    rarely far from anywhere else in East County. Since [YEAR FOUNDED], [OWNER NAME] and our team
+    have handled everything from a stubborn faucet drip to a full repipe, and every job starts the
+    same way: we look, we explain, and you approve a flat-rate price before we pick up a tool.
+
+sections:
+  - heading: Full-Service Plumbing for Homes and Businesses
+    paragraphs:
+      - >-
+        One call covers nearly anything that carries water, gas, or waste through your property. We
+        repair leaking and burst pipes, clear slow or blocked drains, service and replace water
+        heaters (tank and tankless), fix and install toilets, faucets, sinks, and garbage disposals,
+        locate and repair slab leaks, run gas lines, replace pressure regulators, and rough in
+        plumbing for kitchen and bathroom remodels. We work in single-family homes, condos, rental
+        properties, and light commercial buildings, so whether you own a bungalow near Main Street or
+        manage a strip-mall suite, the same licensed crew shows up either way.
+
+  - heading: Plumbing Problems We See Every Week in El Cajon
+    paragraphs:
+      - >-
+        El Cajon’s housing stock keeps a plumber busy in very particular ways. Much of the city was
+        built between the 1950s and 1970s on slab foundations, and those homes often still carry
+        their original galvanized steel supply lines — pipes that corrode from the inside until
+        pressure drops and pinhole leaks appear. The valley’s hot inland summers push water heaters
+        hard, and the water itself, largely imported Colorado River supply delivered through Helix
+        Water District, is heavy with minerals that leave scale on fixtures, inside heater tanks, and
+        along pipe walls. We diagnose these local patterns quickly because we see them constantly,
+        which usually means a faster fix and a smaller bill.
+
+  - heading: Why East County Homeowners Call Sedco Plumbing
+    paragraphs:
+      - >-
+        Plenty of companies will drive out to El Cajon. Few are actually from here. Sedco Plumbing is
+        locally owned, licensed as a California C-36 plumbing contractor ([LICENSE #]), bonded, and
+        insured. Our technicians show up on time, wear boot covers, protect your floors, and leave
+        the work area cleaner than they found it. Labor is backed by a workmanship warranty
+        ([WARRANTY TERMS]), and same-day and emergency appointments are available ([HOURS]) because
+        plumbing trouble does not wait for a convenient opening on your calendar.
+
+faqs:
+  - question: Do you serve areas outside El Cajon?
+    answer:
+      - >-
+        Yes. Sedco Plumbing serves all of San Diego County, with fastest response across East County
+        — La Mesa, Santee, Lakeside, Spring Valley, Lemon Grove, Alpine, Rancho San Diego, and Jamul.
+        Visit our service areas page to find your city.
+  - question: Are you licensed and insured?
+    answer:
+      - >-
+        We hold a California C-36 plumbing contractor license ([LICENSE #]) and carry full bonding
+        and insurance. You can verify our license anytime through the Contractors State License Board
+        website.
+  - question: How does your pricing work?
+    answer:
+      - >-
+        We quote a flat rate after diagnosing the problem, before any work begins. The price you
+        approve is the price you pay, even if the job takes longer than expected.
+  - question: Can you come out the same day?
+    answer:
+      - >-
+        In most cases, yes. Because we are based in El Cajon, we can usually reach East County homes
+        within hours of your call, and emergency service is available ([HOURS]).
+
+ctaHeading: Talk to a Plumber Who Knows El Cajon
+ctaBody: >-
+  From a mystery drip to a whole-house repipe, you deserve straight answers and honest pricing from a
+  crew that lives where you do. Call Sedco Plumbing at [PHONE], email [EMAIL], or reach out through
+  our contact page to schedule your visit today.
+
+internalLinks:
+  - href: /services/drain-cleaning/
+    anchor: drain cleaning in El Cajon
+    group: service
+  - href: /services/water-heater/
+    anchor: water heater repair and installation
+    group: service
+  - href: /service-areas/
+    anchor: every city we serve in San Diego County
+    group: page
+  - href: /service-areas/el-cajon/
+    anchor: plumbing in El Cajon neighborhoods
+    group: city
+  - href: /contact/
+    anchor: request a service call
+    group: page

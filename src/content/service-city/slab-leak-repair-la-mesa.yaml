@@ -1,0 +1,94 @@
+service: slab-leak-repair
+city: la-mesa
+
+title: Slab Leak Repair in La Mesa, CA | Sedco Plumbing
+description: >-
+  Warm spots, high water bills, or the sound of running water? Sedco Plumbing finds and fixes slab leaks in La
+  Mesa homes with minimal digging. Call [PHONE].
+primaryKeyword: slab leak repair La Mesa
+supportingKeywords:
+  - slab leak detection La Mesa
+  - leak under foundation
+  - water leak detection La Mesa
+  - pipe reroute
+  - high water bill leak
+
+heroStat: Same day
+heroStatLabel: Detection visits, typically
+heroPoints:
+  - Electronic and acoustic detection before any cutting
+  - Spot repair, reroute, or repipe — priced honestly
+  - Findings documented for your insurance claim
+  - Active leaks treated as emergencies [HOURS]
+
+h1: Slab Leak Detection & Repair in La Mesa, CA
+intro:
+  - >-
+    A slab leak hides in the one place you cannot check — inside the concrete your home sits on. Left alone, it
+    soaks the soil beneath the foundation, drives up your water bill, and invites mold into flooring and drywall.
+    Sedco Plumbing locates and repairs slab leaks throughout La Mesa using electronic detection equipment, so we
+    open the slab only where it is truly necessary — or avoid opening it at all.
+
+sections:
+  - heading: The Warning Signs Under Your Feet
+    paragraphs:
+      - >-
+        Most La Mesa homeowners discover a slab leak through small oddities: a warm patch on a tile floor, the faint
+        sound of water moving when every fixture is off, a Helix Water District bill that jumps without explanation,
+        or hairline cracks creeping across a floor. Any one of these deserves a prompt look. Because Sedco Plumbing
+        operates out of neighboring El Cajon, that look can usually happen within hours, not days.
+
+  - heading: Why Slab Leaks Happen Here
+    paragraphs:
+      - >-
+        The copper supply lines routed beneath La Mesa’s 1940s–1960s homes have been in service for sixty years or
+        more, and soft copper wears from the inside as water moves through it. Hillside properties around Mount
+        Helix add another stress: street pressure on elevated lots frequently exceeds 80 psi, and sustained high
+        pressure accelerates pinhole failures. Hot-water lines fail most often, since heat speeds corrosion — which
+        is why a warm spot on the floor is such a telling clue.
+
+  - heading: Detection First, Then the Right Repair
+    paragraphs:
+      - >-
+        We confirm the leak with meter and pressure testing, then pinpoint it with acoustic and electronic listening
+        equipment before recommending anything. Sometimes a direct spot repair through one small, precise opening is
+        the right call. Often, especially in older homes, rerouting the failed line overhead through walls or attic
+        space costs less, avoids jackhammering, and retires a vulnerable pipe for good. If several lines are
+        failing, we will price a repipe honestly so you are not paying us to chase leaks one at a time.
+
+faqs:
+  - question: How do I know it is a slab leak and not something else?
+    answer:
+      - >-
+        A meter test settles it quickly: with every fixture off, a spinning leak indicator on your water meter
+        points to a supply-side leak, often under the slab. We confirm the exact location with detection equipment
+        before any repair is proposed.
+  - question: How soon can you get to a La Mesa slab leak?
+    answer:
+      - >-
+        We dispatch from El Cajon, which borders La Mesa, so a detection visit can typically happen the same day
+        you call — and an actively running leak is treated as an emergency [HOURS].
+  - question: Will my homeowners insurance cover the repair?
+    answer:
+      - >-
+        Policies commonly cover the damage a slab leak causes and the cost of accessing the pipe, though usually not
+        the failed pipe itself. We document everything we find to support your claim.
+
+ctaHeading: Stop the Leak Before It Spreads
+ctaBody: >-
+  Every day a slab leak runs, it wastes water and undermines your foundation. Call Sedco Plumbing at [PHONE] for
+  prompt slab leak detection anywhere in La Mesa.
+
+internalLinks:
+  - href: /services/slab-leak-repair/
+    anchor: slab leak detection & repair
+    group: service
+  - href: /service-areas/la-mesa/
+    anchor: our La Mesa service area
+    group: city
+  - href: /services/water-heater/la-mesa/
+    anchor: La Mesa water heater service
+    group: combo
+  - href: /services/water-lines/
+    anchor: water line repair & repiping
+    group: service

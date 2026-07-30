@@ -1,0 +1,115 @@
+---
+/**
+ * SERVICE AREAS HUB — guide Part 3 "Service Areas Hub",
+ * design ServiceAreasHub.dc.html: 9 East County city cards, then a greater
+ * San Diego callout.
+ */
+import { site, paths } from '@config/site';
+import { images } from '@lib/images';
+
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Hero from '@components/Hero.astro';
+import HeroCtas from '@components/HeroCtas.astro';
+import CityCardGrid from '@components/CityCardGrid.astro';
+import CtaSection from '@components/CtaSection.astro';
+import PageSchema from '@components/schema/PageSchema.astro';
+
+const title = 'Service Areas | Sedco Plumbing — San Diego County, CA';
+const description =
+  'Sedco Plumbing serves El Cajon, La Mesa, Santee, Lakeside, Spring Valley and all of San Diego County. Fast local response. Call [PHONE].';
+const path = paths.areasHub;
+
+const crumbs = [{ name: 'Home', href: paths.home }, { name: 'Service Areas' }];
+
+// The hub grid covers the nine East County communities; the city of San Diego
+// gets its own callout below (guide Part 3).
+const eastCountyCities = site.cities.filter((city) => city.slug !== 'san-diego');
+const sanDiego = site.cities.find((city) => city.slug === 'san-diego')!;
+---
+
+<BaseLayout title={title} description={description} path={path} crumbs={crumbs}>
+  <Fragment slot="head">
+    <PageSchema type="CollectionPage" name={title} description={description} path={path} />
+  </Fragment>
+
+  <Hero
+    variant="center"
+    image={images.heroCity}
+    badge="Based in El Cajon, covering the county"
+    badgeGlyph="📍"
+    heading="Where We Work: San Diego County Plumbing Service Areas"
+    intro="Sedco Plumbing is based in El Cajon, and our trucks cover all of San Diego County. Being headquartered in the middle of East County means fast response times where most of our customers live — often the same day you call. Find your community below, or call [PHONE]; if you’re anywhere in San Diego County, we can help."
+  >
+    <HeroCtas slot="cta" center />
+  </Hero>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="areas-heading">East County Communities We Serve</h2>
+      <CityCardGrid cities={eastCountyCities} columns={3} />
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="container">
+      <div class="sd-callout">
+        <div>
+          <h2>Greater San Diego</h2>
+          <p>
+            We also serve <a href={paths.city(sanDiego.slug)}>the city of San Diego</a> — with
+            especially quick reach into {sanDiego.neighborhoods.slice(0, -1).join(', ')}, and {
+              sanDiego.neighborhoods.at(-1)
+            } — and take jobs throughout the rest of the county.
+          </p>
+        </div>
+        <a class="btn btn--primary" href={paths.city(sanDiego.slug)}>
+          San Diego plumbing services →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="container">
+      <p class="hub-links measure">
+        Browse <a href={paths.servicesHub}>every plumbing service we offer</a>, or <a
+          href={paths.contact}>request a service call</a
+        > and we will tell you how soon we can be there.
+      </p>
+    </div>
+  </section>
+
+  <CtaSection
+    heading="A Plumber Who’s Already Nearby"
+    body="When your home is minutes from our base, you wait less and pay for less drive time. Call Sedco Plumbing at [PHONE] to find out how soon we can be at your door."
+  />
+</BaseLayout>
+
+<style>
+  .areas-heading {
+    margin-bottom: 1.75rem;
+  }
+  .sd-callout {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    background: var(--tint-2);
+    border: 1px solid var(--border-2);
+    border-radius: var(--r-card-lg);
+    padding: 2rem 2.25rem;
+  }
+  .hub-links {
+    font-size: var(--fs-prose);
+    color: var(--text-soft);
+    text-align: center;
+  }
+  .sd-callout p {
+    font-size: var(--fs-prose);
+    color: var(--text-soft);
+    margin-top: 0.75rem;
+    max-width: 62ch;
+    line-height: 1.6;
+  }
+</style>

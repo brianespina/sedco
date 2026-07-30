@@ -1,0 +1,111 @@
+city: alpine
+
+title: Plumber in Alpine, CA | Sedco Plumbing
+description: >-
+  A plumber who actually comes to Alpine — wells, propane, gas lines, and everyday repairs, straight up I-8
+  from El Cajon. Call [PHONE] for service.
+primaryKeyword: plumber Alpine CA
+supportingKeywords:
+  - Alpine plumbing company
+  - well water plumber Alpine
+  - propane gas line Alpine
+  - water heater repair Alpine
+  - emergency plumber Alpine CA
+
+heroBadge: No travel surcharge, no excuses
+heroStat: 20–25 min
+heroStatLabel: Up the I-8 grade
+heroPoints:
+  - Flat-rate pricing with no quiet travel penalty
+  - Well pressure tanks, switches, and supply lines
+  - Propane and natural gas lines, pressure-tested
+  - Emergency dispatch [HOURS], same as in town
+
+h1: An East County Plumber Who Actually Comes to Alpine
+intro:
+  - >-
+    Ask around Alpine and you’ll hear the same complaint: plumbers from the city either won’t make the drive or
+    tack a surcharge onto every visit for the privilege. Sedco Plumbing sees it differently. Our shop in El Cajon
+    sits at the bottom of the I-8 grade, which puts most Alpine addresses 20 to 25 minutes from a dispatched
+    truck — close enough for genuine same-day service, without treating your zip code like a foreign country.
+
+sections:
+  - heading: The “Will They Even Come Out Here” Problem, Solved
+    paragraphs:
+      - >-
+        Distance is only a problem for companies that aren’t built for it. We schedule Alpine work in efficient
+        windows, stock our trucks so a second trip is the exception, and quote flat-rate pricing that doesn’t
+        quietly absorb a travel penalty. Emergencies get the same treatment: a burst line or failed water heater
+        in Alpine is dispatched [HOURS], the same as one five minutes from our shop. Being locally owned in East
+        County means Alpine isn’t the edge of our map — it’s the middle of it.
+
+  - heading: Rural Systems We Work On Every Week
+    paragraphs:
+      - >-
+        Alpine’s larger properties come with plumbing the suburbs never see. Many homes run on private wells, so
+        we service pressure tanks, switches, and supply lines on the house side of the wellhead, and we install
+        filtration systems tuned to what your particular water carries. Propane is the standard fuel outside the
+        town core, and our licensed technicians run and repair the gas lines feeding ranges, water heaters, fire
+        pits, and generators. Closer to the center of town, Padre Dam serves piped water — hard, like most
+        imported East County supply — so scale-related heater and fixture problems follow you even up the
+        mountain.
+
+  - heading: Plumbing Services We Provide in Alpine
+    list:
+      - >-
+        [Water heater repair and installation](/services/water-heater/) — tank, tankless, and propane-fired
+      - >-
+        [Gas and propane line installation and repair](/services/gas-lines/)
+      - >-
+        [Water filtration and softener systems](/services/water-filtration/) for well and district water
+      - >-
+        [Drain cleaning](/services/drain-cleaning/) and [sewer line service](/services/sewer-lines/)
+      - >-
+        [Slab leak detection](/services/slab-leak-repair/), [repiping](/services/water-lines/), and [pressure
+        regulators](/services/water-pressure-regulators/)
+      - >-
+        Fixture work and remodel plumbing — full list on [our services page](/services/)
+
+faqs:
+  - question: How long does it really take you to reach Alpine?
+    answer:
+      - >-
+        Plan on 20–25 minutes from El Cajon straight up Interstate 8 for most addresses, a bit more for properties
+        well off Tavern Road or Japatul Valley Road. We’ll give you an honest arrival window when you book, and we
+        keep it.
+  - question: Can you install or repair propane lines for my appliances?
+    answer:
+      - >-
+        Yes — gas line work is part of our C-36 license ([LICENSE #]), and propane-fed ranges, water heaters, and
+        outdoor appliances are routine jobs for us in Alpine. Every line we run is pressure-tested before it goes
+        into service.
+  - question: My well water stains fixtures and tastes off. Can you fix that?
+    answer:
+      - >-
+        Usually, yes. We start with the symptoms you’re seeing, match a filtration or softening system to the
+        problem, and install it with proper bypasses so maintenance is simple. District water customers in the
+        town core benefit from softening too, since Padre Dam’s supply runs hard.
+
+ctaHeading: Get a Plumber Who Treats Alpine Like Home Turf
+ctaBody: >-
+  Stop negotiating with companies that see your address as an inconvenience. Call Sedco Plumbing at [PHONE] and
+  get licensed, flat-rate plumbing service that makes the drive without making it your problem.
+
+alsoServing: 'Also serving nearby: Lakeside, Jamul, and El Cajon.'
+
+internalLinks:
+  - href: /services/gas-lines/
+    anchor: gas and propane line work
+    group: service
+  - href: /services/water-filtration/
+    anchor: filtration for well and hard water
+    group: service
+  - href: /services/water-heater/
+    anchor: water heater repair and installation
+    group: service
+  - href: /service-areas/lakeside/
+    anchor: neighboring Lakeside
+    group: city
+  - href: /service-areas/jamul/
+    anchor: neighboring Jamul
+    group: city

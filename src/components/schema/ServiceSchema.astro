@@ -1,0 +1,40 @@
+---
+/**
+ * Service schema for service pages and service x city pages
+ * (guide Part 7.1 template B).
+ *
+ * On the 16 main service pages areaServed is El Cajon plus San Diego County.
+ * On a service x city page it is that city.
+ */
+import { site, absolute, BUSINESS_ID } from '@config/site';
+import JsonLd from './JsonLd.astro';
+
+interface Props {
+  /** Service name, used verbatim as serviceType */
+  serviceType: string;
+  /** Site-relative path of this page */
+  path: string;
+  /** City name for a combo page; omit for a main service page */
+  city?: string;
+}
+
+const { serviceType, path, city } = Astro.props;
+
+const areaServed = city
+  ? { '@type': 'City', name: city }
+  : [
+      { '@type': 'City', name: site.business.locality },
+      { '@type': 'AdministrativeArea', name: site.business.county },
+    ];
+
+const data = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType,
+  provider: { '@id': BUSINESS_ID },
+  areaServed,
+  url: absolute(path),
+};
+---
+
+<JsonLd data={data} />

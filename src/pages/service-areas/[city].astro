@@ -1,0 +1,178 @@
+---
+/**
+ * CITY PAGE TEMPLATE — guide Part 5, design ServiceArea.dc.html.
+ *
+ * Tier-2 split hero with a response-time stat card → 2-col body (article +
+ * sticky sidebar with "Also Serving Nearby") → orange final CTA.
+ *
+ * Carries the Plumber entity with areaServed as the guide's spec block
+ * requires, using the same @id and the same site-wide areaServed list as the
+ * homepage so the entity is never published with conflicting data.
+ */
+import type { GetStaticPaths } from 'astro';
+import { getCollection } from 'astro:content';
+import { getCity, paths, serviceCityPairs } from '@config/site';
+import { images } from '@lib/images';
+import { th } from '@lib/tokens';
+import type { InternalLink } from '@lib/types';
+
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Hero from '@components/Hero.astro';
+import HeroCtas from '@components/HeroCtas.astro';
+import Sections from '@components/Sections.astro';
+import FaqBlock from '@components/FaqBlock.astro';
+import CtaSection from '@components/CtaSection.astro';
+import SideCallCard from '@components/SideCallCard.astro';
+import SideLinkCard from '@components/SideLinkCard.astro';
+import LocalBusinessSchema from '@components/schema/LocalBusinessSchema.astro';
+import FaqSchema from '@components/schema/FaqSchema.astro';
+
+export const getStaticPaths = (async () => {
+  const entries = await getCollection('serviceAreas');
+  return entries.map((entry) => ({
+    params: { city: entry.data.city },
+    props: { entry },
+  }));
+}) satisfies GetStaticPaths;
+
+const { entry } = Astro.props;
+const data = entry.data;
+
+const city = getCity(data.city);
+const path = paths.city(city.slug);
+
+const crumbs = [
+  { name: 'Home', href: paths.home },
+  { name: 'Service Areas', href: paths.areasHub },
+  { name: `${city.name}, CA` },
+];
+
+// Combo children for this city, derived from config.
+const comboLinks: InternalLink[] = serviceCityPairs
+  .filter((pair) => pair.city.slug === city.slug)
+  .map((pair) => ({
+    href: paths.serviceCity(pair.service.slug, pair.city.slug),
+    anchor: `${pair.service.name} in ${city.name}`,
+  }));
+
+// "Also serving nearby" — neighbouring cities from config.
+const nearbyLinks: InternalLink[] = city.nearby.map((slug) => ({
+  href: paths.city(slug),
+  anchor: getCity(slug).name,
+}));
+
+const serviceLinks = data.internalLinks.filter((link) => link.group === 'service');
+---
+
+<BaseLayout title={data.title} description={data.description} path={path} crumbs={crumbs}>
+  <Fragment slot="head">
+    <LocalBusinessSchema />
+    {data.faqs.length > 0 && <FaqSchema faqs={data.faqs} />}
+  </Fragment>
+
+  <Hero
+    variant="split"
+    image={images.heroCity}
+    badge={data.heroBadge ?? `Serving ${city.name}, CA`}
+    badgeGlyph="📍"
+    heading={data.h1}
+    intro={data.intro[0]}
+  >
+    <HeroCtas slot="cta" />
+
+    <div class="glass-card" slot="aside">
+      {
+        data.heroStat && (
+          <>
+            <div class="glass-card__stat">{data.heroStat}</div>
+            <div class="glass-card__label">{data.heroStatLabel}</div>
+          </>
+        )
+      }
+      <ul>
+        {
+          (data.heroPoints.length > 0
+            ? data.heroPoints
+            : [
+                'Licensed, bonded, and insured',
+                'Flat-rate price before we start',
+                'Local crews, not a call center',
+              ]
+          ).map((point) => (
+            <li>
+              <span class="check" aria-hidden="true">
+                ✓
+              </span>
+              {point}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </Hero>
+
+  <section class="section">
+    <div class="container article-layout">
+      <article class="prose">
+        {data.intro.slice(1).map((paragraph) => <p set:html={th(paragraph)} />)}
+
+        <Sections sections={data.sections} />
+
+        {data.faqs.length > 0 && <FaqBlock faqs={data.faqs} heading={data.faqHeading} />}
+
+        {
+          data.alsoServing && (
+            <p class="also-serving">
+              Also serving nearby:{' '}
+              {nearbyLinks.map((link, index) => (
+                <>
+                  <a href={link.href}>{link.anchor}</a>
+                  {index < nearbyLinks.length - 2
+                    ? ', '
+                    : index === nearbyLinks.length - 2
+                      ? ', and '
+                      : ''}
+                </>
+              ))}
+              {city.nearbyNote ? ` — including ${city.nearbyNote}.` : '.'}
+            </p>
+          )
+        }
+      </article>
+
+      <aside class="sidebar">
+        <SideCallCard
+          heading={`Request Service in ${city.name}`}
+          body="Talk to a licensed local plumber and get an upfront price before any work begins."
+        />
+        {
+          comboLinks.length > 0 && (
+            <SideLinkCard heading={`Popular in ${city.name}`} links={comboLinks} />
+          )
+        }
+        {
+          nearbyLinks.length > 0 && (
+            <SideLinkCard heading="Also Serving Nearby" links={nearbyLinks} pills />
+          )
+        }
+        {
+          serviceLinks.length > 0 && (
+            <SideLinkCard heading="Services We Provide" links={serviceLinks} />
+          )
+        }
+      </aside>
+    </div>
+  </section>
+
+  <CtaSection heading={data.ctaHeading} body={data.ctaBody} />
+</BaseLayout>
+
+<style>
+  .also-serving {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.9375rem !important;
+    color: var(--text-muted) !important;
+  }
+</style>

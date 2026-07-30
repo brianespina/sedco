@@ -1,0 +1,285 @@
+---
+/**
+ * BLOG POST TEMPLATE — design BlogPost.dc.html.
+ *
+ * Centered article head → full-width lead image → 2-col (article + sticky
+ * sidebar). The article opens with the highlighted AI-Overview answer box the
+ * guide's Part 8 specifies, which also emits FAQPage schema.
+ */
+import type { GetStaticPaths } from 'astro';
+import { Image } from 'astro:assets';
+import { getCollection, getEntry, render } from 'astro:content';
+import { paths, site } from '@config/site';
+import { images } from '@lib/images';
+
+import BaseLayout from '@layouts/BaseLayout.astro';
+import CtaSection from '@components/CtaSection.astro';
+import SideCallCard from '@components/SideCallCard.astro';
+import SideLinkCard from '@components/SideLinkCard.astro';
+import FaqSchema from '@components/schema/FaqSchema.astro';
+import ArticleSchema from '@components/schema/ArticleSchema.astro';
+
+export const getStaticPaths = (async () => {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}) satisfies GetStaticPaths;
+
+const { post } = Astro.props;
+const data = post.data;
+const { Content } = await render(post);
+
+const path = paths.post(post.id);
+
+const crumbs = [
+  { name: 'Home', href: paths.home },
+  { name: 'Blog', href: paths.blog },
+  { name: data.title },
+];
+
+const dateFormat = new Intl.DateTimeFormat('en-US', {
+  month: 'long',
+  day: 'numeric',
+  year: 'numeric',
+});
+
+// Roughly 200 words per minute, for the byline's read-time estimate.
+const readMinutes = Math.max(1, Math.round(post.body!.split(/\s+/).length / 200));
+
+// "Keep Reading" — the post's own related list, or the newest other posts.
+const relatedEntries = await Promise.all(
+  data.related.map((ref) => getEntry('blog', ref.id)),
+);
+const related = relatedEntries.filter(
+  (entry): entry is NonNullable<typeof entry> => Boolean(entry) && !entry!.data.draft,
+);
+
+const fallbackRelated =
+  related.length > 0
+    ? related
+    : (await getCollection('blog', ({ data: d }) => !d.draft))
+        .filter((entry) => entry.id !== post.id)
+        .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
+        .slice(0, 3);
+
+const keepReading = fallbackRelated.map((entry) => ({
+  href: paths.post(entry.id),
+  anchor: entry.data.title,
+}));
+
+const faqs = data.answerBox
+  ? [{ question: data.answerBox.question, answer: data.answerBox.answer }]
+  : [];
+---
+
+<BaseLayout
+  title={data.seoTitle ?? data.title}
+  description={data.metaDescription}
+  path={path}
+  crumbs={crumbs}
+  ogImage={data.featuredImage?.src}
+  publishedTime={data.publishDate}
+>
+  <Fragment slot="head">
+    <ArticleSchema
+      headline={data.title}
+      description={data.metaDescription}
+      path={path}
+      published={data.publishDate}
+      updated={data.updatedDate}
+      author={data.author}
+      image={data.featuredImage?.src}
+    />
+    {faqs.length > 0 && <FaqSchema faqs={faqs} />}
+  </Fragment>
+
+  <article>
+    <header class="post-head">
+      <div class="container">
+        <span class="cat-pill">{data.category}</span>
+        <h1>{data.title}</h1>
+        <div class="byline">
+          <Image
+            src={images.logo.src}
+            alt=""
+            width={64}
+            height={64}
+            loading="eager"
+            class="byline__logo"
+          />
+          <span>
+            <strong>{data.author}</strong>
+            <span>
+              {dateFormat.format(data.publishDate)} · {readMinutes} min read
+              {data.updatedDate && <> · Updated {dateFormat.format(data.updatedDate)}</>}
+            </span>
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <div class="lead-image">
+      <Image
+        src={data.featuredImage ?? images.blogDefault.src}
+        alt={data.featuredImageAlt || images.blogDefault.alt}
+        widths={[720, 1200, 1600]}
+        sizes="(max-width: 1240px) 100vw, 1240px"
+        loading="eager"
+        fetchpriority="high"
+      />
+    </div>
+
+    <div class="section">
+      <div class="container article-layout">
+        <div class="prose post-body">
+          {
+            data.answerBox && (
+              <aside class="answer-box">
+                <h2>{data.answerBox.question}</h2>
+                {data.answerBox.answer.map((paragraph) => (
+                  <p>{paragraph}</p>
+                ))}
+              </aside>
+            )
+          }
+
+          <Content />
+
+          {
+            data.internalLinks.length > 0 && (
+              <aside class="related-callout">
+                <h2>Related From {site.business.name}</h2>
+                <ul>
+                  {data.internalLinks.map((link) => (
+                    <li>
+                      <a href={link.href}>{link.anchor}</a>
+                    </li>
+                  ))}
+                </ul>
+              </aside>
+            )
+          }
+        </div>
+
+        <aside class="sidebar">
+          <SideCallCard />
+          {keepReading.length > 0 && <SideLinkCard heading="Keep Reading" links={keepReading} />}
+        </aside>
+      </div>
+    </div>
+  </article>
+
+  <CtaSection
+    heading="Need a Plumber in East County?"
+    body="Call Sedco Plumbing at [PHONE] for an honest assessment and an upfront price, anywhere in San Diego County."
+  />
+</BaseLayout>
+
+<style>
+  .post-head {
+    padding-block: 3rem 2rem;
+    text-align: center;
+  }
+  .post-head .container {
+    max-width: var(--measure);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .post-head h1 {
+    font-size: var(--fs-h1-sub);
+  }
+  .cat-pill {
+    background: var(--tint);
+    color: var(--brand-primary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.3125rem 0.625rem;
+    border-radius: var(--r-pill);
+  }
+  .byline {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: left;
+  }
+  .byline__logo {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--r-input);
+  }
+  .byline > span {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.35;
+  }
+  .byline strong {
+    font-size: 0.9375rem;
+    color: var(--brand-deep);
+  }
+  .byline span span {
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+  }
+
+  .lead-image {
+    max-width: var(--container);
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+  }
+  .lead-image img {
+    width: 100%;
+    max-height: 460px;
+    object-fit: cover;
+    border-radius: var(--r-card-lg);
+  }
+
+  .post-body {
+    max-width: var(--measure-prose);
+  }
+
+  .answer-box {
+    background: var(--tint);
+    border-left: 4px solid var(--brand-primary);
+    border-radius: 0 var(--r-card) var(--r-card) 0;
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 2rem;
+  }
+  .answer-box h2 {
+    font-size: 1.25rem;
+    margin-top: 0;
+  }
+  .answer-box p {
+    margin-top: 0.75rem;
+    font-size: var(--fs-prose);
+    line-height: 1.65;
+    color: var(--text-soft-2);
+  }
+
+  .related-callout {
+    margin-top: 2.5rem;
+    border: 1px solid var(--border);
+    border-radius: var(--r-card);
+    padding: 1.5rem 1.75rem;
+    background: var(--tint-3);
+  }
+  .related-callout h2 {
+    font-size: 1.1875rem;
+    margin-top: 0;
+  }
+  .related-callout ul {
+    margin-top: 0.875rem;
+    display: grid;
+    gap: 0.5rem;
+    padding-left: 0;
+    list-style: none;
+  }
+  .related-callout li::before {
+    display: none;
+  }
+</style>

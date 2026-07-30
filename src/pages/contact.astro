@@ -1,0 +1,182 @@
+---
+/**
+ * CONTACT — guide Part 3 "Contact Us", design Contact.dc.html.
+ * Centered hero → 2-col (request form | NAP, service area, hours cards).
+ */
+import { site, paths } from '@config/site';
+import { th, phoneHref, emailHref } from '@lib/tokens';
+import { images } from '@lib/images';
+
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Hero from '@components/Hero.astro';
+import ContactForm from '@components/ContactForm.astro';
+import Phone from '@components/Phone.astro';
+import PageSchema from '@components/schema/PageSchema.astro';
+
+const title = 'Contact Sedco Plumbing | El Cajon Plumber — [PHONE]';
+const description =
+  'Contact Sedco Plumbing in El Cajon, CA. Request service anywhere in San Diego County — same-day appointments available. Call [PHONE] or book online.';
+const path = paths.contact;
+
+const crumbs = [{ name: 'Home', href: paths.home }, { name: 'Contact' }];
+
+const eastCountyCities = site.cities.filter((city) => city.slug !== 'san-diego');
+---
+
+<BaseLayout title={title} description={description} path={path} crumbs={crumbs}>
+  <Fragment slot="head">
+    <PageSchema type="ContactPage" name={title} description={description} path={path} />
+  </Fragment>
+
+  <Hero
+    variant="center"
+    image={images.heroGeneral}
+    badge="Same-day appointments usually available"
+    heading="Contact Sedco Plumbing"
+    intro="The fastest way to reach us is by phone: [PHONE]. Prefer to write? Use the form below and we will get back to you promptly during business hours [HOURS]."
+  >
+    <div class="btn-row btn-row--center" slot="cta">
+      <a class="btn btn--accent" href={phoneHref()}>
+        <span aria-hidden="true">📞</span> Call <Phone />
+      </a>
+      <a class="btn btn--glass" href="#request">Request online</a>
+    </div>
+  </Hero>
+
+  <section class="section">
+    <div class="container contact-grid">
+      <div>
+        <h2 class="form-heading">Request Service</h2>
+        <ContactForm variant="full" as="h3" heading="Tell us what you need" id="request" />
+      </div>
+
+      <aside class="contact-side">
+        <div class="side-card side-card--dark on-dark">
+          <!-- Not a heading: the guide's heading order for this page is H1, then
+               H2 Request Service / Service Area / Hours only. -->
+          <p class="card-title">{site.business.name}</p>
+          <address class="nap-block">
+            <span>{site.business.locality}, {site.business.region}</span>
+            <a href={phoneHref()}><span set:html={th('[PHONE]')} /></a>
+            <a href={emailHref()}><span set:html={th('[EMAIL]')} /></a>
+            <span>License <span set:html={th('[LICENSE #]')} /></span>
+          </address>
+          <p>
+            We are a mobile service-area business — our technicians come to you, so there is no
+            storefront to visit.
+          </p>
+        </div>
+
+        <div class="side-card">
+          <h2>Service Area</h2>
+          <p class="side-copy">
+            We come to you. Sedco Plumbing is based in El Cajon and serves all of San Diego County,
+            with priority coverage in {
+              eastCountyCities.map((city, index) => (
+                <>
+                  <a href={paths.city(city.slug)}>{city.name}</a>
+                  {index < eastCountyCities.length - 2
+                    ? ', '
+                    : index === eastCountyCities.length - 2
+                      ? ', and '
+                      : ''}
+                </>
+              ))
+            }.
+          </p>
+          <ul class="pill-list side-pills">
+            {
+              site.cities.map((city) => (
+                <li>
+                  <a class="pill" href={paths.city(city.slug)}>
+                    <span aria-hidden="true">📍</span>
+                    {city.name}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+          <p class="side-copy">
+            Browse <a href={paths.servicesHub}>all of our plumbing services</a> or the <a
+              href={paths.areasHub}>full list of communities we serve</a
+            >.
+          </p>
+        </div>
+
+        <div class="side-card side-card--warm">
+          <h2>Hours</h2>
+          <p class="side-copy">
+            <span set:html={th('[HOURS]')} /> — with emergency availability for urgent problems like
+            burst pipes, sewage backups, and gas leaks.
+          </p>
+          <p class="safety-note">
+            <strong>If you smell gas</strong>, leave the building first and call your gas utility,
+            then call us.
+          </p>
+        </div>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 3.5rem;
+    align-items: start;
+  }
+  .form-heading {
+    margin-bottom: 1.25rem;
+  }
+  .contact-side {
+    display: grid;
+    gap: 1.375rem;
+  }
+  .card-title {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.1875rem;
+    color: #fff;
+  }
+  .nap-block {
+    display: grid;
+    gap: 0.4375rem;
+    font-style: normal;
+    margin-top: 1rem;
+    font-size: 0.9375rem;
+  }
+  .nap-block a {
+    color: #fff;
+    font-weight: 600;
+  }
+  .side-copy {
+    font-size: 0.9375rem;
+    color: var(--text-soft);
+    line-height: 1.6;
+    margin-top: 0.75rem;
+  }
+  .side-pills {
+    margin-top: 1rem;
+  }
+  .side-card--warm {
+    background: #fff8f0;
+    border-color: #f3d9bb;
+  }
+  .safety-note {
+    margin-top: 0.875rem;
+    font-size: 0.875rem;
+    color: #8a4b12;
+    background: #fdeedb;
+    border-radius: var(--r-input);
+    padding: 0.75rem 0.875rem;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 900px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+  }
+</style>

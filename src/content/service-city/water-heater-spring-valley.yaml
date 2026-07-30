@@ -1,0 +1,91 @@
+service: water-heater
+city: spring-valley
+
+title: Water Heater Repair in Spring Valley, CA | Sedco Plumbing
+description: >-
+  Water heater repair and installation in Spring Valley, with pressure checks and expansion tanks for hillside homes
+  over 80 psi. Call [PHONE].
+primaryKeyword: water heater repair Spring Valley
+supportingKeywords:
+  - water heater installation Spring Valley
+  - tankless water heater Spring Valley
+  - water heater replacement 91977
+  - expansion tank installation
+  - T&P valve leaking
+
+heroStat: 80 psi
+heroStatLabel: The limit we check for
+heroPoints:
+  - Pressure measured on every water heater call
+  - Regulator and charged expansion tank where needed
+  - Seismic strapping, drain pan, and venting brought current
+  - Workmanship warranty [WARRANTY TERMS]
+
+h1: Water Heater Repair & Installation in Spring Valley, CA
+intro:
+  - >-
+    If your water heater’s relief valve drips, your tank rumbles like a kettle, or your showers keep running cold,
+    Sedco Plumbing can help — usually the same day. We repair and replace tank and tankless water heaters across
+    Spring Valley, and we pay special attention to something many installers here skip entirely: water pressure.
+
+sections:
+  - heading: Hillside Pressure Is the Silent Water Heater Killer
+    paragraphs:
+      - >-
+        Gravity feeds Spring Valley’s hillside neighborhoods generously. On lots around Dictionary Hill and parts of Casa
+        de Oro, street pressure can exceed 80 psi — beyond what plumbing code allows and well beyond what a water heater
+        tank is built to endure day after day. Excess pressure stresses tank seams, forces temperature-and-pressure
+        relief valves to weep, and shortens the life of every appliance connected to your water. We measure your pressure
+        on every water heater call, and when it is high, we address it with a regulator and a properly charged expansion
+        tank rather than just swapping the heater and waiting for history to repeat.
+
+  - heading: Straightforward Repairs and Code-Correct Replacements
+    paragraphs:
+      - >-
+        Whether the fix is a thermocouple, an element, a gas control valve, or a full replacement, you get a flat-rate
+        quote first. Spring Valley’s older housing stock means many heaters we replace were installed under earlier
+        codes — so new installations bring the setup current: seismic strapping, drain pan and discharge routing, proper
+        venting, and the expansion tank now required on closed systems. Your water comes from either Helix or Otay
+        depending on where you live, and both deliver the hard water that makes periodic tank flushing worthwhile.
+
+  - heading: Thinking About Tankless?
+    paragraphs:
+      - >-
+        A wall-hung tankless unit frees up garage or closet space and supplies endless hot water for busy households. We
+        confirm your gas line and venting can support one before quoting, so there are no surprises mid-installation.
+
+faqs:
+  - question: Why does my temperature-and-pressure relief valve keep dripping?
+    answer:
+      - >-
+        A weeping T&P valve usually signals excess pressure or thermal expansion, not a bad valve. Replacing the valve
+        alone treats the symptom; testing your home’s pressure and adding a regulator or expansion tank treats the cause.
+  - question: Do I need an expansion tank with a new water heater?
+    answer:
+      - >-
+        In most cases, yes. Homes with a pressure regulator or backflow device form a closed system, and California code
+        requires thermal expansion control on them. It is inexpensive insurance for your new tank.
+  - question: Can you replace a water heater in Spring Valley the same day?
+    answer:
+      - >-
+        Usually. We stock common sizes, and Spring Valley is minutes from our El Cajon base. Call before mid-morning and
+        same-day replacement is typically achievable, with availability [HOURS].
+
+ctaHeading: Hot Water, Handled
+ctaBody: >-
+  For repairs, replacements, and tankless conversions backed by a workmanship warranty [WARRANTY TERMS], call Sedco
+  Plumbing at [PHONE] and schedule water heater service in Spring Valley.
+
+internalLinks:
+  - href: /services/water-heater/
+    anchor: water heater repair & installation
+    group: service
+  - href: /service-areas/spring-valley/
+    anchor: Spring Valley plumbing services
+    group: city
+  - href: /services/slab-leak-repair/spring-valley/
+    anchor: slab leak detection in Spring Valley
+    group: combo
+  - href: /services/water-pressure-regulators/
+    anchor: water pressure regulator replacement
+    group: service

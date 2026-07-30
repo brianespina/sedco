@@ -1,0 +1,136 @@
+---
+/**
+ * SERVICE PAGE TEMPLATE — guide Part 4, design Service.dc.html.
+ *
+ * Tier-2 split hero with a frosted credential card → 2-col body (article +
+ * sticky sidebar) → orange final CTA. Copy comes verbatim from the service's
+ * content entry; internal links use the guide's anchor text.
+ */
+import type { GetStaticPaths } from 'astro';
+import { getCollection } from 'astro:content';
+import { getService, getCity, paths, site } from '@config/site';
+import { images } from '@lib/images';
+import type { InternalLink } from '@lib/types';
+
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Hero from '@components/Hero.astro';
+import HeroCtas from '@components/HeroCtas.astro';
+import Sections from '@components/Sections.astro';
+import FaqBlock from '@components/FaqBlock.astro';
+import CtaSection from '@components/CtaSection.astro';
+import SideCallCard from '@components/SideCallCard.astro';
+import SideLinkCard from '@components/SideLinkCard.astro';
+import ServiceSchema from '@components/schema/ServiceSchema.astro';
+import FaqSchema from '@components/schema/FaqSchema.astro';
+
+export const getStaticPaths = (async () => {
+  const entries = await getCollection('services');
+  return entries.map((entry) => ({
+    params: { service: entry.data.service },
+    props: { entry },
+  }));
+}) satisfies GetStaticPaths;
+
+const { entry } = Astro.props;
+const data = entry.data;
+
+const service = getService(data.service);
+const path = paths.service(service.slug);
+
+const crumbs = [
+  { name: 'Home', href: paths.home },
+  { name: 'Services', href: paths.servicesHub },
+  { name: service.name },
+];
+
+// Child service x city pages, derived from config so they can never drift.
+const childLinks: InternalLink[] = service.cities.map((citySlug) => ({
+  href: paths.serviceCity(service.slug, citySlug),
+  anchor: `${service.name} in ${getCity(citySlug).name}`,
+}));
+
+const relatedServices = data.internalLinks.filter((link) => link.group === 'service');
+const cityLinks = data.internalLinks.filter((link) => link.group === 'city');
+---
+
+<BaseLayout title={data.title} description={data.description} path={path} crumbs={crumbs}>
+  <Fragment slot="head">
+    <ServiceSchema serviceType={service.name} path={path} />
+    {data.faqs.length > 0 && <FaqSchema faqs={data.faqs} />}
+  </Fragment>
+
+  <Hero
+    variant="split"
+    image={images.heroService}
+    badge={data.heroBadge ?? `Licensed CA ${site.business.licenseClass} plumbing contractor`}
+    heading={data.h1}
+    intro={data.intro[0]}
+  >
+    <HeroCtas slot="cta" />
+
+    <div class="glass-card" slot="aside">
+      {
+        data.heroStat && (
+          <>
+            <div class="glass-card__stat">{data.heroStat}</div>
+            <div class="glass-card__label">{data.heroStatLabel}</div>
+          </>
+        )
+      }
+      <ul>
+        {
+          (data.heroPoints.length > 0
+            ? data.heroPoints
+            : [
+                'Licensed, bonded, and insured',
+                'Flat-rate price before we start',
+                'Same-day appointments available',
+              ]
+          ).map((point) => (
+            <li>
+              <span class="check" aria-hidden="true">
+                ✓
+              </span>
+              {point}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </Hero>
+
+  <section class="section">
+    <div class="container article-layout">
+      <article class="prose">
+        {data.intro.slice(1).map((paragraph) => <p>{paragraph}</p>)}
+
+        <Sections sections={data.sections} />
+
+        {data.faqs.length > 0 && <FaqBlock faqs={data.faqs} heading={data.faqHeading} />}
+      </article>
+
+      <aside class="sidebar">
+        <SideCallCard />
+        {
+          relatedServices.length > 0 && (
+            <SideLinkCard heading="Related Services" links={relatedServices} />
+          )
+        }
+        {
+          childLinks.length > 0 && (
+            <SideLinkCard heading={`${service.name} by City`} links={childLinks} pills />
+          )
+        }
+        {cityLinks.length > 0 && <SideLinkCard heading="Where We Work" links={cityLinks} pills />}
+      </aside>
+    </div>
+  </section>
+
+  <CtaSection heading={data.ctaHeading} body={data.ctaBody} />
+</BaseLayout>
+
+<style>
+  .child-pills {
+    margin-top: 1rem;
+  }
+</style>

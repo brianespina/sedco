@@ -1,0 +1,90 @@
+service: sewer-lines
+city: la-mesa
+
+title: Sewer Line Repair in La Mesa, CA | Sedco Plumbing
+description: >-
+  Tree roots in your sewer line? Sedco Plumbing inspects, repairs, and replaces aging clay laterals in La Mesa,
+  with trenchless options. Call [PHONE].
+primaryKeyword: sewer line repair La Mesa
+supportingKeywords:
+  - sewer line replacement La Mesa
+  - trenchless sewer repair La Mesa
+  - sewer camera inspection La Mesa
+  - root intrusion sewer
+  - clay sewer pipe
+
+heroStat: Within the hour
+heroStatLabel: Emergency backups, routinely
+heroPoints:
+  - Recorded camera inspection before any bid
+  - Trenchless options that spare yard and driveway
+  - Problem spots located and marked on the surface
+  - We say so plainly when excavation is the better answer
+
+h1: Sewer Line Repair & Replacement in La Mesa, CA
+intro:
+  - >-
+    The trees are one of the best things about living in La Mesa — until their roots find your sewer line. Sedco
+    Plumbing repairs and replaces residential sewer laterals across the city, from the flats of La Mesa Village to
+    the winding roads of Mount Helix, and we bring trenchless options that can save your yard, driveway, and
+    landscaping in the process. Based in El Cajon, we are only minutes away when a backup turns urgent.
+
+sections:
+  - heading: Roots, Clay Pipe, and Seventy-Year-Old Laterals
+    paragraphs:
+      - >-
+        Many La Mesa homes built in the 1940s through the 1960s still drain through their original vitrified clay
+        sewer laterals. Clay pipe is laid in short segments, and every joint is an invitation: the mature camphors,
+        oaks, and pepper trees that line the older streets send feeder roots straight into those seams, where they
+        thicken into masses that snag paper and waste. Around Mount Helix and Grossmont, laterals also run long
+        distances downhill, so a single root intrusion or offset joint can back up the whole house. If your line
+        needs clearing more than about once a year, roots are almost certainly the reason.
+
+  - heading: See the Problem Before You Pay for It
+    paragraphs:
+      - >-
+        We never quote a sewer replacement from guesswork. A camera inspection travels the full length of your
+        lateral and shows you — on screen, in plain view — exactly what is down there: root masses, cracked segments,
+        offsets, or sags. You get a recorded inspection and a locate mark on the surface, so any bid we give is tied
+        to evidence you have seen with your own eyes.
+
+  - heading: Trenchless Repair That Spares Your Yard
+    paragraphs:
+      - >-
+        Where the pipe allows it, trenchless methods let us rehabilitate or replace a lateral through small access
+        pits instead of an open trench across the property. Pipe bursting pulls a new line through the path of the
+        old one; lining creates a smooth, jointless pipe inside the existing run and seals the roots out for good.
+        When excavation is truly the better answer, we will say so and explain why.
+
+faqs:
+  - question: How do I know if roots are in my sewer line?
+    answer:
+      - >-
+        Gurgling drains, backups at the lowest fixture in the house, and clogs that return within months are the
+        classic signs. A camera inspection confirms it and shows how severe the intrusion has become.
+  - question: How fast can Sedco Plumbing respond to a sewer backup in La Mesa?
+    answer:
+      - >-
+        Very fast — El Cajon and La Mesa share a border, so our trucks routinely arrive within the hour for
+        emergency backups [HOURS]. Same-day camera inspections are the norm rather than the exception.
+  - question: Does trenchless work on old clay pipe?
+    answer:
+      - >-
+        Usually, yes. Clay laterals in reasonable alignment are good candidates for bursting or lining. Badly
+        collapsed sections may need a short excavation first, which the camera inspection will reveal ahead of time.
+
+ctaHeading: Schedule a Camera Inspection Today
+ctaBody: >-
+  Know what is happening under your lawn before it becomes a mess inside your home. Call Sedco Plumbing at
+  [PHONE] to book a sewer camera inspection or emergency service in La Mesa.
+
+internalLinks:
+  - href: /services/sewer-lines/
+    anchor: sewer line repair & replacement
+    group: service
+  - href: /service-areas/la-mesa/
+    anchor: plumber serving La Mesa
+    group: city
+  - href: /services/drain-cleaning/la-mesa/
+    anchor: drain cleaning in La Mesa
+    group: combo

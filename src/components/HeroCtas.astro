@@ -1,0 +1,28 @@
+---
+/**
+ * The standard hero button pair: orange click-to-call + glass "Request Service".
+ */
+import { paths } from '@config/site';
+import { phoneHref } from '@lib/tokens';
+import Phone from './Phone.astro';
+
+interface Props {
+  /** Where the secondary button points; defaults to the contact page */
+  requestHref?: string;
+  requestLabel?: string;
+  center?: boolean;
+}
+
+const {
+  requestHref = paths.contact,
+  requestLabel = 'Request Service',
+  center = false,
+} = Astro.props;
+---
+
+<div class={center ? 'btn-row btn-row--center' : 'btn-row'}>
+  <a class="btn btn--accent" href={phoneHref()}>
+    <span aria-hidden="true">📞</span> Call <Phone />
+  </a>
+  <a class="btn btn--glass" href={requestHref}>{requestLabel}</a>
+</div>

@@ -1,0 +1,452 @@
+---
+/**
+ * Sticky site header (guide Part 2 nav, design SiteHeader.dc.html).
+ *
+ * Desktop: hover-opened Services (16) and Service Areas (10) dropdowns, plus
+ * the orange click-to-call button. Mobile: a hamburger drawer with the two
+ * lists as accordions — not covered by the prototypes, so it follows the
+ * established visual language.
+ */
+import { Image } from 'astro:assets';
+import { site, paths } from '@config/site';
+import { phoneHref } from '@lib/tokens';
+import { images } from '@lib/images';
+import Phone from './Phone.astro';
+
+const currentPath = Astro.url.pathname;
+const isCurrent = (href: string) =>
+  href === paths.home ? currentPath === href : currentPath.startsWith(href);
+
+const serviceLinks = site.services.map((service) => ({
+  href: paths.service(service.slug),
+  label: service.navLabel,
+}));
+const cityLinks = site.cities.map((city) => ({
+  href: paths.city(city.slug),
+  label: city.name,
+}));
+---
+
+<header class="site-header">
+  <div class="site-header__accent"></div>
+
+  <div class="container site-header__row">
+    <a class="lockup" href={paths.home}>
+      <Image
+        src={images.logo.src}
+        alt={images.logo.alt}
+        width={84}
+        height={84}
+        loading="eager"
+        class="lockup__logo"
+      />
+      <span class="lockup__text">
+        <span class="lockup__name">{site.business.name}</span>
+        <span class="lockup__place">{site.business.tagline}</span>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Main">
+      {
+        site.nav.map((item) =>
+          item.dropdown ? (
+            <div class="nav__group" data-dropdown>
+              <a
+                class="nav__link"
+                href={item.href}
+                aria-current={isCurrent(item.href) ? 'true' : undefined}
+                aria-expanded="false"
+                aria-haspopup="true"
+                data-dropdown-trigger
+              >
+                {item.label} <span class="nav__caret" aria-hidden="true">▾</span>
+              </a>
+              <div
+                class={`nav__menu nav__menu--${item.dropdown}`}
+                data-dropdown-menu
+                hidden
+              >
+                {(item.dropdown === 'services' ? serviceLinks : cityLinks).map((link) => (
+                  <a href={link.href}>{link.label}</a>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <a
+              class="nav__link"
+              href={item.href}
+              aria-current={isCurrent(item.href) ? 'page' : undefined}
+            >
+              {item.label}
+            </a>
+          ),
+        )
+      }
+    </nav>
+
+    <a class="call-btn" href={phoneHref()}>
+      <span aria-hidden="true">📞</span>
+      <span class="visually-hidden">Call us at</span>
+      <Phone />
+    </a>
+
+    <button class="burger" type="button" aria-expanded="false" aria-controls="mobile-nav">
+      <span class="visually-hidden">Menu</span>
+      <span class="burger__bars" aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <div class="drawer" id="mobile-nav" hidden>
+    <nav class="drawer__inner container" aria-label="Mobile">
+      <a class="drawer__link" href={paths.home}>Home</a>
+
+      <details class="drawer__group">
+        <summary>Services</summary>
+        <div class="drawer__sublinks">
+          <a href={paths.servicesHub}>All Services</a>
+          {serviceLinks.map((link) => <a href={link.href}>{link.label}</a>)}
+        </div>
+      </details>
+
+      <details class="drawer__group">
+        <summary>Service Areas</summary>
+        <div class="drawer__sublinks">
+          <a href={paths.areasHub}>All Service Areas</a>
+          {cityLinks.map((link) => <a href={link.href}>{link.label}</a>)}
+        </div>
+      </details>
+
+      <a class="drawer__link" href={paths.about}>About</a>
+      <a class="drawer__link" href={paths.reviews}>Reviews</a>
+      <a class="drawer__link" href={paths.blog}>Blog</a>
+      <a class="drawer__link" href={paths.contact}>Contact</a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 60;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(8px);
+    box-shadow: var(--sh-header);
+  }
+
+  .site-header__accent {
+    height: 3px;
+    background: var(--grad-accent-bar);
+  }
+
+  .site-header__row {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    padding-block: 0.6875rem;
+    flex-wrap: nowrap;
+  }
+
+  /* ---- Logo lockup ---- */
+  .lockup {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-shrink: 0;
+  }
+  .lockup__logo {
+    width: 42px;
+    height: 42px;
+    border-radius: var(--r-input);
+    box-shadow: 0 3px 8px rgba(15, 58, 99, 0.22);
+  }
+  .lockup__text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+  }
+  .lockup__name {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.125rem;
+    letter-spacing: 0.01em;
+    color: var(--brand-deep);
+    text-transform: uppercase;
+  }
+  .lockup__place {
+    font-size: 0.625rem;
+    letter-spacing: 0.14em;
+    font-weight: 600;
+    color: var(--text-muted-2);
+    text-transform: uppercase;
+    margin-top: 3px;
+  }
+
+  /* ---- Desktop nav ---- */
+  .nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    flex-shrink: 0;
+    /* Deliberately roomier than the design handoff's `gap: 0`. */
+    gap: var(--nav-gap);
+  }
+  .nav__link {
+    /* Horizontal padding sets both the hover pill's width and the visual
+       separation between items, so it is tuned alongside --nav-gap. The design
+       specified 7px both sides; this is more generous per review feedback. */
+    padding: 0.4375rem var(--nav-link-padding-x);
+    font-weight: 600;
+    font-size: 0.84375rem;
+    color: var(--text);
+    border-radius: 6px;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .nav__link:hover,
+  .nav__group[data-open] .nav__link {
+    background: var(--tint);
+  }
+  .nav__link[aria-current] {
+    color: var(--brand-primary);
+  }
+  .nav__caret {
+    font-size: 0.625rem;
+    color: var(--text-muted-2);
+  }
+
+  .nav__group {
+    position: relative;
+  }
+  .nav__menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: var(--sh-dropdown);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+  }
+  .nav__menu--services {
+    width: 520px;
+  }
+  .nav__menu--cities {
+    width: 300px;
+    left: auto;
+    right: 0;
+  }
+  .nav__menu a {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text);
+    border-radius: var(--r-sm);
+  }
+  .nav__menu a:hover {
+    background: var(--tint);
+    color: var(--brand-primary);
+  }
+
+  /* ---- Call button ---- */
+  .call-btn {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.875rem;
+    padding: 0.6875rem 0.9375rem;
+    border-radius: var(--r-input);
+    box-shadow: var(--sh-accent-sm);
+    min-height: 44px;
+    transition: background var(--t-fast);
+  }
+  .call-btn:hover {
+    background: var(--accent-hover);
+    color: #fff;
+  }
+  .call-btn :global(.ph-chip) {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.75);
+    color: #fff;
+  }
+
+  /* ---- Hamburger + drawer ---- */
+  .burger {
+    display: none;
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: var(--r-input);
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+  }
+  .burger__bars,
+  .burger__bars::before,
+  .burger__bars::after {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--brand-deep);
+    border-radius: 2px;
+    position: relative;
+  }
+  .burger__bars::before,
+  .burger__bars::after {
+    content: '';
+    position: absolute;
+    left: 0;
+  }
+  .burger__bars::before {
+    top: -6px;
+  }
+  .burger__bars::after {
+    top: 6px;
+  }
+
+  .drawer {
+    border-top: 1px solid var(--border);
+    background: #fff;
+    max-height: min(70vh, 560px);
+    overflow-y: auto;
+  }
+  .drawer__inner {
+    display: grid;
+    padding-block: 0.75rem 1.25rem;
+  }
+  .drawer__link,
+  .drawer__group > summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8125rem 0.25rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--text);
+    border-bottom: 1px solid var(--border);
+    min-height: 44px;
+    cursor: pointer;
+    list-style: none;
+  }
+  .drawer__group > summary::-webkit-details-marker {
+    display: none;
+  }
+  .drawer__group > summary::after {
+    content: '+';
+    color: var(--brand-primary);
+    font-size: 1.25rem;
+  }
+  .drawer__group[open] > summary::after {
+    content: '–';
+  }
+  .drawer__sublinks {
+    display: grid;
+    padding: 0.5rem 0 0.75rem 0.75rem;
+  }
+  .drawer__sublinks a {
+    padding: 0.625rem 0.25rem;
+    font-size: 0.9375rem;
+    color: var(--text-soft);
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  .drawer__sublinks a:hover {
+    color: var(--brand-primary);
+  }
+
+  @media (max-width: 1180px) {
+    .nav,
+    .call-btn {
+      display: none;
+    }
+    .burger {
+      display: inline-flex;
+      margin-left: auto;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .lockup__name {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<script>
+  // Desktop dropdowns: hover on pointer devices, click/tap otherwise.
+  // Only one menu is open at a time; Escape closes.
+  const groups = document.querySelectorAll<HTMLElement>('[data-dropdown]');
+
+  const closeAll = (except?: HTMLElement) => {
+    groups.forEach((group) => {
+      if (group === except) return;
+      group.removeAttribute('data-open');
+      group.querySelector('[data-dropdown-menu]')?.setAttribute('hidden', '');
+      group.querySelector('[data-dropdown-trigger]')?.setAttribute('aria-expanded', 'false');
+    });
+  };
+
+  const open = (group: HTMLElement) => {
+    closeAll(group);
+    group.setAttribute('data-open', '');
+    group.querySelector('[data-dropdown-menu]')?.removeAttribute('hidden');
+    group.querySelector('[data-dropdown-trigger]')?.setAttribute('aria-expanded', 'true');
+  };
+
+  const close = (group: HTMLElement) => {
+    group.removeAttribute('data-open');
+    group.querySelector('[data-dropdown-menu]')?.setAttribute('hidden', '');
+    group.querySelector('[data-dropdown-trigger]')?.setAttribute('aria-expanded', 'false');
+  };
+
+  const hoverCapable = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+  groups.forEach((group) => {
+    const trigger = group.querySelector<HTMLElement>('[data-dropdown-trigger]');
+
+    if (hoverCapable) {
+      group.addEventListener('mouseenter', () => open(group));
+      group.addEventListener('mouseleave', () => close(group));
+      // Keyboard users get the menu on focus, and can still follow the hub link.
+      trigger?.addEventListener('focus', () => open(group));
+      group.addEventListener('focusout', (event) => {
+        if (!group.contains(event.relatedTarget as Node)) close(group);
+      });
+    } else {
+      trigger?.addEventListener('click', (event) => {
+        // First tap opens the menu; the hub link stays reachable from inside it.
+        if (!group.hasAttribute('data-open')) {
+          event.preventDefault();
+          open(group);
+        }
+      });
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeAll();
+  });
+
+  // Mobile drawer
+  const burger = document.querySelector<HTMLButtonElement>('.burger');
+  const drawer = document.getElementById('mobile-nav');
+
+  burger?.addEventListener('click', () => {
+    const isOpen = burger.getAttribute('aria-expanded') === 'true';
+    burger.setAttribute('aria-expanded', String(!isOpen));
+    if (isOpen) drawer?.setAttribute('hidden', '');
+    else drawer?.removeAttribute('hidden');
+  });
+</script>

@@ -1,0 +1,49 @@
+{
+  "name": "sedco-plumbing",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sedco Plumbing \u2014 local service business website (reusable config-driven Astro system)",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "verify": "astro build && node scripts/verify-build.mjs",
+    "deploy": "astro build && wrangler deploy",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^14.1.7",
+    "@astrojs/markdoc": "^2.0.6",
+    "@astrojs/react": "^6.0.2",
+    "@astrojs/sitemap": "^3.7.3",
+    "@fontsource-variable/libre-franklin": "^5.3.0",
+    "@fontsource/barlow": "^5.2.8",
+    "@keystatic/astro": "^5.2.0",
+    "@keystatic/core": "^0.6.3",
+    "astro": "^7.1.6",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@astrojs/node": "^11.0.3",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "sharp": "^0.34.4",
+    "typescript": "^6.0.3",
+    "vite": "^8.2.0",
+    "wrangler": "^4.83.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.1": true,
+    "workerd@1.20260722.1": true,
+    "sharp@0.35.2": true,
+    "sharp@0.34.5": true
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}
