@@ -125,7 +125,7 @@ export const site = {
     /** Web3Forms access key — set WEB3FORMS_ACCESS_KEY in .env / Cloudflare secrets */
     web3formsKey: import.meta.env.WEB3FORMS_ACCESS_KEY ?? '',
     /** Keystatic Cloud project, one team per client */
-    keystaticProject: '[KEYSTATIC_TEAM]/[KEYSTATIC_PROJECT]',
+    keystaticProject: 'sedco/sedco',
     /** GA4 measurement ID, e.g. G-XXXXXXXXXX. Empty = no analytics injected. */
     ga4: '',
   },
