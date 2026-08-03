@@ -1,6 +1,8 @@
 import { defineCollection, reference, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
+import { site } from './config/site';
+
 /**
  * CONTENT COLLECTIONS
  *
@@ -136,7 +138,7 @@ const blog = defineCollection({
       excerpt: z.string().min(1).max(300),
       featuredImage: image().optional(),
       featuredImageAlt: z.string().default(''),
-      author: z.string().default('Sedco Plumbing'),
+      author: z.string().default(site.business.name),
       /** Highlighted answer box near the top of the post (guide Part 8) */
       answerBox: z
         .object({

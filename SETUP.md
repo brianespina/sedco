@@ -140,12 +140,32 @@ copy does not.
 
 ## 5. Web3Forms
 
-1. Go to [web3forms.com](https://web3forms.com), enter the **client's** email, copy the access key.
-2. Local: put it in `.env` as `WEB3FORMS_ACCESS_KEY=...`
-3. Production: `npx wrangler secret put WEB3FORMS_ACCESS_KEY`
+1. Create the account at [web3forms.com](https://web3forms.com) on the **client's** email — one
+   account per client, owned by the client. The signup address is where every lead lands, so using
+   your own email sends the client's leads to your inbox instead of theirs. Signup verifies the
+   address, so this step needs either the client doing it themselves or access to their mailbox.
+2. Copy the access key into `.env` as `WEB3FORMS_ACCESS_KEY=...`
 
-Until it is set, the form renders a visible warning instead of failing silently. One free account
-per client keeps leads in their own inbox.
+The cleanest handoff is the client signing up (Google sign-in on the business account they already
+use for GBP is quickest) and sending you just the key. If you create the account for them, hand the
+credentials over through a password manager rather than email, and have them reset the password on
+first login. The key itself needs no such care — see below.
+
+**The key is read at build time, not runtime.** Every public page is prerendered, so the key is
+baked into the HTML by `astro build`. Set it wherever the build runs — `.env` is enough for
+`npm run deploy`, since that builds locally; if you move the build into CI or Cloudflare's build
+system, add it there as a build-time environment variable. `wrangler secret put` does **not** work
+for this: a runtime Worker secret is never seen by already-prerendered HTML, and the contact form
+would deploy dead.
+
+The key is not a credential — it ships as a hidden input in the page HTML and is visible in
+view-source by design. Nothing is leaked by sharing it.
+
+Until it is set, `npm run verify` fails loudly and the form posts nothing. One free account per
+client keeps leads in their own inbox.
+
+**Free plan limits worth telling the client:** 250 submissions/month, and no dashboard on the free
+tier — email is the only record of a lead. If a lead email is deleted, it is gone.
 
 Form fields come from config — the city dropdown is the `cities` array plus "Other", and the
 service dropdown is the `services` array plus "Not sure / something else".
@@ -232,7 +252,7 @@ Then, from the guide's Part 9:
 
 These need a decision or client input before this specific site launches.
 
-### 1. Duplicate title tag — needs a decision
+### 1. Duplicate title tag — decided: follow the guide
 
 The content guide assigns the **same** title tag to two pages:
 
@@ -240,14 +260,17 @@ The content guide assigns the **same** title tag to two pages:
 - `/service-areas/el-cajon/` → `Plumber in El Cajon, CA | Sedco Plumbing`
 
 Both also target the same primary keyword, `plumber El Cajon`. This contradicts the guide's own
-Part 7.4 rule ("unique title tag and meta description per page ... never duplicate across pages")
-and risks the two pages competing for one query.
+Part 7.4 rule ("unique title tag and meta description per page ... never duplicate across pages").
 
-The copy was left exactly as written rather than silently changed. `npm run verify` surfaces it as
-a warning on every run. **Recommended fix:** retitle the service page to
-`Plumbing Services in El Cajon, CA | Sedco Plumbing` — it reads naturally, keeps the keyword, and
-lets the city page own the "plumber El Cajon" query. Then delete the entry from
-`ACKNOWLEDGED_DUPLICATE_TITLES` in `scripts/verify-build.mjs`.
+**Decision: ship the guide's copy verbatim.** The guide is the source of truth, and the conflict is
+the guide's to resolve, not the build's. The accepted consequence is that the two pages compete for
+`plumber El Cajon` — Google will pick one and may filter the other from results for that query.
+
+If Search Console later shows the two cannibalising each other, the fix is to retitle the service
+page to `Plumbing Services in El Cajon, CA | Sedco Plumbing` in
+`src/content/services/general-plumbing.yaml`, then delete the entry from
+`ACKNOWLEDGED_DUPLICATE_TITLES` in `scripts/verify-build.mjs`. `verify` prints the duplicate on
+every run so it stays visible as a recorded decision rather than an oversight.
 
 ### 2. Blog cost post — pricing needed
 
@@ -269,11 +292,34 @@ Guide Part 9 asks these to be verified before launch, and they appear in the cop
 
 ### 4. Still placeholder content
 
+Nothing in this list announces itself on the page any more. Placeholder sections render as
+neutral content or hide entirely, and the reminders live here and in `npm run verify` output
+instead of in the HTML — a note written for the developer should never reach a visitor.
+
 - **Photos** — all stock from the design handoff; the logo is the only real asset
-- **Reviews** — `src/config/reviews.ts`, the design's sample set
-- **Service-area map** — `ServiceAreaMap.astro` renders the design's styled stand-in
-- **Privacy policy** — a reasonable starting draft describing what the site actually collects;
-  needs client and legal review
+- **Reviews** — `src/config/reviews.ts` holds 12 reviews curated from the client's Yelp and
+  Foursquare profiles. Every one still needs a `city` (the source reviews don't state one, and the
+  guide asks reviews to be tagged by city); `verify` counts what is missing. The six Yelp entries
+  come from Yelp's "not currently recommended" bucket — confirm the client is comfortable
+  republishing them, and prefer Yelp's recommended reviews and Google reviews as they arrive.
+- **Google review button** — `/reviews/` hides the "Leave a Google review" button the guide asks
+  for until `profiles.googleReview` is set in `src/config/site.ts`. `verify` warns while it is unset.
+- **Service-area map** — `ServiceAreaMap.astro` renders a caption card over a decorative
+  background, with no pins or boundaries, because placing invented locations on a map is a factual
+  claim we cannot make. Replace the background with a real San Diego County coverage map that
+  highlights the service area — never a storefront pin, since the address is hidden. The guide
+  (Part 3, Homepage) marks this graphic optional, so dropping the card is also a valid choice; the
+  city links beside it already carry the section.
+- **Team photos on About** — the guide marks these optional ("team photos, community involvement,
+  sponsorships — add when available"). Nothing is stubbed on the page; add a section to
+  `src/pages/about.astro` when the client supplies photos.
+- **Privacy policy** — the text accurately describes what the *website* collects (the Web3Forms
+  submission, analytics if enabled, no first-party tracking cookies), but nobody has confirmed how
+  the *business* handles that data off the site: retention, whether leads reach subcontractors, and
+  any CCPA obligations. Have the client review it with legal advice, then set
+  `legal.privacyPolicyApproved: true` in `src/config/site.ts`; `verify` warns until you do. The
+  "Last updated" line reads from `legal.privacyPolicyUpdated` — bump it when the text changes, not
+  on every deploy.
 - **Blog** — 2 of the guide's 12 starter posts are written; posts 3–12 have briefs in Part 8
 
 ### 5. Blog images

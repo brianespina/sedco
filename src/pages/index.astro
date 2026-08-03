@@ -7,8 +7,8 @@
  * all 16 service pages and all 10 city pages (guide Part 7.2).
  */
 import { Image } from 'astro:assets';
-import { site, paths } from '@config/site';
-import { featuredReviews, reviewsArePlaceholder } from '@config/reviews';
+import { site, paths, getCity } from '@config/site';
+import { featuredReviews } from '@config/reviews';
 import { images } from '@lib/images';
 import { th } from '@lib/tokens';
 import type { Faq } from '@lib/types';
@@ -285,26 +285,25 @@ const eastCountyCities = site.cities.filter((city) => city.slug !== 'san-diego')
 
       <ul class="grid grid--3 review-cards" role="list">
         {
-          featuredReviews.map((review) => (
-            <li class="review-card">
-              <div class="stars" aria-label="5 out of 5 stars">
-                ★★★★★
-              </div>
-              <p>“{review.quote}”</p>
-              <div class="review-card__name">— {review.name}</div>
-              <div class="review-card__detail">{review.detail}</div>
-            </li>
-          ))
+          featuredReviews.map((review) => {
+            const city = review.city ? getCity(review.city) : null;
+            return (
+              <li class="review-card">
+                {review.rating && (
+                  <div class="stars" aria-label={`${review.rating} out of 5 stars`}>
+                    {'★'.repeat(review.rating)}
+                  </div>
+                )}
+                <p>“{review.quote}”</p>
+                <div class="review-card__name">— {review.name}</div>
+                <div class="review-card__detail">
+                  {city ? `${review.service} — ${city.name}` : review.service} · via {review.source}
+                </div>
+              </li>
+            );
+          })
         }
       </ul>
-
-      {
-        reviewsArePlaceholder && (
-          <p class="reviews-band__note">
-            Sample reviews — replace with genuine first-party or live Google reviews before launch.
-          </p>
-        )
-      }
     </div>
   </section>
 
@@ -517,12 +516,6 @@ const eastCountyCities = site.cities.filter((city) => city.slug !== 'san-diego')
     font-size: var(--fs-xs);
     color: #9db8d4;
   }
-  .reviews-band__note {
-    font-size: 0.78125rem;
-    color: var(--on-dark-faint);
-    margin-top: 1.125rem;
-  }
-
   .faq-wrap {
     max-width: var(--measure);
     margin-inline: auto;

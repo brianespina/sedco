@@ -4,10 +4,15 @@
  *
  * No Review or AggregateRating markup: the guide (Part 7.1) permits it only for
  * genuine first-party reviews collected on the site, never for reviews copied
- * from Google. The cards below are placeholder content (src/config/reviews.ts).
+ * from another platform. These are curated from the client's Yelp and
+ * Foursquare profiles (src/config/reviews.ts), so the markup stays off.
+ *
+ * Each card is tagged with the city the work was done in once that is known —
+ * the guide asks reviews to be grouped or tagged by city so visitors see proof
+ * from their own area. Cities are unset until the client maps them.
  */
-import { paths } from '@config/site';
-import { reviews, reviewsArePlaceholder } from '@config/reviews';
+import { paths, getCity } from '@config/site';
+import { reviews } from '@config/reviews';
 import { isPlaceholder } from '@lib/tokens';
 import { site } from '@config/site';
 import { images } from '@lib/images';
@@ -46,36 +51,33 @@ const reviewLinkReady = !isPlaceholder(reviewLink) && reviewLink.length > 0;
 
   <section class="section">
     <div class="container">
-      {
-        reviewsArePlaceholder && (
-          <p class="placeholder-banner">
-            <span class="ph-chip">SAMPLE REVIEWS</span>
-            Replace with the client's real reviews — 8-12 with first name, city, and service
-            performed — or embed a live Google reviews feed. Group them by city so visitors see proof
-            from their own area.
-          </p>
-        )
-      }
-
       <ul class="masonry" role="list">
         {
-          reviews.map((review) => (
-            <li class="review">
-              <div class="stars" aria-label="5 out of 5 stars">
-                ★★★★★
-              </div>
-              <p>“{review.quote}”</p>
-              <div class="review__author">
-                <span class="avatar" aria-hidden="true">
-                  {review.name.charAt(0)}
-                </span>
-                <span>
-                  <strong>{review.name}</strong>
-                  <span class="review__detail">{review.detail}</span>
-                </span>
-              </div>
-            </li>
-          ))
+          reviews.map((review) => {
+            const city = review.city ? getCity(review.city) : null;
+            return (
+              <li class="review">
+                {review.rating && (
+                  <div class="stars" aria-label={`${review.rating} out of 5 stars`}>
+                    {'★'.repeat(review.rating)}
+                  </div>
+                )}
+                <p>“{review.quote}”</p>
+                <div class="review__author">
+                  <span class="avatar" aria-hidden="true">
+                    {review.name.charAt(0)}
+                  </span>
+                  <span>
+                    <strong>{review.name}</strong>
+                    <span class="review__detail">
+                      {city ? `${review.service} — ${city.name}` : review.service}
+                    </span>
+                  </span>
+                </div>
+                <p class="review__source">via {review.source}</p>
+              </li>
+            );
+          })
         }
       </ul>
     </div>
@@ -91,15 +93,16 @@ const reviewLinkReady = !isPlaceholder(reviewLink) && reviewLink.length > 0;
             If we earned it, we would be grateful for a review on Google.
           </p>
           {
-            reviewLinkReady ? (
+            /*
+             * The guide asks for a "direct Google review link" button here. It
+             * renders once profiles.googleReview is set in src/config/site.ts;
+             * until then the section stands without it rather than printing a
+             * note to the visitor. `npm run verify` reports the missing link.
+             */
+            reviewLinkReady && (
               <a class="btn btn--primary" href={reviewLink} rel="noopener">
                 Leave a Google review
               </a>
-            ) : (
-              <p class="link-missing">
-                <span class="ph-chip">[GOOGLE REVIEW LINK]</span> — add the client's direct review
-                link in src/config/site.ts to enable this button.
-              </p>
             )
           }
           <p class="card-copy">
@@ -119,17 +122,6 @@ const reviewLinkReady = !isPlaceholder(reviewLink) && reviewLink.length > 0;
 </BaseLayout>
 
 <style>
-  .placeholder-banner {
-    background: var(--ph-bg);
-    border: 1px dashed var(--ph-border);
-    color: var(--ph-text);
-    border-radius: var(--r-card);
-    padding: 1rem 1.125rem;
-    font-size: var(--fs-sm);
-    line-height: 1.55;
-    margin-bottom: 2rem;
-  }
-
   .masonry {
     columns: 3;
     column-gap: 1.375rem;
@@ -173,6 +165,11 @@ const reviewLinkReady = !isPlaceholder(reviewLink) && reviewLink.length > 0;
     font-size: 0.8125rem;
     color: var(--text-muted);
   }
+  .review__source {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 0.75rem;
+  }
   .avatar {
     width: 38px;
     height: 38px;
@@ -196,11 +193,6 @@ const reviewLinkReady = !isPlaceholder(reviewLink) && reviewLink.length > 0;
     color: var(--text-soft);
     line-height: 1.6;
     margin-block: 0.75rem 1.125rem;
-  }
-  .link-missing {
-    font-size: 0.8125rem;
-    color: var(--text-muted);
-    line-height: 1.5;
   }
 
   @media (max-width: 900px) {

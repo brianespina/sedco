@@ -159,6 +159,7 @@ Everything below is wired per the content guide's Part 7:
 
 ## Known items before launch
 
-See the bottom of [SETUP.md](./SETUP.md) for the full list, including the one place where the
-content guide contradicts itself (a duplicate title tag) and the blog cost post whose price
-ranges still need the client's real figures.
+See the bottom of [SETUP.md](./SETUP.md) for the full list. `npm run verify` prints the live ones
+on every run — unfilled config placeholders, reviews without a city, the unapproved privacy policy,
+and the duplicate title tag the content guide itself assigns to two pages (shipped verbatim as a
+recorded decision).

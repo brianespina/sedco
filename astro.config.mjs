@@ -47,7 +47,23 @@ const adapter =
 export default defineConfig({
   site: siteConfig.url,
   output: 'static',
-  trailingSlash: 'always',
+  /**
+   * 'ignore', not 'always'. The guide's URL rule (Part 7.4: lowercase, hyphens,
+   * trailing slash) is about the canonical form of public URLs, and that is
+   * unchanged — `build.format: 'directory'` still emits /path/index.html, and
+   * every canonical tag, internal link and sitemap entry still carries the
+   * trailing slash.
+   *
+   * 'always' additionally makes route MATCHING strict, which silently breaks
+   * Keystatic: the admin requests /api/keystatic/tree, /api/keystatic/update,
+   * /api/keystatic/github/login and /keystatic/cloud/oauth/callback — none with
+   * a trailing slash — so the CMS 404s on every read, every save, and the Cloud
+   * login callback. Only /keystatic/ itself would load.
+   *
+   * If you add a host-level redirect for the www/non-www split (SETUP.md step
+   * 8), exclude /keystatic and /api/keystatic from it for the same reason.
+   */
+  trailingSlash: 'ignore',
   build: { format: 'directory' },
 
   adapter,

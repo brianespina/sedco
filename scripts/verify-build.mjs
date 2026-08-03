@@ -32,21 +32,22 @@ const NON_PAGE_TARGETS = new Set([
 ]);
 
 /**
- * KNOWN CONFLICT IN THE CONTENT GUIDE — awaiting a client decision.
+ * KNOWN CONFLICT IN THE CONTENT GUIDE — decided: follow the guide.
  *
  * The guide specifies the same title tag for two pages:
  *   /services/general-plumbing/  and  /service-areas/el-cajon/
  * both get "Plumber in El Cajon, CA | Sedco Plumbing", and both target the
- * primary keyword "plumber El Cajon".
+ * primary keyword "plumber El Cajon". That contradicts the guide's own Part 7.4
+ * rule ("unique title tag ... never duplicate across pages").
  *
- * That contradicts the guide's own Part 7.4 rule ("unique title tag ... never
- * duplicate across pages") and risks the two pages competing for one query.
- * The copy is left exactly as written rather than silently rewritten; this
- * entry keeps the conflict visible on every run until it is resolved.
+ * The call is to ship the guide's copy verbatim. The accepted consequence is
+ * that the two pages compete for "plumber El Cajon" and Google picks one; the
+ * other may be filtered from results for that query. If that shows up in Search
+ * Console later, differentiating the service page as "Plumbing Services in El
+ * Cajon, CA | Sedco Plumbing" is the fix — edit the title in its content entry.
  *
- * TO RESOLVE: differentiate one title in its content entry — the service page
- * reads naturally as "Plumbing Services in El Cajon, CA | Sedco Plumbing" —
- * then delete this entry.
+ * This entry stops the duplicate from failing the uniqueness check. Do not
+ * remove it without also changing one of the two titles.
  */
 const ACKNOWLEDGED_DUPLICATE_TITLES = new Set(['Plumber in El Cajon, CA | Sedco Plumbing']);
 
@@ -88,6 +89,26 @@ const incoming = new Map();
 let placeholderPages = 0;
 let placeholderTotal = 0;
 const formsMissingKey = new Set();
+
+/**
+ * The guide's Part 9 placeholder list — every token that resolves from
+ * src/config/site.ts. Anything else left in [BRACKETS] is a hole in the copy,
+ * not a config value waiting to be filled.
+ */
+const CONFIG_TOKENS = new Set([
+  '[PHONE]',
+  '[EMAIL]',
+  '[LICENSE #]',
+  '[YEAR FOUNDED]',
+  '[OWNER NAME]',
+  '[HOURS]',
+  '[WARRANTY TERMS]',
+  '[ESTIMATE POLICY]',
+  '[ZIP]',
+]);
+
+/** url → the non-config tokens still showing on that page */
+const contentTokens = new Map();
 
 for (const [url, html] of pages) {
   // ---- one H1 per page ----
@@ -132,10 +153,19 @@ for (const [url, html] of pages) {
   }
 
   // ---- unreplaced placeholders ----
+  // Two different problems wear the same [BRACKETS]. Config tokens resolve the
+  // moment site.ts is filled in; content tokens are gaps in the copy itself
+  // (a cost post missing its price ranges) and no config edit will ever fix
+  // them, so they are counted and named separately.
   const leftover = html.match(/\[[A-Z][A-Z0-9 #_]*\]/g) ?? [];
   if (leftover.length > 0) {
     placeholderPages += 1;
     placeholderTotal += leftover.length;
+  }
+  for (const token of leftover) {
+    if (CONFIG_TOKENS.has(token)) continue;
+    if (!contentTokens.has(url)) contentTokens.set(url, new Set());
+    contentTokens.get(url).add(token);
   }
 
   // ---- link graph ----
@@ -160,7 +190,10 @@ for (const [title, urls] of titles) {
   if (urls.length === 1) continue;
   const message = `Duplicate title "${title}" on: ${urls.join(', ')}`;
   if (ACKNOWLEDGED_DUPLICATE_TITLES.has(title)) {
-    warnings.push(`${message} — known guide conflict, needs a decision before launch`);
+    warnings.push(
+      `${message} — the guide assigns both pages this title; shipping it verbatim is a ` +
+        'recorded decision, not an oversight',
+    );
   } else {
     failures.push(message);
   }
@@ -212,6 +245,55 @@ if (placeholderTotal > 0) {
     `${placeholderTotal} unreplaced [PLACEHOLDER] tokens across ${placeholderPages} pages — ` +
       `fill src/config/site.ts before launch (guide Part 9)`,
   );
+}
+
+for (const [url, tokens] of contentTokens) {
+  warnings.push(
+    `${url} shows ${[...tokens].join(', ')} to visitors — these are gaps in the copy, not ` +
+      'config values. The guide (Part 8) requires cost posts to state real ranges: get the ' +
+      "figures from the client or set the post to draft: true.",
+  );
+}
+
+// ---- reviews (guide Part 3) ----
+// Invented sample testimonials must never reach production, so this is a hard
+// failure rather than a warning. Missing cities only warn: the guide asks
+// reviews to be tagged by city, but the client has to supply that mapping.
+{
+  const source = readFileSync('src/config/reviews.ts', 'utf8');
+  if (/reviewsArePlaceholder\s*=\s*true/.test(source)) {
+    failures.push(
+      'src/config/reviews.ts still holds placeholder reviews (reviewsArePlaceholder = true) — ' +
+        "replace them with the client's real reviews before launch (guide Part 3)",
+    );
+  }
+  const withoutCity = (source.match(/city:\s*null/g) ?? []).length;
+  if (withoutCity > 0) {
+    warnings.push(
+      `${withoutCity} review(s) have no city — the guide asks reviews to be tagged by city so ` +
+        'visitors see proof from their own area. Map each reviewer to the job address.',
+    );
+  }
+}
+
+// ---- client assets the pages degrade around (SETUP.md "Placeholder content") ----
+// These render nothing rather than printing a note to the visitor, so the
+// reminder has to live here instead of in the DOM.
+{
+  const config = readFileSync('src/config/site.ts', 'utf8');
+  if (/googleReview:\s*'\[/.test(config)) {
+    warnings.push(
+      'profiles.googleReview is unset — the "Leave a Google review" button the guide asks for ' +
+        '(Part 3, Reviews) is hidden. Add the direct review link in src/config/site.ts.',
+    );
+  }
+  if (/privacyPolicyApproved:\s*false/.test(config)) {
+    warnings.push(
+      'The privacy policy has not been approved by the client (legal.privacyPolicyApproved is ' +
+        'false). It describes what the site collects, but not how the business handles that data ' +
+        'off the site. Get it reviewed, then set the flag in src/config/site.ts.',
+    );
+  }
 }
 
 for (const warning of warnings) console.log(`  ! ${warning}`);

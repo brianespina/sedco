@@ -45,6 +45,11 @@ const crumbs = [{ name: 'Home', href: paths.home }, { name: 'Services' }];
             <span class="group-glyph" aria-hidden="true">
               {group.glyph}
             </span>
+            {/* The space keeps the heading's text content readable — "🔧 Repairs
+                & Emergency Work" rather than "🔧Repairs" — for crawlers and any
+                tool that reads textContent. The glyph is aria-hidden, so screen
+                readers announce the heading without it either way. */}
+            {' '}
             {group.heading}
           </h2>
           <ServiceCardGrid

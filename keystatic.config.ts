@@ -14,8 +14,16 @@ import { site } from './src/config/site';
  * publish a post that breaks the page's SEO structure or layout. Body content
  * is Markdoc, so posts cannot inject arbitrary components.
  */
+/**
+ * STORAGE MODE is env-driven so nobody has to hand-edit this file and remember
+ * to change it back. `KEYSTATIC_LOCAL=1 npm run dev` writes edits straight to
+ * src/content/blog/ on disk with no Keystatic Cloud account; every other run —
+ * including every build and deploy — uses Cloud.
+ */
+const useLocalStorage = process.env.KEYSTATIC_LOCAL === '1';
+
 export default config({
-  storage: { kind: 'cloud' },
+  storage: useLocalStorage ? { kind: 'local' } : { kind: 'cloud' },
   cloud: { project: site.integrations.keystaticProject },
 
   ui: {
@@ -140,6 +148,18 @@ export default config({
             label: 'Internal links',
             description: 'Every post links to at least one service page and one city page.',
             itemLabel: (props) => props.fields.anchor.value || 'Link',
+          },
+        ),
+
+        related: fields.array(
+          fields.relationship({
+            label: 'Related post',
+            collection: 'posts',
+          }),
+          {
+            label: 'Keep reading',
+            description: 'Other posts to offer in the sidebar. Two or three is plenty.',
+            itemLabel: (props) => props.value ?? 'Post',
           },
         ),
 

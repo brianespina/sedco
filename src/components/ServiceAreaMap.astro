@@ -1,20 +1,17 @@
 ---
 /**
- * Service-area map card.
+ * Service-area graphic for the homepage "where we work" section.
  *
- * PLACEHOLDER: the design ships a styled stand-in, not a real map. Replace with
- * a San Diego County coverage map that highlights the service area — never a
- * storefront pin, since this is a service-area business with a hidden address.
+ * The guide (Part 3, Homepage) makes this optional: "embed a service-area map
+ * graphic — not a Google pin, since there is no storefront." Until the client
+ * supplies a real coverage map this renders as a caption card over a decorative
+ * background. It deliberately shows no pins or boundaries: inventing locations
+ * on a map is a factual claim we cannot make. Swapping in a real coverage map
+ * is documented in SETUP.md.
  */
 import { Image } from 'astro:assets';
+import { site } from '@config/site';
 import { images } from '@lib/images';
-
-const pins = [
-  { left: '24%', top: '34%', size: '22px' },
-  { left: '52%', top: '52%', size: '26px' },
-  { left: '68%', top: '30%', size: '18px' },
-  { left: '40%', top: '68%', size: '18px' },
-];
 ---
 
 <div class="map-card">
@@ -28,21 +25,11 @@ const pins = [
     aria-hidden="true"
   />
   <div class="map-card__overlay"></div>
-  <div class="map-card__grid"></div>
-
-  {
-    pins.map((pin) => (
-      <span class="map-card__pin" style={`left:${pin.left};top:${pin.top};font-size:${pin.size}`} aria-hidden="true">
-        📍
-      </span>
-    ))
-  }
 
   <div class="map-card__body">
-    <span class="ph-chip map-card__chip">[SERVICE-AREA MAP]</span>
-    <p>
-      Drop in a San Diego County coverage map here — highlight the service area, not a storefront
-      pin.
+    <p class="map-card__lead">Serving all of {site.business.county}</p>
+    <p class="map-card__sub">
+      Based in {site.business.locality}, {site.business.region} — our technicians come to you.
     </p>
   </div>
 </div>
@@ -62,26 +49,13 @@ const pins = [
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -3;
+    z-index: -2;
   }
   .map-card__overlay {
     position: absolute;
     inset: 0;
     background: linear-gradient(160deg, rgba(15, 58, 99, 0.88), rgba(28, 95, 164, 0.8));
-    z-index: -2;
-  }
-  .map-card__grid {
-    position: absolute;
-    inset: 0;
-    background-image:
-      linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
-    background-size: 40px 40px;
     z-index: -1;
-  }
-  .map-card__pin {
-    position: absolute;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
   }
   .map-card__body {
     position: absolute;
@@ -94,19 +68,15 @@ const pins = [
     color: var(--on-dark-badge);
     padding: 1.875rem;
   }
-  .map-card__chip {
-    background: rgba(255, 255, 255, 0.16);
-    border-color: rgba(255, 255, 255, 0.6);
+  .map-card__lead {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.25rem;
     color: #fff;
-    padding: 0.5625rem 1.125rem;
-    border-radius: var(--r-input);
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    backdrop-filter: blur(3px);
   }
-  .map-card__body p {
+  .map-card__sub {
     font-size: 0.875rem;
-    margin-top: 0.875rem;
+    margin-top: 0.625rem;
     max-width: 290px;
   }
 </style>

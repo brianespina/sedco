@@ -105,6 +105,22 @@ export const site = {
     facebook: '[FACEBOOK URL]',
   },
 
+  legal: {
+    /**
+     * Month and year printed as "Last updated" on the privacy policy. Bump it
+     * when the policy text changes — never derive it from the build date, or
+     * every deploy tells visitors the policy was revised when it was not.
+     */
+    privacyPolicyUpdated: 'July 2026',
+    /**
+     * Set true once the client has reviewed and approved the privacy policy
+     * (with legal advice). `npm run verify` warns while this is false: the text
+     * describes what the website collects, but only the client can confirm how
+     * the business handles that data off the website.
+     */
+    privacyPolicyApproved: false,
+  },
+
   integrations: {
     /** Web3Forms access key — set WEB3FORMS_ACCESS_KEY in .env / Cloudflare secrets */
     web3formsKey: import.meta.env.WEB3FORMS_ACCESS_KEY ?? '',

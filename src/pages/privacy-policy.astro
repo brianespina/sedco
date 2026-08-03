@@ -2,10 +2,13 @@
 /**
  * PRIVACY POLICY — linked from the footer (guide Part 2).
  *
- * PLACEHOLDER CONTENT: this is a plain-language starting point covering what
- * the site actually collects (contact form submissions via Web3Forms, and
- * analytics if enabled). Have the client review it — and take legal advice if
- * they operate under CCPA thresholds — before launch.
+ * NOT CLIENT-APPROVED YET. The text below accurately describes what this
+ * website collects (contact form submissions via Web3Forms, analytics if
+ * enabled), but nobody has confirmed how the business handles that data off the
+ * website — retention, subcontractors, and any CCPA obligations. The client
+ * needs to review and approve it, with legal advice, before launch. SETUP.md
+ * tracks it and `npm run verify` warns until `legal.privacyPolicyApproved` is
+ * set in src/config/site.ts.
  */
 import { site, paths } from '@config/site';
 import { th, emailHref } from '@lib/tokens';
@@ -18,10 +21,7 @@ const path = paths.privacy;
 
 const crumbs = [{ name: 'Home', href: paths.home }, { name: 'Privacy Policy' }];
 
-const updated = new Intl.DateTimeFormat('en-US', {
-  month: 'long',
-  year: 'numeric',
-}).format(new Date());
+const updated = site.legal.privacyPolicyUpdated;
 ---
 
 <BaseLayout title={title} description={description} path={path} crumbs={crumbs} noindex>
@@ -30,12 +30,6 @@ const updated = new Intl.DateTimeFormat('en-US', {
       <article class="prose measure">
         <h1>Privacy Policy</h1>
         <p class="updated">Last updated {updated}</p>
-
-        <p class="review-note">
-          <span class="ph-chip">REVIEW BEFORE LAUNCH</span> This policy is a starting point that reflects
-          what the website actually collects. Have {site.business.name} review and approve it — and seek
-          legal advice on California privacy obligations — before go-live.
-        </p>
 
         <h2>What We Collect</h2>
         <p>
@@ -97,14 +91,5 @@ const updated = new Intl.DateTimeFormat('en-US', {
   .updated {
     font-size: 0.875rem !important;
     color: var(--text-muted) !important;
-  }
-  .review-note {
-    background: var(--ph-bg);
-    border: 1px dashed var(--ph-border);
-    border-radius: var(--r-card);
-    padding: 1rem 1.125rem;
-    font-size: var(--fs-sm) !important;
-    line-height: 1.6 !important;
-    color: var(--ph-text) !important;
   }
 </style>

@@ -8,19 +8,29 @@
  * NOTE: every photo below is licensed stock from the design handoff and is a
  * PLACEHOLDER. Replace with the client's own trucks/techs/jobs before launch
  * (guide Part 7.4 asks for real local photos). The logo is the real brand mark.
+ *
+ * ALT TEXT describes what is actually in the frame and nothing more. It names
+ * no city: these are stock photos shot somewhere unknown, so "in El Cajon"
+ * would be a claim we cannot support — to a screen-reader user it is simply
+ * false, and to a crawler it reads as keyword stuffing. Locations go back in
+ * when the photos are the client's own. FILENAMES describe their contents for
+ * the same reason. When the client's real photos replace these, name them on
+ * the guide's SEO convention instead — service plus city, e.g.
+ * `slab-leak-repair-el-cajon.jpg` — which is accurate once the photo really was
+ * taken on an El Cajon job.
  */
 
 import { site } from '@config/site';
 
 import logo from '../assets/images/sedco-plumbing-logo.jpeg';
-import heroPlumber from '../assets/images/plumber-el-cajon-hero.jpg';
-import plumberVertical from '../assets/images/licensed-plumber-el-cajon.jpg';
-import serviceAreaMap from '../assets/images/plumbing-service-area-san-diego-county.jpg';
-import pipeWork from '../assets/images/pipe-repair-el-cajon.jpg';
-import underSink from '../assets/images/under-sink-plumbing-repair-el-cajon.jpg';
-import bathSink from '../assets/images/bathroom-sink-fixtures-el-cajon.jpg';
-import bathroom from '../assets/images/bathroom-remodel-plumbing-el-cajon.jpg';
-import runningWater from '../assets/images/hard-water-east-county.jpg';
+import heroPlumber from '../assets/images/plumber-under-sink-shutoff-valves.jpg';
+import plumberVertical from '../assets/images/plumber-drain-trap-under-sink.jpg';
+import bathroomPipes from '../assets/images/plumber-supply-pipes-tiled-bathroom.jpg';
+import pipeWork from '../assets/images/brass-valve-fitting-wrench.jpg';
+import kitchenFaucet from '../assets/images/kitchen-faucet-running-water.jpg';
+import fullBathroom from '../assets/images/tiled-bathroom-tub-shower-sink-toilet.jpg';
+import vesselSink from '../assets/images/vessel-sink-brass-faucet-bathroom.jpg';
+import radiator from '../assets/images/radiator-threaded-connector.jpg';
 
 export interface SiteImage {
   src: ImageMetadata;
@@ -35,47 +45,48 @@ export const images = {
   /** Homepage hero background */
   heroHome: {
     src: heroPlumber,
-    alt: 'Plumber working on a residential water line in El Cajon',
+    alt: 'Plumber reaching under a sink to work on the shutoff valves and drain trap',
   },
   /** Service page hero background */
   heroService: {
     src: pipeWork,
-    alt: 'Close-up of copper supply pipes during a plumbing repair',
+    alt: 'Hands tightening a threaded brass valve fitting with a wrench',
   },
   /** City / service-area page hero background */
   heroCity: {
-    src: serviceAreaMap,
-    alt: 'Plumber servicing a bathroom in a San Diego County home',
+    src: bathroomPipes,
+    alt: 'Plumber working on supply pipes in a tiled bathroom',
   },
   /** Hub, blog, and core-page hero background */
   heroGeneral: {
-    src: bathroom,
-    alt: 'Bathroom fixtures in a remodeled East County home',
+    src: vesselSink,
+    alt: 'Vessel sink with a brass faucet on a wood counter in a tiled bathroom',
   },
   /** Full-bleed dark trust strip on the homepage */
   trustBand: {
-    src: underSink,
-    alt: 'Plumber tightening a fitting on an under-sink drain assembly',
+    src: kitchenFaucet,
+    alt: 'Water running from a kitchen faucet into a dark sink',
   },
   /** "Why Sedco" vertical portrait */
   whyUs: {
     src: plumberVertical,
-    alt: `Licensed ${site.business.name} technician at work`,
+    alt: 'Plumber working on the drain trap beneath a sink',
   },
   /** Services-section framed photo */
   servicesIntro: {
-    src: bathSink,
-    alt: 'Modern bathroom sink and fixtures',
+    src: fullBathroom,
+    alt: 'Bathtub, shower fixtures, wall-hung sink and toilet in a tiled bathroom',
   },
-  /** Service-area map placeholder card */
+  /** Homepage service-area card background (decorative — see ServiceAreaMap.astro) */
   serviceAreaMap: {
-    src: serviceAreaMap,
-    alt: `${site.business.name} service area across ${site.business.county}`,
+    src: bathroomPipes,
+    alt: 'Plumber working on supply pipes in a tiled bathroom',
   },
-  /** Blog lead image fallback */
+  /** Blog lead image fallback. The stock photo shows a radiator, which is not a
+   *  fixture East County homes have — swap it when real photos arrive. */
   blogDefault: {
-    src: runningWater,
-    alt: 'Water running from a kitchen faucet',
+    src: radiator,
+    alt: 'Gloved hands fitting a threaded connector to a white radiator',
   },
 } satisfies Record<string, SiteImage>;
 
