@@ -1,4 +1,4 @@
-import { config, collection, fields } from '@keystatic/core';
+import { config, collection, fields, singleton } from '@keystatic/core';
 
 import { site } from './src/config/site';
 
@@ -27,10 +27,116 @@ export default config({
   cloud: { project: site.integrations.keystaticProject },
 
   ui: {
-    brand: { name: `${site.business.name} — Blog` },
+    brand: { name: site.business.name },
     navigation: {
       Content: ['posts'],
+      'Business details': ['business'],
     },
+  },
+
+  singletons: {
+    /**
+     * BUSINESS DETAILS — the guide's Part 9 placeholder list, editable by the
+     * client instead of by a developer. Written to
+     * src/content/settings/business.json and merged into site.business /
+     * site.profiles, so every page, CTA, footer and schema block picks the
+     * change up on the next build.
+     *
+     * Deliberately absent: the trading name, the service-area locality, region
+     * and county. The guide's copy is written around those, so changing one
+     * would leave 52 pages contradicting the schema.
+     *
+     * Values still in [BRACKETS] render as dashed placeholder chips on the
+     * page, so an unfilled field is visible rather than silently blank.
+     */
+    business: singleton({
+      label: 'Business details',
+      path: 'src/content/settings/business',
+      format: { data: 'json' },
+      schema: {
+        phone: fields.text({
+          label: 'Phone number',
+          description:
+            'One number, used in the header, every CTA, the footer and schema. Format it the way you want it read, e.g. (619) 555-0134.',
+          validation: { isRequired: true },
+        }),
+        email: fields.text({
+          label: 'Email address',
+          description: 'Where contact-form notifications and enquiries go.',
+          validation: { isRequired: true },
+        }),
+        license: fields.text({
+          label: 'Contractor licence number',
+          description: 'Shown on the About page, footer and service pages.',
+          validation: { isRequired: true },
+        }),
+        licenseClass: fields.text({
+          label: 'Licence class',
+          description: 'C-36 for plumbing. Change only if the licence itself changes.',
+          validation: { isRequired: true },
+        }),
+        yearFounded: fields.text({
+          label: 'Year founded',
+          description: 'Named in the About page and homepage copy, e.g. 1998.',
+          validation: { isRequired: true },
+        }),
+        owner: fields.text({
+          label: 'Owner name',
+          description: 'Named in the About page copy.',
+          validation: { isRequired: true },
+        }),
+        hours: fields.text({
+          label: 'Business hours (as written)',
+          description:
+            'Printed in the footer, the contact page and FAQ answers, e.g. "Mon-Fri 7am-6pm, emergency service 24/7".',
+          validation: { isRequired: true },
+        }),
+        hoursSchema: fields.text({
+          label: 'Business hours (for search engines)',
+          description:
+            'The same hours in schema.org format, e.g. "Mo-Fr 07:00-18:00". Ask your developer if unsure.',
+          validation: { isRequired: true },
+        }),
+        warranty: fields.text({
+          label: 'Workmanship warranty',
+          description: 'The exact terms, e.g. "1-year workmanship warranty". Do not paraphrase.',
+          validation: { isRequired: true },
+        }),
+        estimatePolicy: fields.text({
+          label: 'Estimate policy',
+          description:
+            'What a customer is charged before work starts, e.g. "Free estimates on replacements; flat diagnostic fee on repairs."',
+          multiline: true,
+          validation: { isRequired: true },
+        }),
+        postalCode: fields.text({
+          label: 'ZIP code',
+          description: 'Used in schema only — no street address is published.',
+          validation: { isRequired: true },
+        }),
+
+        profiles: fields.object(
+          {
+            google: fields.text({
+              label: 'Google Business Profile URL',
+              description: 'Leave blank if you do not have one yet.',
+            }),
+            googleReview: fields.text({
+              label: 'Google "write a review" link',
+              description:
+                'The direct review link from your Google Business Profile. The Reviews page button is hidden until this is set.',
+            }),
+            yelp: fields.text({ label: 'Yelp URL' }),
+            facebook: fields.text({ label: 'Facebook URL' }),
+          },
+          {
+            label: 'Profile links',
+            description:
+              'Linked in the footer and declared in search-engine schema. Blank fields are simply left out.',
+          },
+        ),
+      },
+    }),
   },
 
   collections: {

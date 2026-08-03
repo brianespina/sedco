@@ -243,7 +243,8 @@ if (formsMissingKey.size > 0) {
 if (placeholderTotal > 0) {
   warnings.push(
     `${placeholderTotal} unreplaced [PLACEHOLDER] tokens across ${placeholderPages} pages — ` +
-      `fill src/config/site.ts before launch (guide Part 9)`,
+      'fill them in Keystatic under Business details (or src/content/settings/business.json) ' +
+      'before launch (guide Part 9)',
   );
 }
 
@@ -281,10 +282,13 @@ for (const [url, tokens] of contentTokens) {
 // reminder has to live here instead of in the DOM.
 {
   const config = readFileSync('src/config/site.ts', 'utf8');
-  if (/googleReview:\s*'\[/.test(config)) {
+  // Business details moved to the Keystatic singleton, so read them from there.
+  const business = JSON.parse(readFileSync('src/content/settings/business.json', 'utf8'));
+  if (/^\[/.test(business.profiles?.googleReview ?? '')) {
     warnings.push(
-      'profiles.googleReview is unset — the "Leave a Google review" button the guide asks for ' +
-        '(Part 3, Reviews) is hidden. Add the direct review link in src/config/site.ts.',
+      'The Google review link is unset — the "Leave a Google review" button the guide asks for ' +
+        '(Part 3, Reviews) is hidden. Add it in Keystatic under Business details, or in ' +
+        'src/content/settings/business.json.',
     );
   }
   if (/keystaticProject:\s*'\[/.test(config)) {

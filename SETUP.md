@@ -27,27 +27,44 @@ This is the bulk of the job. Nothing else in the codebase holds client values.
 
 ### Business identity
 
-| Field | What it is |
-| --- | --- |
-| `url` | Canonical origin, no trailing slash. **Generates every canonical tag** — must match the live domain. |
-| `business.name` | Trading name |
-| `business.phone` | One number, used everywhere. `tel:` links derive from it. |
-| `business.email` | Where form confirmations go |
-| `business.license` / `licenseClass` | Contractor licence number and class (C-36 for plumbing; C-10 electrical, C-20 HVAC, etc.) |
-| `business.owner`, `yearFounded` | Named in About and city copy |
-| `business.hours` | Human-readable, as printed in copy |
-| `business.hoursSchema` | Same hours in schema.org format, e.g. `Mo-Fr 07:00-18:00` |
-| `business.warranty`, `estimatePolicy` | Exact terms — do not paraphrase these |
-| `business.locality`, `region`, `postalCode`, `county` | Service-area business: **no street address** |
-| `business.tagline` | Small uppercase line under the logo |
+**Most of this is now edited in Keystatic, not here.** Phone, email, licence number and class, year
+founded, owner, hours (both forms), warranty, estimate policy, ZIP and the four profile URLs live in
+the **Business details** singleton at `/keystatic`, stored in
+`src/content/settings/business.json`. The client changes their own hours without a support ticket;
+the values merge into `site.business` and `site.profiles`, so everything that reads
+`site.business.phone` works exactly as before. For a new client, either edit that JSON directly or
+hand them the CMS.
+
+What stays in `site.ts` is what the client must **not** change alone, because the guide's copy is
+written around it: trading name, service-area locality/region/county, and the services and cities
+matrices.
+
+| Field | Where | What it is |
+| --- | --- | --- |
+| `url` | `site.ts` | Canonical origin, no trailing slash. **Generates every canonical tag** — must match the live domain. |
+| `business.name` | `site.ts` | Trading name |
+| `business.locality`, `region`, `county` | `site.ts` | Service-area business: **no street address**. The copy names these constantly — changing one here without rewriting the copy leaves the pages and the schema disagreeing. |
+| `business.tagline` | `site.ts` | Small uppercase line under the logo |
+| `phone` | Keystatic | One number, used everywhere. `tel:` links derive from it. |
+| `email` | Keystatic | Where form confirmations go |
+| `license` / `licenseClass` | Keystatic | Contractor licence number and class (C-36 for plumbing; C-10 electrical, C-20 HVAC, etc.) |
+| `owner`, `yearFounded` | Keystatic | Named in About and city copy |
+| `hours` | Keystatic | Human-readable, as printed in copy |
+| `hoursSchema` | Keystatic | Same hours in schema.org format, e.g. `Mo-Fr 07:00-18:00` |
+| `warranty`, `estimatePolicy` | Keystatic | Exact terms — do not paraphrase these |
+| `postalCode` | Keystatic | ZIP, used in schema only |
 
 Any field left as a `[BRACKETED]` token renders as a dashed placeholder chip on the page, so
 unfinished data is impossible to miss. `npm run verify` counts what is left.
 
+The Keystatic fields ship as `[BRACKETED]` placeholders in a fresh clone, so a new client site
+shows chips until someone — you or the client — fills them in.
+
 ### Profiles
 
-`profiles.google`, `profiles.googleReview`, `profiles.yelp`, `profiles.facebook`. Empty or
-placeholder values are simply omitted from the footer and from schema `sameAs` — no broken icons.
+`google`, `googleReview`, `yelp`, `facebook`, all in the Keystatic **Business details** singleton.
+Empty or placeholder values are simply omitted from the footer and from schema `sameAs` — no
+broken icons.
 
 ### Services and cities
 

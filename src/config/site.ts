@@ -13,7 +13,21 @@
  * render as dashed "placeholder chips" everywhere they appear (per the design),
  * so anything missing is visible on the page instead of silently shipping.
  * Replace the token with the real value and the chip disappears site-wide.
+ *
+ * BUSINESS DETAILS LIVE IN KEYSTATIC. Phone, email, licence, hours, warranty,
+ * estimate policy, ZIP and the profile URLs are edited by the client at
+ * /keystatic and stored in src/content/settings/business.json — so a
+ * change of hours is not a support ticket. They are merged in below and are
+ * used exactly as before; nothing that reads `site.business.phone` changes.
+ *
+ * What stays here is what the client must NOT change on their own, because the
+ * guide's copy is written around it: the trading name, the service-area
+ * locality and region, the county, and the services/cities matrices.
  */
+import businessSettings from '../content/settings/business.json';
+
+/** The Keystatic-owned business fields, minus the profile URLs. */
+const { profiles: _profiles, ...contact } = businessSettings;
 
 export type ServiceGroup = 'repairs' | 'water' | 'lines' | 'installs';
 export type CityTier = 1 | 2 | 3 | 4;
@@ -69,25 +83,13 @@ export const site = {
 
   business: {
     name: 'Sedco Plumbing',
-    /** Contractor license class, e.g. C-36 for plumbing */
-    licenseClass: 'C-36',
 
-    // ---- PLACEHOLDERS: replace before launch (guide Part 9) ----
-    phone: '[PHONE]',
-    email: '[EMAIL]',
-    license: '[LICENSE #]',
-    yearFounded: '[YEAR FOUNDED]',
-    owner: '[OWNER NAME]',
-    /** Human-readable hours, as printed in copy and the footer */
-    hours: '[HOURS]',
-    /** Same hours in schema.org format, e.g. "Mo-Fr 07:00-18:00" */
-    hoursSchema: '[HOURS]',
-    warranty: '[WARRANTY TERMS]',
-    estimatePolicy: '[ESTIMATE POLICY]',
-    postalCode: '[ZIP]',
-    // -----------------------------------------------------------
-
-    /** Service-area business: locality/region only, street address hidden (guide Part 7) */
+    /**
+     * Service-area business: locality/region only, street address hidden
+     * (guide Part 7). Not client-editable — the guide's copy names these
+     * places in nearly every paragraph, so changing one here would leave the
+     * pages saying something different from the schema.
+     */
     locality: 'El Cajon',
     region: 'CA',
     regionName: 'California',
@@ -95,15 +97,18 @@ export const site = {
     county: 'San Diego County',
     priceRange: '$$',
     tagline: 'El Cajon, California',
+
+    /**
+     * Client-editable in Keystatic — phone, email, licence, licenceClass,
+     * yearFounded, owner, hours, hoursSchema, warranty, estimatePolicy, ZIP.
+     * Spread last so the singleton is authoritative for the fields it owns.
+     */
+    ...contact,
   },
 
-  profiles: {
-    google: '[GOOGLE BUSINESS PROFILE URL]',
-    /** Direct "write a review" link used by the Reviews page button */
-    googleReview: '[GOOGLE REVIEW LINK]',
-    yelp: '[YELP URL]',
-    facebook: '[FACEBOOK URL]',
-  },
+  /** Client-editable in Keystatic. Empty or placeholder values are omitted from
+   *  the footer and from schema `sameAs`, so nothing renders broken. */
+  profiles: businessSettings.profiles,
 
   legal: {
     /**

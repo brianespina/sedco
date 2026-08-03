@@ -1,0 +1,19 @@
+{
+  "phone": "[PHONE]",
+  "email": "[EMAIL]",
+  "license": "[LICENSE #]",
+  "licenseClass": "C-36",
+  "yearFounded": "[YEAR FOUNDED]",
+  "owner": "[OWNER NAME]",
+  "hours": "[HOURS]",
+  "hoursSchema": "[HOURS]",
+  "warranty": "[WARRANTY TERMS]",
+  "estimatePolicy": "[ESTIMATE POLICY]",
+  "postalCode": "[ZIP]",
+  "profiles": {
+    "google": "[GOOGLE BUSINESS PROFILE URL]",
+    "googleReview": "[GOOGLE REVIEW LINK]",
+    "yelp": "[YELP URL]",
+    "facebook": "[FACEBOOK URL]"
+  }
+}
