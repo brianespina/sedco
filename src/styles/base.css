@@ -733,7 +733,17 @@ a.pill--dark:hover {
 .prose {
   max-width: var(--measure);
 }
-.prose > * + * {
+/*
+ * Sibling spacing for prose. The second selector exists because Astro's Markdoc
+ * renderer wraps blog bodies in an <article>, which makes every paragraph a
+ * grandchild of .prose — the direct-child rule then never applies and post
+ * paragraphs run together with no gap. Headings kept their spacing regardless,
+ * since .prose h2 / h3 below are descendant selectors, so only body copy looked
+ * wrong. Guide-driven pages render their elements directly into .prose and are
+ * matched by the first selector.
+ */
+.prose > * + *,
+.prose > article > * + * {
   margin-top: 1.125rem;
 }
 .prose h2 {
