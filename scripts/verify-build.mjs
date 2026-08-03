@@ -287,6 +287,13 @@ for (const [url, tokens] of contentTokens) {
         '(Part 3, Reviews) is hidden. Add the direct review link in src/config/site.ts.',
     );
   }
+  if (/keystaticProject:\s*'\[/.test(config)) {
+    warnings.push(
+      'integrations.keystaticProject is still a placeholder — /keystatic will load the admin and ' +
+        'then fail to authenticate. Create the team + project at keystatic.cloud, connect it to ' +
+        "this repo, and set it as 'team/project' in src/config/site.ts (SETUP.md step 6).",
+    );
+  }
   if (/privacyPolicyApproved:\s*false/.test(config)) {
     warnings.push(
       'The privacy policy has not been approved by the client (legal.privacyPolicyApproved is ' +

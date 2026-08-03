@@ -179,9 +179,28 @@ service dropdown is the `services` array plus "Not sure / something else".
 3. Deploy. The client signs in at `https://<domain>/keystatic` — Keystatic Cloud handles auth, so
    there are no credentials to manage.
 
-**Local editing without Keystatic Cloud:** in `keystatic.config.ts`, change
-`storage: { kind: 'cloud' }` to `storage: { kind: 'local' }`. Edits then write straight to
-`src/content/blog/` on disk. Switch it back before deploying.
+**Local editing without Keystatic Cloud:** run `KEYSTATIC_LOCAL=1 npm run dev`. Edits write
+straight to `src/content/blog/` on disk. No account needed, and nothing to remember to revert —
+every build and deploy uses Cloud regardless of that variable.
+
+### Publishing has to be automated, or the CMS looks broken
+
+Keystatic Cloud saves a post by **committing to the GitHub repo**. It does not deploy. With a
+manual `npm run deploy`, a client hits Save, sees success, and their post never appears on the
+site — the worst kind of failure, because nothing looks wrong.
+
+Connect the repo to **Cloudflare Workers Builds** (or any CI that runs `npm run build && wrangler
+deploy` on push to `main`) before handing the CMS to the client. Set `WEB3FORMS_ACCESS_KEY` as a
+build-time variable there too — the contact form is prerendered, so a build without it ships a
+dead form.
+
+### Astro 7 compatibility
+
+`src/middleware.ts` shims `locals.runtime.env` for `/api/keystatic` requests. `@keystatic/astro`
+still reads a property Astro removed in v6, and without the shim every CMS API call returns 500 on
+Cloudflare. `astro.config.mjs` also sets `trailingSlash: 'ignore'` because the admin requests its
+API and OAuth callback URLs without trailing slashes. Do not change either without re-testing
+`/keystatic` against `npx wrangler dev`.
 
 The blog schema deliberately makes title, meta description, slug, and card blurb **required**, and
 the body is Markdoc — so a client filling in content cannot break the page's SEO structure or
